@@ -1,5 +1,10 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 
+def ask_users_location() -> str:
+    users_location = input(f"Please, tell us your {YELLOW}neighborhood{RESET} name: {GREEN}").strip()
+    print(f"{RESET}")
+    return users_location
+
 def neighborhood_finder(neighbor: str, data: dict):
     if neighbor.isalpha():
         neighbor = neighbor.strip()
@@ -9,7 +14,7 @@ def neighborhood_finder(neighbor: str, data: dict):
     neighbor = neighbor.upper()
     for key in data.keys():
         if neighbor in data[key]:
-            print(f"{GREEN}>>>>>>>>>>>>> Neighborhood '{neighbor}' found in the database.{RESET}")
+            print(f"{GREEN}>>>>>>>>>>>>> Neighborhood '{neighbor}' from {key} district found in the database.{RESET}")
             return neighbor            
     else:
         print(f"{RED}Neighborhood '{neighbor}' not found in the database.{RESET}")

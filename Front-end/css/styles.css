@@ -1,0 +1,466 @@
+
+/* Add font files for Figtree */
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree.woff2') format('woff2'),
+       url('fonts/figtree.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add font files for Jost */
+@font-face {
+  font-family: 'Jost';
+  src: url('fonts/jost.woff2') format('woff2'),
+       url('fonts/jost.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-figtree: 'Figtree', sans-serif;
+  --font-family-jost: 'Jost', sans-serif;
+  --text-white: rgba(255, 255, 255, 1);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.node-4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+}
+
+.black-gradient-5 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.h3-headline {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.h1 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.text-9 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.button-zap-lucas-8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px 8px 15px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 49.029126213592235%;
+  background-color: rgba(0, 184, 49, 1);
+  border-radius: 20px;
+}
+
+.node-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.cityscape-raios-02-1-11 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+}
+
+.h3-headline {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.h1 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.text-15 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.button-conheca-lucas-14 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px 8px 15px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(148, 0, 0, 1);
+  border-radius: 20px;
+}
+
+.frame-conheca-lucas-10 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.node-17 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+}
+
+.black-gradient-18 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.h3-headline {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.h1 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.text-22 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.button-zap-lucas-21 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px 8px 15px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 49.029126213592235%;
+  background-color: rgba(0, 184, 49, 1);
+  border-radius: 20px;
+}
+
+.node-16 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.node-24 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+}
+
+.black-gradient-25 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.h3-headline {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.h1 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.text-29 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-figtree);
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.button-conheca-lucas-28 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px 8px 15px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(148, 0, 0, 1);
+  border-radius: 20px;
+}
+
+.frame-dashboard-23 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.index-content-grid-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.text-31 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.text-32 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.text-33 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.text-34 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.footer-30 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 37px;
+  padding: 28px 69px 28px 69px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+  background-color: rgba(37, 22, 179, 1);
+}
+
+.node-36 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(38, 38, 38, 1);
+}
+
+.h3-headline {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jost);
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.node-38 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.menu-burger-40 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.menu-hamburguer-39 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.header-35 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.index-1 {
+@media (max-width: 1440px) {
+  .index-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: NaN%;
+  background-color: rgba(255, 255, 255, 1);
+}

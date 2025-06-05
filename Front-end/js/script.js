@@ -56,7 +56,8 @@ class SirenaApp {
         const whatsappButtons = document.querySelectorAll('.whatsapp-button');
         const lucasButton = document.querySelector('.lucas-button');
         const learnMoreButton = document.querySelector('.learn-more-button');
-        
+        const data4lifeButton = document.querySelector('.data4life-button');
+
         // WhatsApp buttons
         whatsappButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -77,8 +78,15 @@ class SirenaApp {
                 window.location.href = 'page-sirena.html';
             });
         }
+
+        // Data4Life button
+        if (data4lifeButton) {
+            data4lifeButton.addEventListener('click', () => {
+                window.location.href = 'page-quemsomos.html';
+            });
+        }
     }
-    
+
     handleWhatsAppClick() {
         const whatsappUrl = `https://t.me/Hideki_1TDSPX_2025_bot`;
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');

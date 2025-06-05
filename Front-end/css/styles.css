@@ -143,36 +143,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-        linear-gradient(45deg, rgba(255, 193, 7, 0.1) 0%, transparent 25%),
-        linear-gradient(-45deg, rgba(255, 193, 7, 0.1) 0%, transparent 25%),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    background-size: 100px 100px, 100px 100px, 50px 50px;
-    z-index: -2;
 }
 
-.forecast-bg {
-    background-image: 
-        linear-gradient(45deg, rgba(239, 68, 68, 0.1) 0%, transparent 25%),
-        linear-gradient(-45deg, rgba(239, 68, 68, 0.1) 0%, transparent 25%),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid2" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid2)"/></svg>');
-}
-
-.agents-bg {
-    background-image: 
-        linear-gradient(45deg, rgba(59, 130, 246, 0.1) 0%, transparent 25%),
-        linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 0%, transparent 25%),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid3" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid3)"/></svg>');
-}
-
-.background-overlay {
+.img-content {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
-    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
 }
 
 .section-content {

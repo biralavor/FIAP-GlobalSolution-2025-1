@@ -53,6 +53,11 @@ body {
     line-height: 1.3;
 }
 
+.logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
 
 .menu-toggle {
     background: none;
@@ -270,6 +275,10 @@ body {
     .section-title {
         font-size: 2.5rem;
     }
+
+    .logo img {
+        width: 140px;
+    }
     
     .section-description {
         font-size: 1.1rem;
@@ -306,5 +315,9 @@ body {
     .cta-button {
         font-size: 1rem;
         padding: 1.25rem 2.5rem;
+    }
+
+    .logo img {
+        width: 180px;
     }
 }

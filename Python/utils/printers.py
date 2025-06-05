@@ -1,5 +1,8 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 
+def invalid_choice():
+    print(f"{RED}Invalid choice. Please try again.{RESET}")
+
 def main_menu_printer():
     print(f"Welcome to {MAGENTA}S.I.R.E.N.A.{RESET}")
     print(f"{MAGENTA}S{RESET}istema {MAGENTA}I{RESET}ntegrado de ", end="")
@@ -17,8 +20,12 @@ def citizen_menu_printer():
     print(f"{YELLOW}2.{RESET} Am I in Danger ???")
     print(f"{YELLOW}3.{RESET} Back to Main Menu")
 
-def invalid_choice():
-    print(f"{RED}Invalid choice. Please try again.{RESET}")
-
+def neighborhood_printer(neighborhoods: dict):
+    if neighborhoods:
+        print(f"{B_GRAY}Neighborhoods in the database:{RESET}")
+        for index, (key, value) in enumerate(neighborhoods.items(), start=1):
+            print(f"{YELLOW}{index}.{RESET} {key}: {value}")
+    else:
+        print(f"{RED}No neighborhoods found.{RESET}")
 #*********************************************************************
 

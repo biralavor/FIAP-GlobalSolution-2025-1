@@ -2,11 +2,22 @@ from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 from utils.printers import main_menu_printer
 from utils.printers import citizen_menu_printer
 from utils.printers import invalid_choice
+from utils.printers import neighborhood_printer
 from utils.validations import ask_valid_nbr
+from utils.finders import neighborhood_finder
+from utils.loaders import csv_loader
+from utils.loaders import csv_parser
+
+SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
+
 
 def main():
     while True:
         main_menu_printer()
+        data = csv_loader(SP_NEIGHBORHOODS)
+        parsed_data = csv_parser(data)
+        neighborhood_printer(parsed_data)
+        neighborhood_finder("moema", parsed_data)
         choice = ask_valid_nbr()
         match choice:
             case 1:

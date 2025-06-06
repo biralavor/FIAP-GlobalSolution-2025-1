@@ -10,8 +10,8 @@ from utils.finders import ask_users_location
 from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
-from Python.generators.simulators import rainfall_init
-from Python.generators.simulators import extreme_rainfall_risk_simulator
+from generators.simulators import rainfall_init
+from generators.simulators import extreme_rainfall_risk_simulator
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 
@@ -27,10 +27,10 @@ async def main():
         match choice:
             case 1:
                 while True:
-                    user_location = ask_users_location()
+                    user_location = ask_users_location("CITIZEN")
                     neighbor = neighborhood_finder(user_location, data_with_rainfall)
                     if neighbor:
-                        neighbor_risk_finder(neighbor, data_with_rainfall)
+                        risk_value = neighbor_risk_finder(neighbor, data_with_rainfall)
                         break
                 citizen_menu_printer()
                 while True:
@@ -42,9 +42,10 @@ async def main():
                             print("Checking if you are in danger...")
                         case 3:
                             break
+                        
             case 2:
                 print("Loading City Patrol Agent System...")
-                user_location = ask_users_location()
+                user_location = ask_users_location("AGENT")
                 neighborhood_finder(user_location, data_with_rainfall)
             case 3:
                 exiting_printer()

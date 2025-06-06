@@ -3,10 +3,11 @@ import asyncio
 from utils.printers import main_menu_printer
 from utils.printers import citizen_menu_printer
 from utils.printers import invalid_choice
-from utils.printers import neighborhood_printer
+from utils.printers import exiting_printer
 from utils.validations import ask_valid_nbr
 from utils.finders import neighborhood_finder
 from utils.finders import ask_users_location
+from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
 from utils.simulations import rainfall_init
@@ -18,17 +19,19 @@ SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
     parsed_data = csv_parser(data)
-    neighborhood_printer(parsed_data)
     data_with_rainfall = rainfall_init(parsed_data)
     data_with_rainfall = await extreme_rainfall_risk_simulation(data_with_rainfall)
-    neighborhood_printer(data_with_rainfall)
     while True:
         main_menu_printer()
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                user_location = ask_users_location()
-                neighborhood_finder(user_location, data_with_rainfall)
+                while True:
+                    user_location = ask_users_location()
+                    neighbor = neighborhood_finder(user_location, data_with_rainfall)
+                    if neighbor:
+                        neighbor_risk_finder(neighbor, data_with_rainfall)
+                        break
                 citizen_menu_printer()
                 while True:
                     citizen_choice = ask_valid_nbr()
@@ -44,8 +47,7 @@ async def main():
                 user_location = ask_users_location()
                 neighborhood_finder(user_location, data_with_rainfall)
             case 3:
-                print("Exiting S.I.R.E.N.A. System. Goodbye!")
-                exit(0)
+                exiting_printer()
             case _:
                 invalid_choice()
                 citizen_menu_printer()

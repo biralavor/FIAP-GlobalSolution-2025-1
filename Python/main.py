@@ -42,7 +42,9 @@ async def main():
                             print("Checking if you are in danger...")
                         case 3:
                             break
-                        
+                        case _:
+                            invalid_choice()
+                            citizen_menu_printer()
             case 2:
                 print("Loading City Patrol Agent System...")
                 user_location = ask_users_location("AGENT")

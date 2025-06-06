@@ -10,8 +10,8 @@ from utils.finders import ask_users_location
 from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
-from Python.utils.simulators import rainfall_init
-from Python.utils.simulators import extreme_rainfall_risk_simulator
+from Python.generators.simulators import rainfall_init
+from Python.generators.simulators import extreme_rainfall_risk_simulator
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 

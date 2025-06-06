@@ -129,6 +129,7 @@ body {
 
 .main {
     margin-top: 80px;
+    padding-top: 2rem;
 }
 
 .forecast-section,
@@ -283,35 +284,27 @@ body {
     justify-self: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 599px) {
     .header-content {
         align-items: center;
     }
-    
+
     .logo-subtitle {
         max-width: 300px;
         font-size: 0.8rem;
     }
     
     .section-title {
-        font-size: 2.5rem;
-        max-width: 500px;
+        font-size: 1.6rem;
+        max-width: 300px;
     }
 
     .logo img {
-        width: 140px;
+        width: 110px;
     }
     
     .section-description {
         font-size: 1.1rem;
-    }
-    
-    .menu-toggle {
-        display: none;
-    }
-    
-    .mobile-menu {
-        display: none;
     }
 
     .forecast-section,
@@ -325,14 +318,47 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
+
+@media (min-width: 600px) {
+    .header-content {
+        align-items: center;
+    }
+
+    .logo-subtitle {
+        max-width: 300px;
+        font-size: 0.8rem;
+    }
+    
     .section-title {
-        font-size: 3rem;
-        max-width: 600px;
+        font-size: 2.5rem;
+        max-width: 500px;
+    }
+
+    .logo img {
+        width: 130px;
     }
     
     .section-description {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+    
+}
+
+
+@media (min-width: 1024px) {
+    .main {
+        margin-top: 85px;
+        padding-top: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.9rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+    
+    .section-description {
+        font-size: 1.4rem;
     }
     
     .cta-button {
@@ -342,5 +368,12 @@ body {
 
     .logo img {
         width: 180px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
     }
 }

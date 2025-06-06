@@ -1,4 +1,5 @@
-from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+import asyncio
+
 from utils.printers import main_menu_printer
 from utils.printers import citizen_menu_printer
 from utils.printers import invalid_choice
@@ -8,44 +9,46 @@ from utils.finders import neighborhood_finder
 from utils.finders import ask_users_location
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
+from utils.simulations import rainfall_init
+from utils.simulations import extreme_rainfall_risk_simulation
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 
 
-def main():
+async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
     parsed_data = csv_parser(data)
     neighborhood_printer(parsed_data)
+    data_with_rainfall = rainfall_init(parsed_data)
+    data_with_rainfall = await extreme_rainfall_risk_simulation(data_with_rainfall)
+    neighborhood_printer(data_with_rainfall)
     while True:
         main_menu_printer()
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                citizen_location = ask_users_location()
-                neighborhood_finder(citizen_location, parsed_data)
+                user_location = ask_users_location()
+                neighborhood_finder(user_location, data_with_rainfall)
                 citizen_menu_printer()
                 while True:
                     citizen_choice = ask_valid_nbr()
                     match citizen_choice:
                         case 1:
                             print("Reporting Incident...")
-                            # Here you would call the function to report an incident
                         case 2:
                             print("Checking if you are in danger...")
-                            # Here you would call the function to check danger status
                         case 3:
                             break
             case 2:
                 print("Loading City Patrol Agent System...")
-                agent_location = ask_users_location()
-                neighborhood_finder(agent_location, parsed_data)
-                # Here you would call the function for city patrol agent options
+                user_location = ask_users_location()
+                neighborhood_finder(user_location, data_with_rainfall)
             case 3:
                 print("Exiting S.I.R.E.N.A. System. Goodbye!")
-                return
+                exit(0)
             case _:
                 invalid_choice()
                 citizen_menu_printer()
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())

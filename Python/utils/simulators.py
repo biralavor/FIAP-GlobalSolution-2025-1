@@ -9,7 +9,7 @@ def rainfall_init(parsed_data):
             data_with_rainfall[district].extend([neighbor_name, 0])
     return data_with_rainfall
 
-async def extreme_rainfall_risk_simulation(data_with_rainfall):
+async def extreme_rainfall_risk_simulator(data_with_rainfall):
     while True:
         # print(f"Simulated rainfall risk: {rainfall_risk} mm")
         for district, neighbors in data_with_rainfall.items():

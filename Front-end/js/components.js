@@ -8,12 +8,9 @@ async function loadComponent(elementId, componentPath) {
     }
 }
 
-// Load all components when the page loads
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load components first
     await loadComponent('header-component', 'components/header.html');
     await loadComponent('footer-component', 'components/footer.html');
     
-    // Initialize the app after components are loaded
     new SirenaApp();
 });

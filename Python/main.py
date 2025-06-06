@@ -10,8 +10,8 @@ from utils.finders import ask_users_location
 from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
-from utils.simulations import rainfall_init
-from utils.simulations import extreme_rainfall_risk_simulation
+from Python.utils.simulators import rainfall_init
+from Python.utils.simulators import extreme_rainfall_risk_simulator
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 
@@ -20,7 +20,7 @@ async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
     parsed_data = csv_parser(data)
     data_with_rainfall = rainfall_init(parsed_data)
-    data_with_rainfall = await extreme_rainfall_risk_simulation(data_with_rainfall)
+    data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
     while True:
         main_menu_printer()
         choice = ask_valid_nbr()

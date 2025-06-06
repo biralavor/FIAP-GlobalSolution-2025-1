@@ -34,13 +34,13 @@ def main_menu_printer():
     print(f"{MAGENTA}R{RESET}sposta às {MAGENTA}E{RESET}mergências e ", end="")
     print(f"{MAGENTA}N{RESET}otificações {MAGENTA}A{RESET}mbientais")
     print(f"{GREEN}---------------------------------{RESET}")
-    print(f"{YELLOW}1.{RESET} Are you a Citizen ?")
-    print(f"{YELLOW}2.{RESET} Are you a City Patrol Agent ?")
+    print(f"{MAGENTA}Tell us who are you:{RESET}")
+    print(f"{YELLOW}1.{RESET} Citizen ?")
+    print(f"{YELLOW}2.{RESET} City Patrol Agent ?")
     print(f"{YELLOW}3.{RESET} Exit")
 
 def citizen_menu_printer():
-    print("Loading S.I.R.E.N.A. Alerts System...")
-    print("Welcome CITIZEN!")
+    print(f"Welcome {GREEN}CITIZEN{RESET}!")
     print(f"{YELLOW}1.{RESET} Report Incident")
     print(f"{YELLOW}2.{RESET} Am I in Danger ???")
     print(f"{YELLOW}3.{RESET} Back to Main Menu")

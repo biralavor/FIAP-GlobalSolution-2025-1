@@ -12,15 +12,12 @@ class SirenaApp {
     }
     
     setupEventListeners() {
-        // Mobile menu toggle
         this.menuToggle?.addEventListener('click', () => {
             this.toggleMobileMenu();
         });
         
-        // CTA button interactions
         this.setupCTAButtons();
         
-        // Window resize handler
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768 && this.isMenuOpen) {
                 this.closeMobileMenu();
@@ -58,28 +55,24 @@ class SirenaApp {
         const learnMoreButton = document.querySelector('.learn-more-button');
         const data4lifeButton = document.querySelector('.data4life-button');
 
-        // WhatsApp buttons
         whatsappButtons.forEach(button => {
             button.addEventListener('click', () => {
                 this.handleWhatsAppClick();
             });
         });
         
-        // L.U.C.A.S. button
         if (lucasButton) {
             lucasButton.addEventListener('click', () => {
                 window.location.href = 'page-conhecaLucas.html';
             });
         }
         
-        // Learn more button
         if (learnMoreButton) {
             learnMoreButton.addEventListener('click', () => {
                 window.location.href = 'page-sirena.html';
             });
         }
 
-        // Data4Life button
         if (data4lifeButton) {
             data4lifeButton.addEventListener('click', () => {
                 window.location.href = 'page-quemsomos.html';
@@ -93,5 +86,4 @@ class SirenaApp {
     }
 }
 
-// Initialize the app directly since script is at end of body
 new SirenaApp();

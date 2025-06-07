@@ -3,6 +3,9 @@ public class Confiabilidade {
     private int idConfiabilidade;
     private String grauConfiabilidade;
 
+    public Confiabilidade() {
+    }
+    
     public int getIdConfiabilidade() {
         return idConfiabilidade;
     }
@@ -18,4 +21,5 @@ public class Confiabilidade {
     public void setGrauConfiabilidade(String grauConfiabilidade) {
         this.grauConfiabilidade = grauConfiabilidade;
     }
+
 }

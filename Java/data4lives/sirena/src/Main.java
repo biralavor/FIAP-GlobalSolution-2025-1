@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args){
-        // Exemplo de uso das classes
 
         Localizacao localizacao1 = new Localizacao();
         localizacao1.setIdLocalizacao(1);
@@ -12,11 +11,11 @@ public class Main {
         localizacao2.setNomeRua("Centro");
         localizacao2.setCoordenadas("-23.234567, -46.234567");
 
-        Reporte reporte1 = new Reporte(1, "Incêndio na floresta", "2025-05-30", "14:30", localizacao1, "Incêndio");
-        Reporte reporte2 = new Reporte(2, "Alagamento na cidade", "2025-06-07", "09:00", localizacao2, "Alagamento");
-        Reporte reporte3 = new Reporte(3, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento");
-        Reporte reporte4 = new Reporte(4, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento");
-        Reporte reporte5 = new Reporte(5, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento");
+        Reporte reporte1 = new Reporte(1, "Incêndio na floresta", "2025-05-30", "14:30", localizacao1, "Incêndio", true, true);
+        Reporte reporte2 = new Reporte(2, "Alagamento na cidade", "2025-06-07", "09:00", localizacao2, "Alagamento", false, true);
+        Reporte reporte3 = new Reporte(3, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento", false, false);
+        Reporte reporte4 = new Reporte(4, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento", false, false);
+        Reporte reporte5 = new Reporte(5, "Deslizamento de terra", "2025-10-07", "11:15", localizacao2, "Deslizamento", false, false);
 
         // Exibir informações do reporte
         System.out.println("ID do Reporte: " + reporte1.getIdReporte());
@@ -61,6 +60,12 @@ public class Main {
         listaReportes.addToReporteList(reporte4);
         listaReportes.addToReporteList(reporte5);
 
+        Prioridade prioridade1 = new Prioridade();
+        prioridade1.defineGrauPrioridade(reporte1.isPessoaEmPerigo(), reporte1.isViaIntransitavel());
+        prioridade1.defineGrauPrioridade(reporte2.isPessoaEmPerigo(), reporte2.isViaIntransitavel());
+        prioridade1.defineGrauPrioridade(reporte3.isPessoaEmPerigo(), reporte3.isViaIntransitavel());
+        prioridade1.defineGrauPrioridade(reporte4.isPessoaEmPerigo(), reporte4.isViaIntransitavel());
+        prioridade1.defineGrauPrioridade(reporte5.isPessoaEmPerigo(), reporte5.isViaIntransitavel());
         listaReportes.calculoConfiabilidade();
         listaReportes.reporteListPrinter();
     }

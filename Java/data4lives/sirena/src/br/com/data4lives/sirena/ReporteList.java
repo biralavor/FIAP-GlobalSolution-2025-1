@@ -65,6 +65,7 @@ public class ReporteList {
             System.out.println("Tipo de Reporte: " + reporte.getTipoReporte());
             String grau = (reporte.getConfiabilidade() != null) ? reporte.getConfiabilidade().getGrauConfiabilidade() : "Indefinido";
             System.out.println("Grau de Confiabilidade: " + grau);
+            System.out.println("Grau de Prioridade:" + reporte.getPrioridade().getGrauPrioridade());
             System.out.println("-----------------------------");
         }
     }

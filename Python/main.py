@@ -1,5 +1,8 @@
 import asyncio
 
+from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+
+
 from utils.finders import ask_users_location
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
@@ -39,7 +42,9 @@ async def main():
                 risk_value = neighborhood_manager(user_type, data_with_rainfall)
                 if risk_value < 4:
                     while True:
-                        citizen_menu_printer()
+                        citizen_loop = True
+                        citizen_menu_printer(citizen_loop)
+                        citizen_loop = False
                         citizen_choice = ask_valid_nbr()
                         match citizen_choice:
                             case 1:
@@ -52,13 +57,15 @@ async def main():
                                 invalid_choice()
             case 2:
                 user_type = "AGENT"
+                agent_loop = True
                 while True:
-                    agent_menu_printer()
+                    agent_menu_printer(agent_loop)
+                    agent_loop = False
                     agent_choice = ask_valid_nbr()
                     match agent_choice:
                         case 1:
                             agent_location = ask_users_location(user_type)
-                            print(f"Taking you to the nearest incident from {agent_location}...")
+                            print(f"Taking you to the nearest incident from {YELLOW}{agent_location}...")
                         case 2:
                             print("Showing all incidents in the neighborhood...")
                             incident_manager(neighborhood_list)
@@ -70,8 +77,6 @@ async def main():
                 exiting_printer()
             case _:
                 invalid_choice()
-                citizen_menu_printer()
-        clear_screen()
 
 if __name__ == '__main__':
     asyncio.run(main())

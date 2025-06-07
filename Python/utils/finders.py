@@ -1,4 +1,5 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+from utils.validations import does_str_has_space
 
 def ask_users_location(user_type) -> str:
     print(f"Please {GREEN}{user_type}{RESET}, ", end="")
@@ -6,19 +7,26 @@ def ask_users_location(user_type) -> str:
     print(f"{RESET}")
     return users_location
 
-def neighborhood_finder(neighbor: str, data: dict) -> str:
-    if neighbor.isalpha():
-        neighbor = neighbor.strip()
+def neighborhood_finder(user_input: str, data: dict) -> str:
+    if does_str_has_space(user_input):
+        parsed_user_input = []
+        splited_user_input = user_input.strip().split()
+        print(splited_user_input)
+        for word in splited_user_input:
+            if not word.isalpha():
+                print(f"{RED}Invalid neighborhood name. DO NOT use special characters.{RESET}")
+                return ""
+            word = word.upper()
+            parsed_user_input.append(word)
+        str_user_input = " ".join(parsed_user_input)
     else:
-        print(f"{RED}Invalid neighborhood name. DO NOT use special characters.{RESET}")
-        return ""
-    neighbor = neighbor.upper()
+        str_user_input = user_input.upper()
     for key in data.keys():
-        if neighbor in data[key]:
-            print(f"{B_GRAY}Neighborhood '{neighbor}' from {key} district found in the database.{RESET}")
-            return neighbor            
+        if str_user_input in data[key]:
+            print(f"{B_GRAY}Neighborhood '{str_user_input}' from {key} district found in the database.{RESET}")
+            return str_user_input
     else:
-        print(f"{RED}Neighborhood '{neighbor}' not found in the database.{RESET}")
+        print(f"{RED}Neighborhood '{user_input}' not found in the database.{RESET}")
         return ""
 
 def district_finder(district: str, data: dict):
@@ -40,6 +48,6 @@ def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
         if user_location in neighbors:
             neighbor_idx = neighbors.index(user_location)
             risk_value = neighbors[neighbor_idx + 1]
-            print(f"{MAGENTA}Rainfall risk for {user_location}: {risk_value}{RESET}")
+            print(f"{B_GRAY}Rainfall risk for {user_location}: {risk_value}{RESET}")
             return risk_value
     return -1

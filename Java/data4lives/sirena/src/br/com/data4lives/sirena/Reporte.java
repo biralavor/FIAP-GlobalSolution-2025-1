@@ -7,14 +7,21 @@ public class Reporte {
     private Localizacao localizacao;
     private String tipoReporte;
     private Confiabilidade confiabilidade;
+    private boolean pessoaEmPerigo;
+    private boolean viaIntransitavel;
+    private Prioridade prioridade;
 
-    public Reporte(int idReporte, String descricao, String data, String hora, Localizacao localizacao, String tipoReporte) {
+    public Reporte(int idReporte, String descricao, String data, String hora, Localizacao localizacao, String tipoReporte, boolean pessoaEmPerigo, boolean viaIntransitavel) {
         this.idReporte = idReporte;
         this.descricao = descricao;
         this.data = data;
         this.hora = hora;
         this.localizacao = localizacao;
         this.tipoReporte = tipoReporte;
+        this.pessoaEmPerigo = pessoaEmPerigo;
+        this.viaIntransitavel = viaIntransitavel;
+        this.prioridade = new Prioridade();
+        this.prioridade.defineGrauPrioridade(pessoaEmPerigo, viaIntransitavel);
     }
 
     public int getIdReporte() {
@@ -70,5 +77,27 @@ public class Reporte {
         this.confiabilidade = confiabilidade;
     }
 
+    public boolean isPessoaEmPerigo() {
+        return pessoaEmPerigo;
+    }
+
+    public void setPessoaEmPerigo(boolean pessoaEmPerigo) {
+        this.pessoaEmPerigo = pessoaEmPerigo;
+    }
+
+    public boolean isViaIntransitavel() {
+        return viaIntransitavel;
+    }
+
+    public void setViaIntransitavel(boolean viaIntransitavel) {
+        this.viaIntransitavel = viaIntransitavel;
+    }
+
+    public Prioridade getPrioridade() {
+        return prioridade;
+    }
+    public void setPrioridade(Prioridade prioridade) {
+        this.prioridade = prioridade;
+    }
 }
 

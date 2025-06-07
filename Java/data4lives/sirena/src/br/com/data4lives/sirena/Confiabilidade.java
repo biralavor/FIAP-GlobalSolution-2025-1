@@ -4,6 +4,8 @@ public class Confiabilidade {
     private String grauConfiabilidade;
 
     public Confiabilidade() {
+        idConfiabilidade = 0; 
+        grauConfiabilidade = "Indefinido"; 
     }
     
     public int getIdConfiabilidade() {

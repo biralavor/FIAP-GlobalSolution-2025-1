@@ -12,10 +12,7 @@ def ask_users_location(user_type) -> str:
         users_location = ask_users_location(user_type)
     return users_location.upper()
 
-def neighborhood_finder(user_input: str, data: dict) -> str:
-    if user_input == "CANCEL":
-        print(f"{YELLOW}Operation cancelled.{RESET}")
-        exit(0)
+def user_input_str_parser(user_input: str) -> str:
     if does_str_has_space(user_input):
         parsed_user_input = []
         splited_user_input = user_input.strip().split()
@@ -25,26 +22,28 @@ def neighborhood_finder(user_input: str, data: dict) -> str:
         str_user_input = " ".join(parsed_user_input)
     else:
         str_user_input = user_input.upper()
+    return str_user_input
+
+def neighborhood_finder(user_input: str, data: dict) -> str:
+    if user_input == "CANCEL":
+        print(f"{YELLOW}Operation cancelled.{RESET}")
+        exit(0)
+    parsed_input = user_input_str_parser(user_input)
     for key in data.keys():
-        if str_user_input in data[key]:
-            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Neighborhood '{str_user_input}' from {key} district found in the database.{RESET}")
-            return str_user_input
+        if parsed_input in data[key]:
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Neighborhood '{parsed_input}' from {key} district found in the database.{RESET}")
+            return parsed_input
     else:
         print(f"{RED}Neighborhood '{user_input}' not found in the database.{RESET}")
         return ""
 
-def district_finder(district: str, data: dict):
-    if district.isalpha():
-        district = district.strip()
+def district_finder(user_input: str, data: dict):
+    parsed_input = user_input_str_parser(user_input)
+    if data.get(parsed_input):
+        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: District '{parsed_input}' found in the database.{RESET}")
+        return data[parsed_input]
     else:
-        print(f"{RED}Invalid district name. DO NOT use special characters.{RESET}")
-        return []
-    district = district.upper()
-    if data.get(district):
-        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: District '{district}' found in the database.{RESET}")
-        return data[district]
-    else:
-        print(f"{RED}District '{district}' not found in the database.{RESET}")
+        print(f"{RED}District '{parsed_input}' not found in the database.{RESET}")
         return []
 
 def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
@@ -55,3 +54,4 @@ def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
             print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Rainfall risk for {user_location}: {risk_value}{RESET}")
             return risk_value
     return -1
+

@@ -1,10 +1,15 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 from utils.validations import does_str_has_space
+from utils.validations import does_str_has_special_char
 
 def ask_users_location(user_type) -> str:
     print(f"Please {GREEN}{user_type}{RESET}, ", end="")
     users_location = input(f"tell us your {YELLOW}neighborhood{RESET} name: {GREEN}").strip()
     print(f"{RESET}")
+    while does_str_has_special_char(users_location) or users_location.isnumeric():
+        if users_location.isnumeric():
+            print(f"{RED}Numbers are NOT allowed for locations.{RESET}")
+        users_location = ask_users_location(user_type)
     return users_location
 
 def neighborhood_finder(user_input: str, data: dict) -> str:

@@ -1,15 +1,15 @@
 public class Autoridade {
 
     private String nome;
-    private String numeroIdentificacao;
+    private String cpf;
     private String email;
     private String contato;
     private String endereco;
     
 
-    public Autoridade(String nome, String numeroIdentificacao, String email, String contato, String endereco) {
+    public Autoridade(String nome, String cpf, String email, String contato, String endereco) {
         this.nome = nome;
-        this.numeroIdentificacao = numeroIdentificacao;
+        this.cpf = cpf;
         this.email = email;
         this.contato = contato;
         this.endereco = endereco;
@@ -21,11 +21,11 @@ public class Autoridade {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getNumIdentificacao() {
-        return numeroIdentificacao;
+    public String getCpf() {
+        return cpf;
     }
-    public void setNumIdentificacao(String numeroIdentificacao) {
-        this.numeroIdentificacao = numeroIdentificacao;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
     public String getEmail() {
         return email;

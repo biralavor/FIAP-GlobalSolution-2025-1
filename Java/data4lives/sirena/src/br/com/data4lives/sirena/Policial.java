@@ -2,13 +2,13 @@ public class Policial extends Autoridade{
 
     private String patente;
     private String unidade;
-    private String numeroIdentificacao;
+    private String credencialPolicial;
 
-    public Policial(String nome, String numeroIdentificacao, String email, String contato, String endereco, String patente, String unidade) {
-        super(nome, numeroIdentificacao, email, contato, endereco);
+    public Policial(String nome, String credencialPolicial, String email, String contato, String endereco, String patente, String unidade) {
+        super(nome, credencialPolicial, email, contato, endereco);
         this.patente = patente;
         this.unidade = unidade;
-        this.numeroIdentificacao = numeroIdentificacao;
+        this.credencialPolicial = credencialPolicial;
     }
 
     public String getPatente() {
@@ -27,11 +27,11 @@ public class Policial extends Autoridade{
         this.unidade = unidade;
     }
 
-    public String getNumeroIdentificacao() {
-        return numeroIdentificacao;
+    public String getCredencialPolicial() {
+        return credencialPolicial;
     }
 
-    public void setNumeroIdentificacao(String numeroIdentificacao) {
-        this.numeroIdentificacao = numeroIdentificacao;
+    public void setCredencialPolicial(String credencialPolicial) {
+        this.credencialPolicial = credencialPolicial;
     }
 }

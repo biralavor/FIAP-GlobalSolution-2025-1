@@ -1,6 +1,7 @@
 public class ReporteList {
 
     private Reporte[] listaReportes;
+    private int quantidadeReportes = 0;
 
     public ReporteList(int tamanho) {
         this.listaReportes = new Reporte[tamanho];
@@ -9,37 +10,62 @@ public class ReporteList {
     public Reporte[] getReportes() {
         return listaReportes;
     }
+
     public void setReportes(Reporte[] reportes) {
         this.listaReportes = reportes;
     }
-    public void addReporte(Reporte reporte) {
-        Reporte[] lista = new Reporte[listaReportes.length];
-        for (int indiceReporte = 0; indiceReporte < listaReportes.length; indiceReporte++) {
-            lista[indiceReporte] = listaReportes[indiceReporte];
-        }
-        lista[lista.length - 1] = reporte;
-        listaReportes = lista;
+
+    public int getQuantidadeReportes() {
+        return quantidadeReportes;
     }
 
-    public void grauConfiabilidade(Reporte[] lista, Confiabilidade confiabilidade) {
-        for (int indiceReporte = 0; indiceReporte < lista.length; indiceReporte++) {
-            int contadorReportes = 0;
-            int idLocalizacao = lista[indiceReporte].getLocalizacao().getIdLocalizacao();
-            String tipoReporte = lista[indiceReporte].getTipoReporte();
-            for (int reporte = 0; reporte < lista.length; reporte++) {
-                if (lista[reporte].getLocalizacao().getIdLocalizacao() == idLocalizacao && lista[reporte].getTipoReporte().equals(tipoReporte)) {
-                    contadorReportes++;
+    public void addToReporteList(Reporte reporte) {
+        if (quantidadeReportes < listaReportes.length) {
+            listaReportes[quantidadeReportes] = reporte;
+            quantidadeReportes++;
+        } else {
+            System.out.println("Limite de reportes atingido!");
+        }
+    }
+
+    public void calculoConfiabilidade() {
+        for (int indice = 0; indice < quantidadeReportes; indice++) {
+            Reporte reporte = listaReportes[indice];
+            String localizacao = reporte.getLocalizacao().getNomeRua();
+            String tipoReporte = reporte.getTipoReporte();
+            int recorrencia = 0;
+            for (int indiceComparador = 0; indiceComparador < quantidadeReportes; indiceComparador++) {
+                Reporte comparador = listaReportes[indiceComparador];
+                if (comparador.getLocalizacao().getNomeRua().equals(localizacao) && 
+                    comparador.getTipoReporte().equals(tipoReporte)) {
+                    recorrencia++;
                 }
             }
-
-            if (contadorReportes <= 3) {
-                lista[indiceReporte].getConfiabilidade().setGrauConfiabilidade("Baixa");
-            }
-            else if (contadorReportes <= 9) {
-                lista[indiceReporte].getConfiabilidade().setGrauConfiabilidade("Média");
+            System.out.println("repeticoes: " + recorrencia);
+            Confiabilidade confiabilidadeIndividual = new Confiabilidade();
+            if (recorrencia < 2) {
+                confiabilidadeIndividual.setGrauConfiabilidade("Baixa");
+            } else if (recorrencia >= 2 && recorrencia <= 4) {
+                confiabilidadeIndividual.setGrauConfiabilidade("Média");
             } else {
-                lista[indiceReporte].getConfiabilidade().setGrauConfiabilidade("Alta");
+                confiabilidadeIndividual.setGrauConfiabilidade("Alta");
             }
+            reporte.setConfiabilidade(confiabilidadeIndividual);
+        }
+    }
+
+    public void reporteListPrinter() {
+        for (int indice = 0; indice < quantidadeReportes; indice++) {
+            Reporte reporte = listaReportes[indice];
+            System.out.println("ID do Reporte: " + reporte.getIdReporte());
+            System.out.println("Descrição: " + reporte.getDescricao());
+            System.out.println("Data: " + reporte.getData());
+            System.out.println("Hora: " + reporte.getHora());
+            System.out.println("Localização: " + reporte.getLocalizacao().getNomeRua());
+            System.out.println("Tipo de Reporte: " + reporte.getTipoReporte());
+            String grau = (reporte.getConfiabilidade() != null) ? reporte.getConfiabilidade().getGrauConfiabilidade() : "Indefinido";
+            System.out.println("Grau de Confiabilidade: " + grau);
+            System.out.println("-----------------------------");
         }
     }
 }

@@ -1,23 +1,20 @@
 public class Reporte {
 
-    private final int idReporte;
+    private int idReporte;
     private String descricao;
     private String data;
     private String hora;
     private Localizacao localizacao;
     private String tipoReporte;
     private Confiabilidade confiabilidade;
-    private String status;
 
-    public Reporte(int idReporte, String descricao, String data, String hora, Localizacao localizacao2, String tipoReporte, Confiabilidade confiabilidade, String status) {
+    public Reporte(int idReporte, String descricao, String data, String hora, Localizacao localizacao, String tipoReporte) {
         this.idReporte = idReporte;
         this.descricao = descricao;
         this.data = data;
         this.hora = hora;
-        this.localizacao = localizacao2;
+        this.localizacao = localizacao;
         this.tipoReporte = tipoReporte;
-        this.confiabilidade = confiabilidade;
-        this.status = status;
     }
 
     public int getIdReporte() {
@@ -73,12 +70,5 @@ public class Reporte {
         this.confiabilidade = confiabilidade;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
 }
+

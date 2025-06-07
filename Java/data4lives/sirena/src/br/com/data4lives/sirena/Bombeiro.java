@@ -2,13 +2,13 @@ public class Bombeiro extends Autoridade {
 
     private String especialidade;
     private String unidade;
-    private String numeroIdentificacao;
+    private String credencialBombeiro;
 
-    public Bombeiro(String nome, String numeroIdentificacao, String email, String contato, String endereco, String especialidade, String unidade) {
-        super(nome, numeroIdentificacao, email, contato, endereco);
+    public Bombeiro(String nome, String credencialBombeiro, String email, String contato, String endereco, String especialidade, String unidade) {
+        super(nome, credencialBombeiro, email, contato, endereco);
         this.especialidade = especialidade;
         this.unidade = unidade;
-        this.numeroIdentificacao = numeroIdentificacao;
+        this.credencialBombeiro = credencialBombeiro;
     }
 
     public String getEspecialidade() {
@@ -27,12 +27,12 @@ public class Bombeiro extends Autoridade {
         this.unidade = unidade;
     }
 
-    public String getNumeroIdentificacao() {
-        return numeroIdentificacao;
+    public String getCredencialBombeiro() {
+        return credencialBombeiro;
     }
 
-    public void setNumeroIdentificacao(String numeroIdentificacao) {
-        this.numeroIdentificacao = numeroIdentificacao;
+    public void setCredencialBombeiro(String credencialBombeiro) {
+        this.credencialBombeiro = credencialBombeiro;
     }
 
 }

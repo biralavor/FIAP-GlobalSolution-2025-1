@@ -4,13 +4,13 @@ from utils.printers import leave_now_printer
 
 def alert_generator(risk_value):
     if risk_value == 0:
-        print(f"\n{GREEN}No risk detected. Enjoy your day!")
+        print(f"\n{GREEN}No risk detected. Enjoy your day!{RESET}")
     elif risk_value == 1:
-        print(f"\n{GREEN}Low risk detected. {MAGENTA}Stay alert!")
+        print(f"\n{GREEN}Low risk detected. {MAGENTA}Stay alert!{RESET}")
     elif risk_value == 2:
-        print(f"\n{YELLOW}Moderate risk detected. {MAGENTA}Take precautions!")
+        print(f"\n{YELLOW}Moderate risk detected. {MAGENTA}Take precautions!{RESET}")
     elif risk_value == 3:
-        print(f"\n{RED}High risk detected. {MAGENTA}Evacuate if necessary!")
+        print(f"\n{RED}High risk detected. {MAGENTA}Evacuate if necessary!{RESET}")
         print(f"{MAGENTA}Here is your {YELLOW}EVACUATION PLAN:{RESET}")
         evacuation_plan_printer()
     elif risk_value == 4:

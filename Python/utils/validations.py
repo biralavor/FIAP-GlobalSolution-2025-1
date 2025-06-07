@@ -17,3 +17,22 @@ def does_str_has_space(user_input: str) -> bool:
         if single_char == " ":
             return True
     return False
+
+def does_str_has_special_char(user_input: str) -> bool:
+    found = False
+    special_chars_bunk = "áàâãéèêíïóôõöúçÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇ!@#$%^&*()_+-={}[]|\\:;\"'<>,.?/~`ñýźżźŕŕřšşśťţþďđğģħĵķłľĺńňņŋñṕŕřśşšťţṿẃẍýźżž"
+    if does_str_has_space(user_input):
+        splited_input = user_input.strip().split()
+        for word in splited_input:
+            for special_char in special_chars_bunk:
+                if special_char in word:
+                    found = True
+    else:
+        for special_char in special_chars_bunk:
+            if special_char in user_input:
+                found = True
+    if found:
+        print(f"{RED}Invalid neighborhood name. DO NOT use special characters.{RESET}")
+        return True
+    else:
+        return False

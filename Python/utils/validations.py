@@ -11,3 +11,9 @@ def ask_valid_nbr() -> int:
             print(f"{RED}Invalid input. Please enter a positive integer.{RESET}")
     print(f"{RESET}")
     return user_input
+
+def does_str_has_space(user_input: str) -> bool:
+    for single_char in user_input:
+        if single_char == " ":
+            return True
+    return False

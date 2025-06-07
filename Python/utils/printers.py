@@ -44,6 +44,12 @@ def citizen_menu_printer():
     print(f"{YELLOW}2.{RESET} Am I in Danger ???")
     print(f"{YELLOW}3.{RESET} Back to Main Menu")
 
+def agent_menu_printer():
+    print(f"Welcome {GREEN}AGENT{RESET}!")
+    print(f"{YELLOW}1.{RESET} Take me to the nearest incident")
+    print(f"{YELLOW}2.{RESET} Show ALL Incident's List")
+    print(f"{YELLOW}3.{RESET} Back to Main Menu")
+
 def neighborhood_printer(neighborhoods: dict):
     if neighborhoods:
         print(f"{B_GRAY}Neighborhoods in the database:{RESET}")

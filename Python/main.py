@@ -4,6 +4,7 @@ from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 
 
 from utils.finders import ask_users_location
+from utils.validations import is_agent_in_high_risk_district
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
 from utils.printers import citizen_menu_printer
@@ -65,7 +66,8 @@ async def main():
                     match agent_choice:
                         case 1:
                             agent_location = ask_users_location(user_type)
-                            print(f"Taking you to the nearest incident from {YELLOW}{agent_location}...")
+                            print(f"Taking you to the nearest incident from {YELLOW}{agent_location}...{RESET}")
+                            is_agent_in_high_risk_district(agent_location, data_with_rainfall, neighborhood_list)
                         case 2:
                             print("Showing all incidents in the neighborhood...")
                             incident_manager(neighborhood_list)

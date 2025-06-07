@@ -16,6 +16,8 @@ def neighborhood_manager(user_type: str, data_with_rainfall: dict) -> int:
     if neighbor:
         risk_value = neighbor_risk_finder(neighbor, data_with_rainfall)
         alert_generator(risk_value)
-    if risk_value == 4:
-        exit(0)
+        if risk_value == 4:
+            exit(0)
+    else:
+        risk_value = neighborhood_manager(user_type, data_with_rainfall)
     return risk_value

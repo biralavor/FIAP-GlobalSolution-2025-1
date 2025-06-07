@@ -24,7 +24,7 @@ def sirena_title_printer():
     print("       ___   _   _ __ ___   _ __    __ _ ")
     print("      / __| | | | '__/ _ \\ | '_ \\  / _` | ")
     print("      \\__ \\_| |_| |_|  __/_| | | || (_| |")
-    print("      |___(_)_(_)_(_)\\___(_)_| |_(_)__,_(_)")
+    print("      |___(_)_(_)_(_)\\___(_)_| |_(_)__,_(_)\n")
     print(f"{GREEN}---------------------------------{RESET}")
     print(f"| {MAGENTA}S{RESET}istema {MAGENTA}I{RESET}ntegrado de ", end="")
     print(f"{MAGENTA}R{RESET}sposta às {MAGENTA}E{RESET}mergências e ", end="")
@@ -38,14 +38,20 @@ def main_menu_printer():
     print(f"{YELLOW}2.{RESET} City Patrol Agent")
     print(f"{YELLOW}3.{RESET} Exit")
 
-def citizen_menu_printer():
-    print(f"Welcome {GREEN}CITIZEN{RESET}!")
+def citizen_menu_printer(citizen_loop):
+    if citizen_loop:
+        print(f"Welcome {GREEN}CITIZEN{RESET}!")
+    else:
+        print(f"{MAGENTA}Choose your next move, {GREEN}CITIZEN!{RESET}")
     print(f"{YELLOW}1.{RESET} Report Incident")
     print(f"{YELLOW}2.{RESET} Am I in Danger ???")
     print(f"{YELLOW}3.{RESET} Back to Main Menu")
 
-def agent_menu_printer():
-    print(f"Welcome {GREEN}AGENT{RESET}!")
+def agent_menu_printer(agent_loop):
+    if agent_loop:
+        print(f"Welcome {GREEN}AGENT{RESET}!")
+    else:
+        print(f"{MAGENTA}Choose your next move, {GREEN}AGENT!{RESET}")
     print(f"{YELLOW}1.{RESET} Take me to the nearest incident")
     print(f"{YELLOW}2.{RESET} Show ALL Incident's List")
     print(f"{YELLOW}3.{RESET} Back to Main Menu")

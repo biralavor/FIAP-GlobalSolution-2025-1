@@ -10,6 +10,8 @@ from utils.finders import ask_users_location
 from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
+from utils.validations import does_str_has_special_char
+
 from generators.alerts import alert_generator
 from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
@@ -29,6 +31,9 @@ async def main():
             case 1:
                 while True:
                     user_location = ask_users_location("CITIZEN")
+                    while does_str_has_special_char(user_location):
+                        user_location = ask_users_location("CITIZEN")
+                    print(f"Searching for neighborhood = {user_location}")
                     neighbor = neighborhood_finder(user_location, data_with_rainfall)
                     if neighbor:
                         risk_value = neighbor_risk_finder(neighbor, data_with_rainfall)
@@ -50,6 +55,8 @@ async def main():
             case 2:
                 print("Loading City Patrol Agent System...")
                 user_location = ask_users_location("AGENT")
+                while does_str_has_special_char(user_location):
+                    user_location = ask_users_location("AGENT")
                 neighborhood_finder(user_location, data_with_rainfall)
             case 3:
                 exiting_printer()

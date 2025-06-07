@@ -11,11 +11,7 @@ def neighborhood_finder(user_input: str, data: dict) -> str:
     if does_str_has_space(user_input):
         parsed_user_input = []
         splited_user_input = user_input.strip().split()
-        print(splited_user_input)
         for word in splited_user_input:
-            if not word.isalpha():
-                print(f"{RED}Invalid neighborhood name. DO NOT use special characters.{RESET}")
-                return ""
             word = word.upper()
             parsed_user_input.append(word)
         str_user_input = " ".join(parsed_user_input)

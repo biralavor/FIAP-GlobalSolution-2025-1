@@ -4,18 +4,18 @@ public class Reporte {
     private String descricao;
     private String data;
     private String hora;
-    private String localizacao;
-    private String tipo_reporte;
-    private int confiabilidade;
+    private Localizacao localizacao;
+    private String tipoReporte;
+    private Confiabilidade confiabilidade;
     private String status;
 
-    public Reporte(int idReporte, String descricao, String data, String hora, String localizacao, String tipo_reporte, int confiabilidade, String status) {
+    public Reporte(int idReporte, String descricao, String data, String hora, Localizacao localizacao2, String tipoReporte, Confiabilidade confiabilidade, String status) {
         this.idReporte = idReporte;
         this.descricao = descricao;
         this.data = data;
         this.hora = hora;
-        this.localizacao = localizacao;
-        this.tipo_reporte = tipo_reporte;
+        this.localizacao = localizacao2;
+        this.tipoReporte = tipoReporte;
         this.confiabilidade = confiabilidade;
         this.status = status;
     }
@@ -49,27 +49,27 @@ public class Reporte {
         this.hora = hora;
     }
 
-    public String getLocalizacao() {
+    public Localizacao getLocalizacao() {
         return localizacao;
     }
 
-    public void setLocalizacao(String localizacao) {
+    public void setLocalizacao(Localizacao localizacao) {
         this.localizacao = localizacao;
     }
 
-    public String getTipo_reporte() {
-        return tipo_reporte;
+    public String getTipoReporte() {
+        return tipoReporte;
     }
 
-    public void setTipo_reporte(String tipo_reporte) {
-        this.tipo_reporte = tipo_reporte;
+    public void setTipoReporte(String tipoReporte) {
+        this.tipoReporte = tipoReporte;
     }
 
-    public int getConfiabilidade() {
+    public Confiabilidade getConfiabilidade() {
         return confiabilidade;
     }
 
-    public void setConfiabilidade(int confiabilidade) {
+    public void setConfiabilidade(Confiabilidade confiabilidade) {
         this.confiabilidade = confiabilidade;
     }
 
@@ -80,4 +80,5 @@ public class Reporte {
     public void setStatus(String status) {
         this.status = status;
     }
+
 }

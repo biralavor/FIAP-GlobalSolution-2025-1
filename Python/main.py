@@ -9,6 +9,7 @@ from utils.printers import clear_screen
 from utils.validations import ask_valid_nbr
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
+from utils.loaders import neighborhood_list_loader
 from managers.neighbor_manager import neighborhood_manager
 from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
@@ -20,6 +21,7 @@ SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
     parsed_data = csv_parser(data)
+    neighborhood_list = neighborhood_list_loader(parsed_data)
     data_with_rainfall = rainfall_init(parsed_data)
     data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
     clear_screen()

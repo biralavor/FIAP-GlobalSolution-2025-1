@@ -4,7 +4,7 @@ from utils.validations import does_str_has_special_char
 
 def ask_users_location(user_type) -> str:
     print(f"Please {GREEN}{user_type}{RESET}, ", end="")
-    users_location = input(f"tell us your {YELLOW}neighborhood{RESET} name: {GREEN}").strip()
+    users_location = input(f"tell us your {YELLOW}neighborhood{RESET} name: {B_GRAY}('cancel' to exit) {GREEN}").strip()
     print(f"{RESET}")
     while does_str_has_special_char(users_location) or users_location.isnumeric():
         if users_location.isnumeric():
@@ -13,6 +13,9 @@ def ask_users_location(user_type) -> str:
     return users_location
 
 def neighborhood_finder(user_input: str, data: dict) -> str:
+    if user_input == "cancel":
+        print(f"{YELLOW}Operation cancelled.{RESET}")
+        exit(0)
     if does_str_has_space(user_input):
         parsed_user_input = []
         splited_user_input = user_input.strip().split()

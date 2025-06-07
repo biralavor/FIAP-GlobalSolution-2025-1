@@ -34,8 +34,8 @@ def sirena_title_printer():
 
 def main_menu_printer():
     print(f"{MAGENTA}Tell us who are you:{RESET}")
-    print(f"{YELLOW}1.{RESET} Citizen ?")
-    print(f"{YELLOW}2.{RESET} City Patrol Agent ?")
+    print(f"{YELLOW}1.{RESET} Citizen")
+    print(f"{YELLOW}2.{RESET} City Patrol Agent")
     print(f"{YELLOW}3.{RESET} Exit")
 
 def citizen_menu_printer():

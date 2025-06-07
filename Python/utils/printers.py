@@ -14,7 +14,7 @@ def invalid_choice():
     print(f"{RED}Invalid choice. Please try again.{RESET}")
 
 def exiting_printer():
-    print(f"{MAGENTA}>>> Exiting S.I.R.E.N.A. Goodbye and {GREEN}be safe!{RESET}")
+    print(f"{MAGENTA}Exiting S.I.R.E.N.A. >>> Goodbye and {GREEN}be safe!{RESET}")
     exit(0)
 
 def sirena_title_printer():

@@ -27,7 +27,7 @@ def neighborhood_finder(user_input: str, data: dict) -> str:
         str_user_input = user_input.upper()
     for key in data.keys():
         if str_user_input in data[key]:
-            print(f"{B_GRAY}S.I.R.E.N.A. ::: Neighborhood '{str_user_input}' from {key} district found in the database.{RESET}")
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Neighborhood '{str_user_input}' from {key} district found in the database.{RESET}")
             return str_user_input
     else:
         print(f"{RED}Neighborhood '{user_input}' not found in the database.{RESET}")
@@ -41,7 +41,7 @@ def district_finder(district: str, data: dict):
         return []
     district = district.upper()
     if data.get(district):
-        print(f"{B_GRAY}S.I.R.E.N.A. ::: District '{district}' found in the database.{RESET}")
+        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: District '{district}' found in the database.{RESET}")
         return data[district]
     else:
         print(f"{RED}District '{district}' not found in the database.{RESET}")
@@ -52,6 +52,6 @@ def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
         if user_location in neighbors:
             neighbor_idx = neighbors.index(user_location)
             risk_value = neighbors[neighbor_idx + 1]
-            print(f"{B_GRAY}S.I.R.E.N.A. ::: Rainfall risk for {user_location}: {risk_value}{RESET}")
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Rainfall risk for {user_location}: {risk_value}{RESET}")
             return risk_value
     return -1

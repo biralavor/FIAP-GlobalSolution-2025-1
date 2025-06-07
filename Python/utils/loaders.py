@@ -17,6 +17,12 @@ def csv_parser(data: list) -> dict:
         if district not in parsed_data:
             parsed_data[district] = []
         parsed_data[district].append(name)
-    # print(f"Neighborhoods in the database: {parsed_data}\n\n")
     return parsed_data
 
+def neighborhood_list_loader(parsed_data: dict) -> dict:
+    neighborhood_list = {}
+    for districts in parsed_data.items():
+        for neighborhood in districts[1]:
+            if neighborhood not in neighborhood_list:
+                neighborhood_list[neighborhood] = []
+    return neighborhood_list

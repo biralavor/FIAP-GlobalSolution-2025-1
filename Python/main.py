@@ -10,6 +10,7 @@ from utils.finders import ask_users_location
 from utils.finders import neighbor_risk_finder
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
+from generators.alerts import alert_generator
 from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
 
@@ -31,6 +32,7 @@ async def main():
                     neighbor = neighborhood_finder(user_location, data_with_rainfall)
                     if neighbor:
                         risk_value = neighbor_risk_finder(neighbor, data_with_rainfall)
+                        alert_generator(risk_value)
                         break
                 citizen_menu_printer()
                 while True:

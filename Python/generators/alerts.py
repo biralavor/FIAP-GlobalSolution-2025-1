@@ -1,46 +1,23 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+from utils.printers import evacuation_plan_printer
+from utils.printers import leave_now_printer
 
 def alert_generator(risk_value):
     if risk_value == 0:
-        print(f"\nNo risk detected. Enjoy your day!")
+        print(f"\n{GREEN}No risk detected. Enjoy your day!")
     elif risk_value == 1:
-        print(f"\nLow risk detected. Stay alert!")
+        print(f"\n{GREEN}Low risk detected. {MAGENTA}Stay alert!")
     elif risk_value == 2:
-        print(f"\nModerate risk detected. Take precautions!")
+        print(f"\n{YELLOW}Moderate risk detected. {MAGENTA}Take precautions!")
     elif risk_value == 3:
-        print(f"\nHigh risk detected. Evacuate if necessary!")
+        print(f"\n{RED}High risk detected. {MAGENTA}Evacuate if necessary!")
+        print(f"{MAGENTA}Here is your {YELLOW}EVACUATION PLAN:{RESET}")
+        evacuation_plan_printer()
     elif risk_value == 4:
-        print(f"\nEXTREME risk detected!")
-        print(f"{MAGENTA}Go to the higher altitude at 'B' location!{RESET}")
+        print(f"\n{RED}EXTREME risk detected!{RESET}")
+        print(f"{YELLOW}GO TO THE HIGHER ALTITUDE AT 'B' LOCATION NOW!{RESET}")
+        leave_now_printer()
         evacuation_plan_printer()
     else:
         print(f"Invalid risk value.")
 
-
-def evacuation_plan_printer():
-    print(f"{RED}")
-    print(" _      ______     __      ________   _   _  ______          __")
-    print("| |    |  ____|   /\\ \\    / /  ____| | \\ | |/ __ \\ \\        / /")
-    print("| |    | |__     /  \\ \\  / /| |__    |  \\| | |  | \\ \\  /\\  / / ")
-    print("| |    |  __|   / /\\ \\ \\/ / |  __|   | . ` | |  | |\\ \\/  \\/ /  ")
-    print("| |____| |____ / ____ \\  /  | |____  | |\\  | |__| | \\  /\\  /   ")
-    print("|______|______/_/    \\_\\/   |______| |_| \\_|\\____/   \\/  \\/    ")
-    print("---------------------------------------------------------------------")
-    print(f"{YELLOW}")
-    print("                                                   .@@%#%#+.")
-    print("                                                   .@@   #@-")
-    print("                                                   .@@###@+")
-    print("                                                   .@@..:#@=")
-    print("                                         ::-==::   .@@--=%@=")
-    print("                              =*###@@@@@@@@@@@@@    =====-.")
-    print("                              -+++++%@@@@@@@@@@*")
-    print("                                    +@@@@@@@@@*")
-    print("                               .-=#@@@@@@@@@@*")
-    print("                            -=%@@@@@@*-#@@@@=")
-    print("         .%@@-           :=#%@@@@@#-.    @@@@")
-    print("         *@-%%.      .:=#@@@@%*=.       *@@%:")
-    print("        -@* -@*      =@@@@%-.           *#=.")
-    print("       .%@###@@-      .===")
-    print("       *@=...:@%.")
-    print("      .==     -=-")
-    print(f"{RESET}")

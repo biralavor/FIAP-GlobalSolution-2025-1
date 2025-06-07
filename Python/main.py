@@ -1,5 +1,6 @@
 import asyncio
 
+from utils.finders import ask_users_location
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
 from utils.printers import citizen_menu_printer
@@ -51,9 +52,20 @@ async def main():
                                 invalid_choice()
             case 2:
                 user_type = "AGENT"
-                agent_menu_printer()
-                incident_manager(neighborhood_list)
-                exit(0)
+                while True:
+                    agent_menu_printer()
+                    agent_choice = ask_valid_nbr()
+                    match agent_choice:
+                        case 1:
+                            agent_location = ask_users_location(user_type)
+                            print(f"Taking you to the nearest incident from {agent_location}...")
+                        case 2:
+                            print("Showing all incidents in the neighborhood...")
+                            incident_manager(neighborhood_list)
+                        case 3:
+                            break
+                        case _:
+                            invalid_choice()
             case 3:
                 exiting_printer()
             case _:

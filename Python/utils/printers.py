@@ -64,6 +64,22 @@ def neighborhood_printer(neighborhoods: dict):
     else:
         print(f"{RED}No neighborhoods found.{RESET}")
 
+def incidents_table_printer(incident_dict: dict) -> None:
+    print(f"{YELLOW}-{RESET}" * 55)
+    print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}RISK VALUE{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
+    print(f"{YELLOW}-{RESET}" * 55)
+    for location, values in incident_dict.items():
+        risk_value = values[0]
+        confidence = values[1]
+        if confidence == "High":
+            confidence = f"{RED}{confidence}{RESET}"
+            location = f"{RED}{location}{RESET}"
+        elif confidence == "Med":
+            confidence = f"{YELLOW}{confidence}{RESET}"
+            location = f"{YELLOW}{location}{RESET}"
+        print(f"|   {confidence} \t| \t{risk_value} \t| {location}\t|")
+        print(f"{B_GRAY}-{RESET}" * 50)
+
 def leave_now_printer():
     print(f"{RED}")
     print(" _      ______     __      ________   _   _  ______          __  _ ")

@@ -26,7 +26,7 @@ async def incident_simulator(neighborhood_list: dict) -> dict:
             if incident >= 15:
                 confidence_level = "High"
             elif incident >= 10:
-                confidence_level = "Medium"
+                confidence_level = "Med"
             elif incident >= 5:
                 confidence_level = "Low"
             else:

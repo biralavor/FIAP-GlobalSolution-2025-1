@@ -66,10 +66,10 @@ def neighborhood_printer(neighborhoods: dict):
 
 def incidents_table_printer(incident_dict: dict) -> None:
     print(f"{YELLOW}-{RESET}" * 55)
-    print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}RISK VALUE{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
+    print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}INCIDENTS{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
     print(f"{YELLOW}-{RESET}" * 55)
     for location, values in incident_dict.items():
-        risk_value = values[0]
+        incidents_value = values[0]
         confidence = values[1]
         if confidence == "High":
             confidence = f"{RED}{confidence}{RESET}"
@@ -77,8 +77,26 @@ def incidents_table_printer(incident_dict: dict) -> None:
         elif confidence == "Med":
             confidence = f"{YELLOW}{confidence}{RESET}"
             location = f"{YELLOW}{location}{RESET}"
-        print(f"|   {confidence} \t| \t{risk_value} \t| {location}\t|")
+        print(f"|   {confidence} \t| \t{incidents_value} \t| {location}\t|")
         print(f"{B_GRAY}-{RESET}" * 50)
+
+def high_risk_district_printer(agent_location: str, data_with_rainfall: dict, neighborhood_list: dict) -> None:
+    print(f"{YELLOW}-{RESET}" * 55)
+    print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}INCIDENTS{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
+    print(f"{YELLOW}-{RESET}" * 55)
+    for district, all_neighbors in data_with_rainfall.items():
+        for neighbor in all_neighbors:
+            if agent_location == neighbor:
+                district_list = data_with_rainfall[district]
+                for each_neighbor in district_list:
+                    if each_neighbor in neighborhood_list:
+                        incidents_value = neighborhood_list[each_neighbor][0]
+                        confidence = neighborhood_list[each_neighbor][1]
+                        if confidence == "High":
+                            confidence = f"{RED}{confidence}{RESET}"
+                            each_neighbor = f"{RED}{each_neighbor}{RESET}"
+                            print(f"|   {confidence} \t| \t{incidents_value} \t| {each_neighbor}\t|")
+                            print(f"{B_GRAY}-{RESET}" * 50)
 
 def leave_now_printer():
     print(f"{RED}")

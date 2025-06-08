@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA4LIFE - Contato</title>
+    <meta name="description" content="Entre em contato com a equipe DATA4LIFE para dúvidas, sugestões ou parcerias.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div id="header-component"></div>
+    <main class="main">
+        <section class="notifications-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2 class="section-title">Contato</h2>
+                    <p class="section-description">
+                        Fale com a equipe DATA4LIFE! Utilize o formulário abaixo para dúvidas, sugestões, parcerias ou para relatar problemas. Retornaremos o mais breve possível.
+                    </p>
+                    <form class="contato-form" style="max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:1.2rem;">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        <button type="submit" class="cta-button">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <img src="images/inundacao-cidadao-01.png"
+            alt="Pessoa em área alagada enviando mensagem pelo celular"
+            class="img-content">
+        </section>
+    </main>
+    <div id="footer-component"></div>
+    <script src="js/script.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+    document.querySelector('.contato-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Mensagem enviada com sucesso!');
+        this.reset();
+    });
+    </script>
+</body>
+</html>

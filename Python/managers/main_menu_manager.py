@@ -1,3 +1,6 @@
+from utils.printers import clear_screen
+from utils.loaders import csv_loader
+from utils.loaders import csv_parser
 from managers.incident_manager import incident_manager
 from managers.neighbor_manager import neighborhood_manager
 from utils.printers import citizen_menu_printer
@@ -10,7 +13,31 @@ from utils.validations import is_agent_in_high_risk_district
 from utils.validations import ask_valid_nbr
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
 
-def citizen_manager(data_with_rainfall: dict, neighborhood_list: dict):
+SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
+
+def data_init_manager() -> dict:
+    clear_screen()
+    data = csv_loader(SP_NEIGHBORHOODS)
+    if not data:
+        print(f"Error: No data found in the CSV file.")
+        exit(1)
+    parsed_data = csv_parser(data)
+    if not parsed_data:
+        print(f"Error: Failed to parse the CSV data.")
+        exit(1)
+    return parsed_data
+
+def citizen_submenu_manager(data_with_rainfall: dict, neighborhood_list: dict) -> None:
+    """
+    Brief:
+        This function manages the citizen's submenu, allowing them to report incidents
+        and view danger levels in their neighborhood.
+    Args:
+        `data_with_rainfall` (dict): A dictionary containing rainfall data and neighborhood information.
+        `neighborhood_list` (dict): A dictionary containing neighborhoods and their incident values.
+    Returns:
+        `None`
+    """
     user_type = "CITIZEN"
     first_time_report = True
     user_location = ask_users_location(user_type)
@@ -35,7 +62,17 @@ def citizen_manager(data_with_rainfall: dict, neighborhood_list: dict):
                 case _:
                     invalid_choice()
 
-def agent_manager(data_with_rainfall, neighborhood_list):
+def agent_submenu_manager(data_with_rainfall: dict, neighborhood_list: dict) -> None:
+    """
+    Brief:
+        This function manages the agent's submenu, allowing them to view incidents
+        in high-risk districts and manage incidents.
+    Args:
+        `data_with_rainfall` (dict): A dictionary containing rainfall data and neighborhood information.
+        `neighborhood_list` (dict): A dictionary containing neighborhoods and their incident values.
+    Returns:
+        `None`
+    """
     user_type = "AGENT"
     agent_first_loop = True
     while True:

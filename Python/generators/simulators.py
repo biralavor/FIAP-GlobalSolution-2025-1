@@ -9,7 +9,9 @@ def rainfall_init(parsed_data: dict) -> dict:
             data_with_rainfall[district].extend([neighbor_name, 0])
     return data_with_rainfall
 
-async def extreme_rainfall_risk_simulator(data_with_rainfall: dict) -> dict:
+async def extreme_rainfall_risk_simulator(parsed_data: dict) -> dict:
+    data_with_rainfall = {}
+    data_with_rainfall = rainfall_init(parsed_data)
     while True:
         for district, neighbors in data_with_rainfall.items():
             for idx in range(0, len(neighbors), 2):

@@ -1,5 +1,49 @@
 @startuml
-class Ocorrencia {
+class br.com.data4lives.sirena.reports.ReporteList {
+- Reporte[] listaReportes
+- int quantidadeReportes
++ <<Create>> ReporteList(int)
++ Reporte[] getReportes()
++ void setReportes(Reporte[])
++ int getQuantidadeReportes()
++ void addToReporteList(Reporte)
++ void reporteListPrinter()
+}
+
+
+class br.com.data4lives.sirena.autoridades.Bombeiro {
+- String especialidade
+- String unidade
+- String credencialBombeiro
++ <<Create>> Bombeiro(String,String,String,String,Localizacao,String,String,String)
++ String getEspecialidade()
++ void setEspecialidade(String)
++ String getUnidade()
++ void setUnidade(String)
++ String getCredencialBombeiro()
++ void setCredencialBombeiro(String)
++ String getTipoAutoridade()
++ void autoridadePrinter()
+}
+
+
+class br.com.data4lives.sirena.autoridades.Policial {
+- String patente
+- String unidade
+- String credencialPolicial
++ <<Create>> Policial(String,String,String,String,Localizacao,String,String,String)
++ String getPatente()
++ void setPatente(String)
++ String getUnidade()
++ void setUnidade(String)
++ String getCredencialPolicial()
++ void setCredencialPolicial(String)
++ String getTipoAutoridade()
++ void autoridadePrinter()
+}
+
+
+class br.com.data4lives.sirena.Ocorrencia {
 - Localizacao localOcorrencia
 - String horaInicioOcorrencia
 - String horaFimOcorrencia
@@ -29,39 +73,7 @@ class Ocorrencia {
 }
 
 
-class Bombeiro {
-- String especialidade
-- String unidade
-- String credencialBombeiro
-+ <<Create>> Bombeiro(String,String,String,String,Localizacao,String,String,String)
-+ String getEspecialidade()
-+ void setEspecialidade(String)
-+ String getUnidade()
-+ void setUnidade(String)
-+ String getCredencialBombeiro()
-+ void setCredencialBombeiro(String)
-+ String getTipoAutoridade()
-+ void autoridadePrinter()
-}
-
-
-class Policial {
-- String patente
-- String unidade
-- String credencialPolicial
-+ <<Create>> Policial(String,String,String,String,Localizacao,String,String,String)
-+ String getPatente()
-+ void setPatente(String)
-+ String getUnidade()
-+ void setUnidade(String)
-+ String getCredencialPolicial()
-+ void setCredencialPolicial(String)
-+ String getTipoAutoridade()
-+ void autoridadePrinter()
-}
-
-
-class Confiabilidade {
+class br.com.data4lives.sirena.Confiabilidade {
 - int idConfiabilidade
 - String grauConfiabilidade
 + <<Create>> Confiabilidade()
@@ -73,20 +85,7 @@ class Confiabilidade {
 }
 
 
-class Localizacao {
-- int idLocalizacao
-- String nomeRua
-- String coordenadas
-+ int getIdLocalizacao()
-+ void setIdLocalizacao(int)
-+ String getNomeRua()
-+ void setNomeRua(String)
-+ String getCoordenadas()
-+ void setCoordenadas(String)
-}
-
-
-class Autoridade {
+class br.com.data4lives.sirena.autoridades.Autoridade {
 - String nome
 - String cpf
 - String email
@@ -110,23 +109,20 @@ class Autoridade {
 }
 
 
-class ReporteList {
-- Reporte[] listaReportes
-- int quantidadeReportes
-+ <<Create>> ReporteList(int)
-+ Reporte[] getReportes()
-+ void setReportes(Reporte[])
-+ int getQuantidadeReportes()
-+ void addToReporteList(Reporte)
-+ void reporteListPrinter()
+class br.com.data4lives.sirena.Localizacao {
+- int idLocalizacao
+- String nomeRua
+- String coordenadas
++ int getIdLocalizacao()
++ void setIdLocalizacao(int)
++ String getNomeRua()
++ void setNomeRua(String)
++ String getCoordenadas()
++ void setCoordenadas(String)
 }
 
 
-class Main {
-+ {static} void main(String[])
-}
-
-class Reporte {
+class br.com.data4lives.sirena.reports.Reporte {
 - int idReporte
 - String descricao
 - String data
@@ -161,7 +157,11 @@ class Reporte {
 }
 
 
-class Prioridade {
+class Main {
++ {static} void main(String[])
+}
+
+class br.com.data4lives.sirena.Prioridade {
 ~ int idPrioridade
 ~ String grauPrioridade
 + <<Create>> Prioridade()
@@ -175,6 +175,6 @@ class Prioridade {
 
 
 
-Autoridade <|-- Bombeiro
-Autoridade <|-- Policial
+br.com.data4lives.sirena.autoridades.Autoridade <|-- br.com.data4lives.sirena.autoridades.Bombeiro
+br.com.data4lives.sirena.autoridades.Autoridade <|-- br.com.data4lives.sirena.autoridades.Policial
 @enduml

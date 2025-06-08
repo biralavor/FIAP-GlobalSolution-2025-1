@@ -63,7 +63,11 @@ public class Main {
         bombeiro2.autoridadePrinter();
 
         // Criando ocorrências
-        Ocorrencia ocorrencia1 = new Ocorrencia(localizacao1, confiabilidade, prioridade, policial1, "Em Andamento");
-        Ocorrencia ocorrencia2 = new Ocorrencia(localizacao2, confiabilidade, prioridade, bombeiro1, "Concluída");
+        Ocorrencia ocorrencia1 = new Ocorrencia(localizacao1, "11:20", confiabilidade, prioridade, new Autoridade[]{policial1, bombeiro1});
+        Ocorrencia ocorrencia2 = new Ocorrencia(localizacao2, "12:30", confiabilidade, prioridade, new Autoridade[]{policial2, bombeiro2});
+
+        ocorrencia1.atenderOcorrencia(reporte1, "11:30", new Autoridade[]{policial1, bombeiro1});
+        ocorrencia2.atenderOcorrencia(reporte3, "12:45", new Autoridade[]{policial2, bombeiro2});
+        ocorrencia2.ocorrenciaPrinter();
     }
 }

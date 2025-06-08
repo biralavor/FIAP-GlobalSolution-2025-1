@@ -9,7 +9,7 @@ public class Ocorrencia {
     private boolean flagAtendida;
     private String status;
 
-    public Ocorrencia (Localizacao localOcorrencia, String horaInicioOcorrencia, Confiabilidade confiabilidade, Prioridade prioridade, Autoridade[] autoridade, String status){
+    public Ocorrencia (Localizacao localOcorrencia, String horaInicioOcorrencia, Confiabilidade confiabilidade, Prioridade prioridade, Autoridade[] autoridade){
         this.localOcorrencia = localOcorrencia;
         this.horaInicioOcorrencia = horaInicioOcorrencia;
         this.horaFimOcorrencia = null; 
@@ -63,21 +63,24 @@ public class Ocorrencia {
         this.status = status;
     }
     
-    public void atenderOcorrencia(Reporte reporte, String horaInicioOcorrencia) {
+    public void atenderOcorrencia(Reporte reporte, String horaAtendimento, Autoridade[] autoridadesResponsaveis) {
         this.localOcorrencia = reporte.getLocalizacao();
         this.confiabilidade = reporte.getConfiabilidade();
         this.prioridade = reporte.getPrioridade();
-        if (this.prioridade.equals("Muito Alta") || this.prioridade.equals("Alta")) {
-            this.autoridade = new Autoridade[2];
-            setHoraInicioOcorrencia(horaInicioOcorrencia);
-            this.status = "Em Atendimento";
-        } else if (this.prioridade.equals("Média")) {
-            this.autoridade = new Autoridade[1];
-            this.status = "Em Atendimento";
-        } else if (this.prioridade.equals("Baixa") && this.confiabilidade.getGrauConfiabilidade().equals("baixa")) {
-            this.status = "Em Análise";
+        this.autoridade = autoridadesResponsaveis;
+        setHoraInicioOcorrencia(horaAtendimento);
+
+        String grauPrioridade = this.prioridade.getGrauPrioridade();
+        String grauConfiabilidade = this.confiabilidade.getGrauConfiabilidade();
+
+        if (grauPrioridade.equals("Muito Alta") || grauPrioridade.equals("Alta")) {
+            status = "Em Atendimento";
+        } else if (grauPrioridade.equals("Média")) {
+            status = "Em Atendimento";
+        } else if (grauPrioridade.equals("Baixa")) {
+            status = "Em Análise";
         } else {
-            this.status = "Aguardando Atendimento";
+            status = "Aguardando Atendimento";
         }
     }
 
@@ -85,5 +88,20 @@ public class Ocorrencia {
         this.horaFimOcorrencia = horaFimOcorrencia;
         this.flagAtendida = true;
         this.status = "Finalizada";
+    }
+
+    public void ocorrenciaPrinter() {
+        System.out.println("Localização da Ocorrência: " + localOcorrencia.getNomeRua());
+        System.out.println("Hora de Início: " + horaInicioOcorrencia);
+        System.out.println("Hora de Fim: " + (horaFimOcorrencia != null ? horaFimOcorrencia : "Em andamento"));
+        System.out.println("Confiabilidade: " + confiabilidade.getGrauConfiabilidade());
+        System.out.println("Prioridade: " + prioridade.getGrauPrioridade());
+        System.out.print("Autoridades Envolvidas: ");
+        for (Autoridade a : autoridade) {
+            if (a != null) {
+                System.out.println(a.getNome() + " (" + a.getTipoAutoridade() + ")");
+            }
+        }
+        System.out.println("\nStatus da Ocorrência: " + status);
     }
 }

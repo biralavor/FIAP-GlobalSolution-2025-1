@@ -4,10 +4,10 @@ public class Autoridade {
     private String cpf;
     private String email;
     private String contato;
-    private String endereco;
-    
+    private Localizacao endereco;
+    private String tipoAutoridade;
 
-    public Autoridade(String nome, String cpf, String email, String contato, String endereco) {
+    public Autoridade(String nome, String cpf, String email, String contato, Localizacao endereco) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
@@ -39,10 +39,27 @@ public class Autoridade {
     public void setContato(String contato) {
         this.contato = contato;
     }
-    public String getEndereco() {
+    public Localizacao getEndereco() {
         return endereco;
     }
-    public void setEndereco(String endereco) {
+    public void setEndereco(Localizacao endereco) {
         this.endereco = endereco;
+    }
+    public String getTipoAutoridade() {
+        return "Autoridade Pública";
+    }
+    public void setTipoAutoridade(String tipoAutoridade) {
+        this.tipoAutoridade = tipoAutoridade;
+    }
+
+    public void autoridadePrinter() {
+        System.out.println("Autoridade{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
+                ", contato='" + contato + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", tipoAutoridade='" + tipoAutoridade + '\'' +
+                '}');
     }
 }

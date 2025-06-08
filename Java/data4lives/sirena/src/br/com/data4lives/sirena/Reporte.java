@@ -99,5 +99,18 @@ public class Reporte {
     public void setPrioridade(Prioridade prioridade) {
         this.prioridade = prioridade;
     }
+
+    public void reportePrinter() {
+        System.out.println("===========================================");
+        System.out.println("ID do Reporte: " + getIdReporte());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Data: " + getData());
+        System.out.println("Hora: " + getHora());
+        System.out.println("Localização: " + getLocalizacao().getNomeRua());
+        System.out.println("Tipo de Reporte: " + getTipoReporte());
+        System.out.println("Pessoa em Perigo: " + isPessoaEmPerigo());
+        System.out.println("Via Intransitável: " + isViaIntransitavel());
+        System.out.println("===========================================");
+    }
 }
 

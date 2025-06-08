@@ -4,8 +4,8 @@ public class Bombeiro extends Autoridade {
     private String unidade;
     private String credencialBombeiro;
 
-    public Bombeiro(String nome, String credencialBombeiro, String email, String contato, String endereco, String especialidade, String unidade) {
-        super(nome, credencialBombeiro, email, contato, endereco);
+    public Bombeiro(String nome, String cpf, String email, String contato, Localizacao endereco, String especialidade, String unidade, String credencialBombeiro) {
+        super(nome, cpf, email, contato, endereco);
         this.especialidade = especialidade;
         this.unidade = unidade;
         this.credencialBombeiro = credencialBombeiro;
@@ -35,4 +35,21 @@ public class Bombeiro extends Autoridade {
         this.credencialBombeiro = credencialBombeiro;
     }
 
+    @Override
+    public String getTipoAutoridade() {
+        return "Bombeiro";
+    }
+    @Override
+    public void autoridadePrinter() {
+        System.out.println("Bombeiro{" +
+                "nome='" + getNome() + '\'' +
+                ", cpf='" + getCpf() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", contato='" + getContato() + '\'' +
+                ", endereco='" + getEndereco() + '\'' +
+                ", especialidade='" + especialidade + '\'' +
+                ", unidade='" + unidade + '\'' +
+                ", credencialBombeiro='" + credencialBombeiro + '\'' +
+                '}');
+    }
 }

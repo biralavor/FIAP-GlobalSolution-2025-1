@@ -4,8 +4,8 @@ public class Policial extends Autoridade{
     private String unidade;
     private String credencialPolicial;
 
-    public Policial(String nome, String credencialPolicial, String email, String contato, String endereco, String patente, String unidade) {
-        super(nome, credencialPolicial, email, contato, endereco);
+    public Policial(String nome, String cpf, String email, String contato, Localizacao endereco, String patente, String unidade, String credencialPolicial) {
+        super(nome, cpf, email, contato, endereco);
         this.patente = patente;
         this.unidade = unidade;
         this.credencialPolicial = credencialPolicial;
@@ -34,4 +34,23 @@ public class Policial extends Autoridade{
     public void setCredencialPolicial(String credencialPolicial) {
         this.credencialPolicial = credencialPolicial;
     }
+
+    @Override
+    public String getTipoAutoridade() {
+        return "Policial";
+    }
+    @Override
+    public void autoridadePrinter() {
+        System.out.println("Policial{" +
+                "nome='" + getNome() + '\'' +
+                ", cpf='" + getCpf() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", contato='" + getContato() + '\'' +
+                ", endereco='" + getEndereco() + '\'' +
+                ", patente='" + patente + '\'' +
+                ", unidade='" + unidade + '\'' +
+                ", credencialPolicial='" + credencialPolicial + '\'' +
+                '}');
+    }
+    
 }

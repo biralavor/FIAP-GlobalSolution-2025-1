@@ -1,3 +1,8 @@
+package br.com.data4lives.sirena;
+
+import br.com.data4lives.sirena.autoridades.Autoridade;
+import br.com.data4lives.sirena.reports.Reporte;
+
 public class Ocorrencia {
 
     private Localizacao localOcorrencia;

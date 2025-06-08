@@ -1,3 +1,5 @@
+package br.com.data4lives.sirena;
+
 public class Localizacao {
 
     private int idLocalizacao;

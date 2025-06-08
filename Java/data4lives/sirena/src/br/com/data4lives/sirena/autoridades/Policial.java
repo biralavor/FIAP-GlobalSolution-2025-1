@@ -1,4 +1,8 @@
-public class Policial extends Autoridade{
+package br.com.data4lives.sirena.autoridades;
+
+import br.com.data4lives.sirena.Localizacao;
+
+public class Policial extends Autoridade {
 
     private String patente;
     private String unidade;

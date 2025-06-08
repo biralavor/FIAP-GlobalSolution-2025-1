@@ -23,8 +23,10 @@ public class Prioridade {
 
     public void defineGrauPrioridade(boolean pessoaEmPerigo, boolean viaIntransitavel) {
         if (pessoaEmPerigo && viaIntransitavel) {
+            grauPrioridade = "Muito Alta";
+        } else if (pessoaEmPerigo){
             grauPrioridade = "Alta";
-        } else if (pessoaEmPerigo || viaIntransitavel) {
+        }else if (viaIntransitavel) {
             grauPrioridade = "Média";
         } else {
             grauPrioridade = "Baixa";

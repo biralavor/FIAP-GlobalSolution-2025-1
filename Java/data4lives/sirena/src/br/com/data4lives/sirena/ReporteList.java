@@ -28,32 +28,6 @@ public class ReporteList {
         }
     }
 
-    public void calculoConfiabilidade() {
-        for (int indice = 0; indice < quantidadeReportes; indice++) {
-            Reporte reporte = listaReportes[indice];
-            String localizacao = reporte.getLocalizacao().getNomeRua();
-            String tipoReporte = reporte.getTipoReporte();
-            int recorrencia = 0;
-            for (int indiceComparador = 0; indiceComparador < quantidadeReportes; indiceComparador++) {
-                Reporte comparador = listaReportes[indiceComparador];
-                if (comparador.getLocalizacao().getNomeRua().equals(localizacao) && 
-                    comparador.getTipoReporte().equals(tipoReporte)) {
-                    recorrencia++;
-                }
-            }
-            System.out.println("repeticoes: " + recorrencia);
-            Confiabilidade confiabilidadeIndividual = new Confiabilidade();
-            if (recorrencia < 2) {
-                confiabilidadeIndividual.setGrauConfiabilidade("Baixa");
-            } else if (recorrencia >= 2 && recorrencia <= 4) {
-                confiabilidadeIndividual.setGrauConfiabilidade("Média");
-            } else {
-                confiabilidadeIndividual.setGrauConfiabilidade("Alta");
-            }
-            reporte.setConfiabilidade(confiabilidadeIndividual);
-        }
-    }
-
     public void reporteListPrinter() {
         for (int indice = 0; indice < quantidadeReportes; indice++) {
             Reporte reporte = listaReportes[indice];

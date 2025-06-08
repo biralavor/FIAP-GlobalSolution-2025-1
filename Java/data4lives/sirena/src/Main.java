@@ -1,3 +1,10 @@
+import br.com.data4lives.sirena.*;
+import br.com.data4lives.sirena.autoridades.Autoridade;
+import br.com.data4lives.sirena.autoridades.Bombeiro;
+import br.com.data4lives.sirena.autoridades.Policial;
+import br.com.data4lives.sirena.reports.Reporte;
+import br.com.data4lives.sirena.reports.ReporteList;
+
 public class Main {
     public static void main(String[] args){
 

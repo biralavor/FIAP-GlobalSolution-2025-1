@@ -1,35 +1,66 @@
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+from utils.validations import does_str_has_space
+from utils.validations import does_str_has_special_char
 
-def ask_users_location() -> str:
-    users_location = input(f"Please, tell us your {YELLOW}neighborhood{RESET} name: {GREEN}").strip()
+def ask_users_location(user_type) -> str:
+    print(f"Please {GREEN}{user_type}{RESET}, ", end="")
+    users_location = input(f"tell us your {YELLOW}neighborhood{RESET} name: {B_GRAY}('cancel' to exit) {GREEN}").strip()
     print(f"{RESET}")
-    return users_location
+    while does_str_has_special_char(users_location) or users_location.isnumeric():
+        if users_location.isnumeric():
+            print(f"{RED}Numbers are NOT allowed for locations.{RESET}")
+        users_location = ask_users_location(user_type)
+    return users_location.upper()
 
-def neighborhood_finder(neighbor: str, data: dict):
-    if neighbor.isalpha():
-        neighbor = neighbor.strip()
+def user_input_str_parser(user_input: str) -> str:
+    if does_str_has_space(user_input):
+        parsed_user_input = []
+        splited_user_input = user_input.strip().split()
+        for word in splited_user_input:
+            word = word.upper()
+            parsed_user_input.append(word)
+        str_user_input = " ".join(parsed_user_input)
     else:
-        print(f"{RED}Invalid neighborhood name. DO NOT use special characters.{RESET}")
-        return []
-    neighbor = neighbor.upper()
+        str_user_input = user_input.upper()
+    return str_user_input
+
+def neighborhood_finder(user_input: str, data: dict) -> str:
+    if user_input == "CANCEL":
+        print(f"{YELLOW}Operation cancelled.{RESET}")
+        exit(0)
+    parsed_input = user_input_str_parser(user_input)
     for key in data.keys():
-        if neighbor in data[key]:
-            print(f"{GREEN}>>>>>>>>>>>>> Neighborhood '{neighbor}' from {key} district found in the database.{RESET}")
-            return neighbor            
+        if parsed_input in data[key]:
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Neighborhood '{parsed_input}' from {key} district found in the database.{RESET}")
+            return parsed_input
     else:
-        print(f"{RED}Neighborhood '{neighbor}' not found in the database.{RESET}")
+        print(f"{RED}Neighborhood '{user_input}' not found in the database.{RESET}")
+        return ""
+
+def district_finder(user_input: str, data: dict):
+    parsed_input = user_input_str_parser(user_input)
+    if data.get(parsed_input):
+        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: District '{parsed_input}' found in the database.{RESET}")
+        return data[parsed_input]
+    else:
+        print(f"{RED}District '{parsed_input}' not found in the database.{RESET}")
         return []
 
-def district_finder(district: str, data: dict):
-    if district.isalpha():
-        district = district.strip()
-    else:
-        print(f"{RED}Invalid district name. DO NOT use special characters.{RESET}")
-        return []
-    district = district.upper()
-    if data.get(district):
-        print(f"{GREEN}>>>>>>>>>>>>> District '{district}' found in the database.{RESET}")
-        return data[district]
-    else:
-        print(f"{RED}District '{district}' not found in the database.{RESET}")
-        return []
+def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
+    for district, neighbors in data_with_rainfall.items():
+        if user_location in neighbors:
+            neighbor_idx = neighbors.index(user_location)
+            risk_value = neighbors[neighbor_idx + 1]
+            risk_kind = "No Risk"
+            if risk_value == 1:
+                risk_kind = "Low"
+            elif risk_value == 2:
+                risk_kind = "Medium"
+            elif risk_value == 3:
+                risk_kind = "High"
+            elif risk_value == 4:
+                risk_kind = "Extreme"
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Rainfall risk for {user_location}: {risk_kind}{RESET}")
+            return risk_value
+    return -1
+

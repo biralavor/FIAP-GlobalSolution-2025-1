@@ -46,8 +46,10 @@ def agent_manager(data_with_rainfall, neighborhood_list):
             case 1:
                 agent_location = ask_users_location(user_type)
                 print(f"{MAGENTA}Taking you to the nearest incident from {YELLOW}{agent_location}...{RESET}")
-                is_agent_in_high_risk_district(agent_location, data_with_rainfall, neighborhood_list)
-                high_risk_district_printer(agent_location, data_with_rainfall, neighborhood_list)
+                if is_agent_in_high_risk_district(agent_location, data_with_rainfall, neighborhood_list):
+                    high_risk_district_printer(agent_location, data_with_rainfall, neighborhood_list)
+                else:
+                    print(f"{MAGENTA}Agent, your are {YELLOW}NOT{MAGENTA} in a high-risk district.{RESET}")
             case 2:
                 incident_manager(neighborhood_list)
             case 3:

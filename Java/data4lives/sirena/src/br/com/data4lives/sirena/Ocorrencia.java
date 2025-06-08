@@ -91,6 +91,7 @@ public class Ocorrencia {
     }
 
     public void ocorrenciaPrinter() {
+        System.out.println("////////////// OCORRENCIA ////////////////////");
         System.out.println("Localização da Ocorrência: " + localOcorrencia.getNomeRua());
         System.out.println("Hora de Início: " + horaInicioOcorrencia);
         System.out.println("Hora de Fim: " + (horaFimOcorrencia != null ? horaFimOcorrencia : "Em andamento"));
@@ -103,5 +104,6 @@ public class Ocorrencia {
             }
         }
         System.out.println("\nStatus da Ocorrência: " + status);
+        System.out.println("//////////////////////////////////////////////\n");
     }
 }

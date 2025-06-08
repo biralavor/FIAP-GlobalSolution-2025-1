@@ -40,7 +40,7 @@ public class Confiabilidade {
                     recorrencia++;
                 }
             }
-            System.out.println("repeticoes: " + recorrencia);
+            // System.out.println("repeticoes: " + recorrencia);
             Confiabilidade confiabilidadeIndividual = new Confiabilidade();
             if (recorrencia < 2) {
                 confiabilidadeIndividual.setGrauConfiabilidade("Baixa");

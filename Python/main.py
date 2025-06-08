@@ -1,30 +1,21 @@
 import asyncio
 
-from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
-
-
-from utils.finders import ask_users_location
-from utils.validations import is_agent_in_high_risk_district
+from managers.main_menu_manager import citizen_manager
+from managers.main_menu_manager import agent_manager
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
-from utils.printers import citizen_menu_printer
-from utils.printers import agent_menu_printer
 from utils.printers import invalid_choice
 from utils.printers import exiting_printer
 from utils.printers import clear_screen
-from utils.printers import high_risk_district_printer
-from utils.validations import ask_valid_nbr
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
 from utils.loaders import neighborhood_list_loader
-from managers.neighbor_manager import neighborhood_manager
+from utils.validations import ask_valid_nbr
 from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
 from generators.simulators import incident_simulator
-from managers.incident_manager import incident_manager
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
-
 
 async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
@@ -40,42 +31,9 @@ async def main():
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                user_type = "CITIZEN"
-                risk_value = neighborhood_manager(user_type, data_with_rainfall)
-                if risk_value < 4:
-                    while True:
-                        citizen_loop = True
-                        citizen_menu_printer(citizen_loop)
-                        citizen_loop = False
-                        citizen_choice = ask_valid_nbr()
-                        match citizen_choice:
-                            case 1:
-                                print("Reporting Incident...")
-                            case 2:
-                                print("Checking if you are in danger...")
-                            case 3:
-                                break
-                            case _:
-                                invalid_choice()
+                citizen_manager(data_with_rainfall)
             case 2:
-                user_type = "AGENT"
-                agent_loop = True
-                while True:
-                    agent_menu_printer(agent_loop)
-                    agent_loop = False
-                    agent_choice = ask_valid_nbr()
-                    match agent_choice:
-                        case 1:
-                            agent_location = ask_users_location(user_type)
-                            print(f"Taking you to the nearest incident from {YELLOW}{agent_location}...{RESET}")
-                            is_agent_in_high_risk_district(agent_location, data_with_rainfall, neighborhood_list)
-                            high_risk_district_printer(agent_location, data_with_rainfall, neighborhood_list)
-                        case 2:
-                            incident_manager(neighborhood_list)
-                        case 3:
-                            break
-                        case _:
-                            invalid_choice()
+                agent_manager(data_with_rainfall, neighborhood_list)
             case 3:
                 exiting_printer()
             case _:

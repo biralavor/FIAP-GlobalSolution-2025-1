@@ -13,13 +13,22 @@
         <section class="dashboard-section">
             <div class="container">
                 <h2 class="section-title">Painel de Incidentes</h2>
-                <table class="dashboard-table">
+                <div class="dashboard-filter-bar">
+                    <label for="filtroUrgencia">Filtrar por prioridade:</label>
+                    <select id="filtroUrgencia" onchange="filtrarUrgencia()">
+                        <option value="">Todas</option>
+                        <option value="Urgente">Urgente</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                    </select>
+                </div>
+                <table class="dashboard-table" id="incidentesTable">
                     <thead>
                         <tr>
-                            <th>Incidente</th>
-                            <th>Confiabilidade</th>
-                            <th>Prioridade</th>
-                            <th>Localização</th>
+                            <th onclick="sortTable(0)">Incidente</th>
+                            <th onclick="sortTable(1)">Confiabilidade</th>
+                            <th onclick="sortTable(2)">Prioridade</th>
+                            <th onclick="sortTable(3)">Localização</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,42 +42,121 @@
                             <td>Deslizamento</td>
                             <td>Média</td>
                             <td><span class="urgencia-media">Alta</span></td>
-                            <td>Av. Central, RJ</td>
+                            <td>Av. Central, SP</td>
                         </tr>
                         <tr>
                             <td>Alagamento</td>
                             <td>Baixa</td>
                             <td><span class="urgencia-baixa">Média</span></td>
-                            <td>Rua 7 de Setembro, BH</td>
+                            <td>Rua 7 de Setembro, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Queda de árvore</td>
+                            <td>Alta</td>
+                            <td><span class="urgencia-media">Alta</span></td>
+                            <td>Av. Paulista, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Desabamento</td>
+                            <td>Alta</td>
+                            <td><span class="urgencia-alta">Urgente</span></td>
+                            <td>Rua Augusta, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Incêndio</td>
+                            <td>Média</td>
+                            <td><span class="urgencia-alta">Urgente</span></td>
+                            <td>Rua Frei Caneca, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Deslizamento</td>
+                            <td>Baixa</td>
+                            <td><span class="urgencia-baixa">Média</span></td>
+                            <td>Rua da Consolação, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Enchente</td>
+                            <td>Média</td>
+                            <td><span class="urgencia-media">Alta</span></td>
+                            <td>Av. Ipiranga, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Alagamento</td>
+                            <td>Alta</td>
+                            <td><span class="urgencia-alta">Urgente</span></td>
+                            <td>Rua Vergueiro, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Queda de muro</td>
+                            <td>Baixa</td>
+                            <td><span class="urgencia-baixa">Média</span></td>
+                            <td>Rua Bela Cintra, SP</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-        <div class="dashboard-theme-toggle" style="position: absolute; top: 1.5rem; right: 2rem; z-index: 10;">
-            <button id="toggleTheme" class="theme-icon-btn" aria-label="Alternar tema">
-                <span id="themeIcon" class="theme-icon">🌙</span>
-            </button>
-        </div>
     </main>
     <div id="footer-component"></div>
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
     <script>
-        const btn = document.getElementById('toggleTheme');
-        const icon = document.getElementById('themeIcon');
-        function setThemeIcon() {
-            if(document.body.classList.contains('dashboard-light')) {
-                icon.textContent = '☀️';
-            } else {
-                icon.textContent = '🌙';
+        
+        function sortTable(n) {
+            var table = document.getElementById("incidentesTable");
+            var rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    let xText = x.textContent.trim();
+                    let yText = y.textContent.trim();
+                    if (dir == "asc") {
+                        if (xText.toLowerCase() > yText.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (xText.toLowerCase() < yText.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount ++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
             }
         }
-        btn.addEventListener('click', function() {
-            document.body.classList.toggle('dashboard-light');
-            setThemeIcon();
-        });
-        setThemeIcon();
+
+        function filtrarUrgencia() {
+            var filtro = document.getElementById('filtroUrgencia').value;
+            var table = document.getElementById('incidentesTable');
+            var trs = table.getElementsByTagName('tr');
+            for (var i = 1; i < trs.length; i++) {
+                var prioridadeCell = trs[i].getElementsByTagName('td')[2];
+                if (prioridadeCell) {
+                    var prioridade = prioridadeCell.textContent.trim();
+                    if (filtro === '' || prioridade === filtro) {
+                        trs[i].style.display = '';
+                    } else {
+                        trs[i].style.display = 'none';
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>

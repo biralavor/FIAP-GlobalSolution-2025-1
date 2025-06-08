@@ -54,6 +54,7 @@ class SirenaApp {
         const lucasButton = document.querySelector('.lucas-button');
         const learnMoreButton = document.querySelector('.learn-more-button');
         const data4lifeButton = document.querySelector('.data4life-button');
+        const registerButton = document.querySelector('.register-button');
 
         whatsappButtons.forEach(button => {
             button.addEventListener('click', () => {
@@ -76,6 +77,12 @@ class SirenaApp {
         if (data4lifeButton) {
             data4lifeButton.addEventListener('click', () => {
                 window.location.href = 'page-quemsomos.html';
+            });
+        }
+
+        if (registerButton) {
+            registerButton.addEventListener('click', () => {
+                window.location.href = 'signin-autoridade.html';
             });
         }
     }

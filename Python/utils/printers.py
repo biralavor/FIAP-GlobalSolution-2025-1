@@ -98,6 +98,15 @@ def high_risk_district_printer(agent_location: str, data_with_rainfall: dict, ne
                             print(f"|   {confidence} \t| \t{incidents_value} \t| {each_neighbor}\t|")
                             print(f"{B_GRAY}-{RESET}" * 50)
 
+def citizen_danger_printer(user_location: str, neighborhood_list: dict):
+    for neighborhood, values in neighborhood_list.items():
+        if user_location == neighborhood:
+            reported_incidents = values[0]
+            confidence = values[1]
+            print(f"You're in a high-risk area: {neighborhood}")
+            print(f"Number of incidents: {reported_incidents}")
+            print(f"Confidence index: {confidence}")
+
 def leave_now_printer():
     print(f"{RED}")
     print(" _      ______     __      ________   _   _  ______          __  _ ")

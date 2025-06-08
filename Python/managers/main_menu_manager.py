@@ -49,7 +49,7 @@ def agent_manager(data_with_rainfall, neighborhood_list):
                 if is_agent_in_high_risk_district(agent_location, data_with_rainfall, neighborhood_list):
                     high_risk_district_printer(agent_location, data_with_rainfall, neighborhood_list)
                 else:
-                    print(f"{MAGENTA}Agent, your are {YELLOW}NOT{MAGENTA} in a high-risk district.{RESET}")
+                    print(f"{MAGENTA}Agent, you're {YELLOW}NOT{MAGENTA} in a high-risk district.{RESET}")
             case 2:
                 incident_manager(neighborhood_list)
             case 3:

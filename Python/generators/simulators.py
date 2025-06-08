@@ -18,10 +18,12 @@ async def extreme_rainfall_risk_simulator(data_with_rainfall: dict) -> dict:
         await asyncio.sleep(1)
         return data_with_rainfall
 
-async def incident_simulator(neighborhood_list: dict) -> dict:
+async def incident_simulator(neighborhood_list: dict, data_with_rainfall: dict) -> dict:
     while True:
         for location in neighborhood_list:
-            incident = random.randint(0, 30)
+            rainfall_risk = rainfall_risk_getter(location, data_with_rainfall)
+            print(f"rainfall risk for {location}: {rainfall_risk}")
+            incident = random.randint(0, pow(3, rainfall_risk))
             confidence_level = ""
             if incident >= 15:
                 confidence_level = "High"
@@ -34,3 +36,11 @@ async def incident_simulator(neighborhood_list: dict) -> dict:
             neighborhood_list[location] = [incident, confidence_level]
         await asyncio.sleep(1)
         return neighborhood_list
+
+def rainfall_risk_getter(location: str, data_with_rainfall: dict) -> int:
+    rainfall_risk = 0
+    for districts, neighbors in data_with_rainfall.items():
+        for idx in range(0, len(neighbors), 2):
+            if neighbors[idx] == location:
+                rainfall_risk = neighbors[idx + 1]
+    return rainfall_risk

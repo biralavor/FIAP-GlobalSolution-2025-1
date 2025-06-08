@@ -8,6 +8,12 @@
                 </a>
                 <p class="logo-subtitle">Sistema Integrado de Resposta à Emergências e Notificações Ambientais</p>
             </div>
+            <div class="header-links desktop-only">
+                <a href="index.html">INÍCIO</a>
+                <a href="page-sirena.html">S.I.R.E.N.A.</a>
+                <a href="page-conhecaLucas.html">L.U.C.A.S.</a>
+                <a href="login-autoridade.html">LOGIN AUTORIDADE</a>
+            </div>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
@@ -19,10 +25,59 @@
 
 <nav class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-content">
-        <a href="#home">Início</a>
-        <a href="#sirena">S.I.R.E.N.A.</a>
-        <a href="#lucas">L.U.C.A.S.</a>
-        <a href="#quemsomos">Quem Somos</a>
-        <a href="#contato">Contato</a>
+        <a href="index.html">INÍCIO</a>
+        <a href="page-sirena.html">S.I.R.E.N.A.</a>
+        <a href="page-conhecaLucas.html">L.U.C.A.S.</a>
+        <a href="page-quemsomos.html">QUEM SOMOS</a>
+        <a href="page-faq.html">F.A.Q.</a>
+        <a href="login-autoridade.html" class="cta-button">LOGIN AUTORIDADE</a>
     </div>
 </nav>
+
+<button id="toggleTheme" class="theme-icon-btn global-theme-btn" aria-label="Alternar modo claro/escuro">
+    <span id="themeIcon" class="theme-icon">🌙</span>
+</button>
+
+<script>
+(function() {
+    // Botão global de tema claro/escuro
+    const btn = document.getElementById('toggleTheme');
+    const icon = document.getElementById('themeIcon');
+    function setThemeIcon() {
+        if(document.body.classList.contains('dashboard-light')) {
+            icon.textContent = '☀️';
+        } else {
+            icon.textContent = '🌙';
+        }
+    }
+    if(btn && icon) {
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('dashboard-light');
+            setThemeIcon();
+            // Salva preferência no localStorage
+            if(document.body.classList.contains('dashboard-light')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+        // Carrega preferência ao abrir
+        if(localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('dashboard-light');
+        }
+        setThemeIcon();
+    }
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        });
+    });
+})();
+</script>

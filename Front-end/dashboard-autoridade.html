@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Autoridade | S.I.R.E.N.A.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div id="header-component"></div>
+    <main class="main dashboard-main dashboard-centered">
+        <section class="dashboard-section">
+            <div class="container">
+                <h2 class="section-title">Painel de Incidentes</h2>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Incidente</th>
+                            <th>Confiabilidade</th>
+                            <th>Prioridade</th>
+                            <th>Localização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enchente</td>
+                            <td>Alta</td>
+                            <td><span class="urgencia-alta">Urgente</span></td>
+                            <td>Rua das Flores, SP</td>
+                        </tr>
+                        <tr>
+                            <td>Deslizamento</td>
+                            <td>Média</td>
+                            <td><span class="urgencia-media">Alta</span></td>
+                            <td>Av. Central, RJ</td>
+                        </tr>
+                        <tr>
+                            <td>Alagamento</td>
+                            <td>Baixa</td>
+                            <td><span class="urgencia-baixa">Média</span></td>
+                            <td>Rua 7 de Setembro, BH</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="dashboard-theme-toggle" style="position: absolute; top: 1.5rem; right: 2rem; z-index: 10;">
+            <button id="toggleTheme" class="theme-icon-btn" aria-label="Alternar tema">
+                <span id="themeIcon" class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </main>
+    <div id="footer-component"></div>
+    <script src="js/script.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        const btn = document.getElementById('toggleTheme');
+        const icon = document.getElementById('themeIcon');
+        function setThemeIcon() {
+            if(document.body.classList.contains('dashboard-light')) {
+                icon.textContent = '☀️';
+            } else {
+                icon.textContent = '🌙';
+            }
+        }
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('dashboard-light');
+            setThemeIcon();
+        });
+        setThemeIcon();
+    </script>
+</body>
+</html>

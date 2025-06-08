@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | S.I.R.E.N.A.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Jost:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div id="header-component"></div>
+    <main class="main faq-main">
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">Como recebo notificações de emergência?</button>
+                        <div class="faq-answer">Você pode receber notificações em tempo real cadastrando seu WhatsApp no sistema ou acessando o painel de alertas no site.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Quem pode acessar o dashboard de incidentes?</button>
+                        <div class="faq-answer">Apenas autoridades cadastradas e autenticadas têm acesso ao dashboard de incidentes e recursos.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Como funciona a integração com agentes públicos?</button>
+                        <div class="faq-answer">O sistema permite comunicação direta entre agentes públicos e cidadãos, facilitando a resposta rápida a emergências.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Posso sugerir melhorias para o sistema?</button>
+                        <div class="faq-answer">Sim! Utilize o formulário de contato para enviar sugestões ou relatar problemas.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-component"></div>
+    <script src="js/script.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,54 +1,45 @@
 import asyncio
 
+from managers.main_menu_manager import citizen_manager
+from managers.main_menu_manager import agent_manager
+from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
-from utils.printers import citizen_menu_printer
 from utils.printers import invalid_choice
-from utils.printers import neighborhood_printer
-from utils.validations import ask_valid_nbr
-from utils.finders import neighborhood_finder
-from utils.finders import ask_users_location
+from utils.printers import exiting_printer
+from utils.printers import clear_screen
 from utils.loaders import csv_loader
 from utils.loaders import csv_parser
-from utils.simulations import rainfall_init
-from utils.simulations import extreme_rainfall_risk_simulation
+from utils.loaders import neighborhood_list_loader
+from utils.validations import ask_valid_nbr
+from generators.simulators import rainfall_init
+from generators.simulators import extreme_rainfall_risk_simulator
+from generators.simulators import incident_simulator
 
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
-
 
 async def main():
     data = csv_loader(SP_NEIGHBORHOODS)
     parsed_data = csv_parser(data)
-    neighborhood_printer(parsed_data)
+    neighborhood_list = neighborhood_list_loader(parsed_data)
     data_with_rainfall = rainfall_init(parsed_data)
-    data_with_rainfall = await extreme_rainfall_risk_simulation(data_with_rainfall)
-    neighborhood_printer(data_with_rainfall)
+    data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
+    neighborhood_list = await incident_simulator(neighborhood_list, data_with_rainfall)
+    clear_screen()
+    sirena_title_printer()
     while True:
         main_menu_printer()
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                user_location = ask_users_location()
-                neighborhood_finder(user_location, data_with_rainfall)
-                citizen_menu_printer()
-                while True:
-                    citizen_choice = ask_valid_nbr()
-                    match citizen_choice:
-                        case 1:
-                            print("Reporting Incident...")
-                        case 2:
-                            print("Checking if you are in danger...")
-                        case 3:
-                            break
+                if neighborhood_list:
+                    neighborhood_list = citizen_manager(data_with_rainfall, neighborhood_list)
             case 2:
-                print("Loading City Patrol Agent System...")
-                user_location = ask_users_location()
-                neighborhood_finder(user_location, data_with_rainfall)
+                if neighborhood_list:
+                    agent_manager(data_with_rainfall, neighborhood_list)
             case 3:
-                print("Exiting S.I.R.E.N.A. System. Goodbye!")
-                exit(0)
+                exiting_printer()
             case _:
                 invalid_choice()
-                citizen_menu_printer()
 
 if __name__ == '__main__':
     asyncio.run(main())

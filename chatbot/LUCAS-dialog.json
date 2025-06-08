@@ -1,0 +1,1584 @@
+{
+  "intents": [
+    {
+      "intent": "abrigo_proximo",
+      "examples": [
+        {
+          "text": "Abrigo da Defesa Civil mais próximo"
+        },
+        {
+          "text": "Estou atrás de um lugar para proteger minha família"
+        },
+        {
+          "text": "Estou procurando cobertura para me proteger da chuva."
+        },
+        {
+          "text": "Mostre um ponto de ajuda"
+        },
+        {
+          "text": "Onde as pessoas estão se refugiando?"
+        },
+        {
+          "text": "Onde tem abrigo perto de mim?"
+        },
+        {
+          "text": "Para onde posso ir?"
+        },
+        {
+          "text": "Pode me ajudar a encontrar um lugar coberto e fechado para me abrigar?"
+        },
+        {
+          "text": "Preciso de ajuda para encontrar um lugar seguro"
+        },
+        {
+          "text": "Qual o caminho mais seguro até um abrigo?"
+        },
+        {
+          "text": "Tem local seguro para minha família?"
+        },
+        {
+          "text": "Tem um abrigo comunitário aqui por perto?"
+        }
+      ],
+      "description": "Intenção de encontrar o local seguro mais próximo."
+    },
+    {
+      "intent": "emergencia",
+      "examples": [
+        {
+          "text": "A árvore caiu em cima de uma pessoa e prendeu a perna dela"
+        },
+        {
+          "text": "Ajuda urgente, tem uma família isolada aqui."
+        },
+        {
+          "text": "A pessoa tá presa dentro do carro alagado"
+        },
+        {
+          "text": "Estou escutando pessoas gritando por socorro"
+        },
+        {
+          "text": "Eu não consigo me locomover, estou ilhado"
+        },
+        {
+          "text": "Pessoa em perigo!"
+        },
+        {
+          "text": "Pessoas desaparecidas, precisamos encontrá-las"
+        },
+        {
+          "text": "Tá cheio de gente em cima do ônibus sem conseguir sair."
+        },
+        {
+          "text": "Tem alguém se afogando"
+        },
+        {
+          "text": "Tem criança machucada"
+        },
+        {
+          "text": "Uma mulher está presa nos destroços"
+        },
+        {
+          "text": "Um homem está sendo levado pela correnteza do rio"
+        }
+      ],
+      "description": "Intenção de reportar casos graves onde se encontram pessoas feridas."
+    },
+    {
+      "intent": "encerramento",
+      "examples": [
+        {
+          "text": "Agradeço pelo seu trabalho."
+        },
+        {
+          "text": "Até logo!"
+        },
+        {
+          "text": "Encerra o atendimento, por favor."
+        },
+        {
+          "text": "Finalizar conversa."
+        },
+        {
+          "text": "Grato pelo apoio"
+        },
+        {
+          "text": "Não preciso de mais nada."
+        },
+        {
+          "text": "Obrigada pela dica"
+        },
+        {
+          "text": "Obrigado!"
+        },
+        {
+          "text": "Pode encerrar por aqui."
+        },
+        {
+          "text": "tchau"
+        },
+        {
+          "text": "Valeu, já consegui me informar."
+        },
+        {
+          "text": "Valeu LUCAS"
+        }
+      ],
+      "description": "Intenção de finalizar o diálogo."
+    },
+    {
+      "intent": "reportar_ocorrencia",
+      "examples": [
+        {
+          "text": "A água está entrando nas casas"
+        },
+        {
+          "text": "A chuva está muito forte e perigosa"
+        },
+        {
+          "text": "A enchente está levando os carros e deixando pessoas ilhadas"
+        },
+        {
+          "text": "A estação de trem está inundada"
+        },
+        {
+          "text": "A rua está intransitável"
+        },
+        {
+          "text": "O córrego transbordou."
+        },
+        {
+          "text": "O nível da água está subindo rápido"
+        },
+        {
+          "text": "O vento derrubou uma árvore na minha rua"
+        },
+        {
+          "text": "Posso registrar um problema?"
+        },
+        {
+          "text": "Posso relatar uma ocorrência?"
+        },
+        {
+          "text": "Quero avisar sobre um alagamento."
+        },
+        {
+          "text": "Teve um deslizamento perto da escola"
+        }
+      ],
+      "description": "Intenção de reportar casos específicos durante um evento climático"
+    },
+    {
+      "intent": "welcome",
+      "examples": [
+        {
+          "text": "Boa noite, pode me ajudar?"
+        },
+        {
+          "text": "Boa Tarde Bot"
+        },
+        {
+          "text": "Bom dia!"
+        },
+        {
+          "text": "Eae, beleza?"
+        },
+        {
+          "text": "Gostaria de saber as opções"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "Oi, tudo bem?"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "Olá, como vai?"
+        },
+        {
+          "text": "Olá IRIS"
+        },
+        {
+          "text": "Quero iniciar a conversa"
+        },
+        {
+          "text": "Tudo bem?"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "avaliacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "0",
+          "synonyms": [
+            "0",
+            "zero"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": [
+            "1",
+            "um"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10",
+          "synonyms": [
+            "10",
+            "dez"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": [
+            "2",
+            "dois"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": [
+            "3",
+            "tres",
+            "três"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": [
+            "4",
+            "quatro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": [
+            "5",
+            "cinco"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "6",
+          "synonyms": [
+            "6",
+            "seis"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "7",
+          "synonyms": [
+            "7",
+            "sete"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "8",
+          "synonyms": [
+            "8",
+            "oito"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "9",
+          "synonyms": [
+            "9",
+            "nove"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "incidente",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Acidente de trânsito",
+          "synonyms": [
+            "acidente de carro",
+            "bateu o carro",
+            "batida",
+            "batida de carros",
+            "batida na pista molhada",
+            "colisão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Alagamento",
+          "synonyms": [
+            "acúmulo de água",
+            "água na rua",
+            "alagado",
+            "inundação",
+            "nível de agua alto ",
+            "tá alagado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Deslizamento",
+          "synonyms": [
+            "delisamento",
+            "desabamento de terra",
+            "desabou o barranco",
+            "desmoronamento",
+            "lama escorregou",
+            "morro deslizou",
+            "terra deslizou"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Enchente",
+          "synonyms": [
+            "cheia",
+            "cheia de rio",
+            "enchente de rio",
+            "Rio transbordando",
+            "transbordamento"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Falha de energia",
+          "synonyms": [
+            "apagão",
+            "apagou a luz",
+            "ficou sem energia",
+            "interrupção elétrica",
+            "queda de energia",
+            "queda de luz",
+            "Sem Luz"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Queda de árvore",
+          "synonyms": [
+            "árvore caída",
+            "arvore no chão",
+            "árvore tombada",
+            "árvore tombou",
+            "galho caído",
+            "galho gigante caiu",
+            "queda de galho",
+            "tronco no chão"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim-nao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Não",
+          "synonyms": [
+            "Discordo",
+            "Nao",
+            "naum",
+            "Negativo",
+            "nop"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sim",
+          "synonyms": [
+            "Concordo",
+            "Correto",
+            "positivo",
+            "Si",
+            "sim",
+            "Sim sim"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "subprefeitura",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Aricanduva",
+          "synonyms": [
+            "Carrão",
+            "Vila Formosa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Butantã",
+          "synonyms": [
+            "Morumbi",
+            "Vila Sônia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Campo Limpo",
+          "synonyms": [
+            "Capão Redondo",
+            "Vila Andrade"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Capela do Socorro",
+          "synonyms": [
+            "Cidade Dutra",
+            "Grajaú"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Casa Verde",
+          "synonyms": [
+            "Cachoeirinha",
+            "Limão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cidade Ademar",
+          "synonyms": [
+            "Jardim Miriam",
+            "Pedreira"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cidade Tiradentes",
+          "synonyms": [
+            "Cohab",
+            "Zona Leste"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ermelino Matarazzo",
+          "synonyms": [
+            "Jardim Nordeste",
+            "Ponte Rasa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Freguesia do Ó",
+          "synonyms": [
+            "Brasilândia",
+            "Vila Albertina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Guaianases",
+          "synonyms": [
+            "Jardim Soares",
+            "Lajeado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ipiranga",
+          "synonyms": [
+            "Cursino",
+            "Sacomã"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Itaim Paulista",
+          "synonyms": [
+            "Jardim Helena",
+            "Vila Curuçá"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Itaquera",
+          "synonyms": [
+            "Cidade Líder",
+            "Parque do Carmo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Jabaquara",
+          "synonyms": [
+            "Americanópolis",
+            "Conceição"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Jaçanã/Tremembé",
+          "synonyms": [
+            "Jaçanã",
+            "Tremembé"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Lapa",
+          "synonyms": [
+            "Barra Funda",
+            "Vila Leopoldina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "M’Boi Mirim",
+          "synonyms": [
+            "Jardim Ângela",
+            "Jardim São Luís"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Mooca",
+          "synonyms": [
+            "Belém",
+            "Brás"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Parelheiros",
+          "synonyms": [
+            "Colônia",
+            "Marsilac"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Penha",
+          "synonyms": [
+            "Cangaíba",
+            "Vila Matilde"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Perus",
+          "synonyms": [
+            "Anhanguera",
+            "Taipas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pinheiros",
+          "synonyms": [
+            "Alto de Pinheiros",
+            "Itaim Bibi"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pirituba/Jaraguá",
+          "synonyms": [
+            "Jaraguá",
+            "São Domingos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Santana/Tucuruvi",
+          "synonyms": [
+            "Mandaqui",
+            "Tucuruvi"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Santo Amaro",
+          "synonyms": [
+            "Brooklin",
+            "Campo Belo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "São Mateus",
+          "synonyms": [
+            "Iguatemi",
+            "São Rafael"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "São Miguel",
+          "synonyms": [
+            "Jardim Helena",
+            "Vila Jacuí"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sapopemba",
+          "synonyms": [
+            "Jardim Planalto",
+            "São Lucas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sé",
+          "synonyms": [
+            "Liberdade",
+            "República"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Mariana",
+          "synonyms": [
+            "Moema",
+            "Saúde"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Maria/Vila Guilherme",
+          "synonyms": [
+            "Vila Guilherme",
+            "Vila Maria"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vila Prudente",
+          "synonyms": [
+            "São Lucas",
+            "Vila Alpina"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "usuario",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bombeiro",
+          "synonyms": [
+            "bombeiro",
+            "bombeiro civil",
+            "bombeiro militar",
+            "Brigadista",
+            "Brigadista de Incêndio ",
+            "Corpo de Bombeiros",
+            "Resgate",
+            "Socorrista"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cidadão",
+          "synonyms": [
+            "Cidadão de SP",
+            "civil",
+            "Habitante",
+            "Miliante",
+            "Munícipe",
+            "residente"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Policial",
+          "synonyms": [
+            "Oficial de polícia",
+            "policia",
+            "Polícia Civil",
+            "policial civil",
+            "policial militar",
+            "Polícia Militar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "title": "Olá, sou LUCAS, Localizador Urbano de Chamados e Alertas de Segurança. Escolha opção apropriada para continuarmos:",
+            "options": [
+              {
+                "label": "Sou Cidadão",
+                "value": {
+                  "input": {
+                    "text": "Cidadão"
+                  }
+                }
+              },
+              {
+                "label": "Sou Autoridade Policial",
+                "value": {
+                  "input": {
+                    "text": "Policial"
+                  }
+                }
+              },
+              {
+                "label": "Sou Bombeiro ",
+                "value": {
+                  "input": {
+                    "text": "Bombeiro"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "welcome || #welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase?"
+              },
+              {
+                "text": "Você pode me explicar em outras palavras? Eu não estou entendendo."
+              },
+              {
+                "text": "Escreva palavras chave para que eu possa entender, por favor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1749072373385",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1749072835607",
+      "context": {
+        "indicacao": "@avaliacao"
+      },
+      "conditions": "@avaliacao",
+      "event_name": "input",
+      "dialog_node": "handler_10_1749072835607"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1749074210047",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1749074210048",
+      "previous_sibling": "handler_6_1749074210048"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Seu batalhão pertence a qual subprefeitura?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1749074370332",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1749074370344",
+      "previous_sibling": "handler_9_1749074370344"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1748911688923",
+      "context": {
+        "sim_ocorrecia": "@sim-nao:Sim"
+      },
+      "conditions": "@sim-nao:Sim",
+      "event_name": "input",
+      "dialog_node": "handler_1_1748911688937"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1749072620094",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1749072620108",
+      "previous_sibling": "handler_8_1749072620108"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_9_1749057861201",
+      "event_name": "input",
+      "dialog_node": "handler_2_1749057861209"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1749072689495",
+      "context": {
+        "qualidade": "@avaliacao"
+      },
+      "conditions": "@avaliacao",
+      "event_name": "input",
+      "dialog_node": "handler_2_1749072689508"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1748991769387",
+      "context": {
+        "incidente": "@incidente"
+      },
+      "conditions": "@incidente",
+      "event_name": "input",
+      "dialog_node": "handler_3_1748991769387"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1749057861201",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1749057861209",
+      "previous_sibling": "handler_2_1749057861209"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1748970080283",
+      "context": {
+        "regiao": "@subprefeitura"
+      },
+      "conditions": "@subprefeitura",
+      "event_name": "input",
+      "dialog_node": "handler_4_1748970080289"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1749074788469",
+      "context": {
+        "subprefeitura_bombeiro": "@subprefeitura"
+      },
+      "conditions": "@subprefeitura",
+      "event_name": "input",
+      "dialog_node": "handler_4_1749074788487"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em uma escala de 0 a 10, qual nota você daria para o nosso atendimento?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1749072689495",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1749072689508",
+      "previous_sibling": "handler_2_1749072689508"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em qual região você se encontra?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1749074788469",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1749074788487",
+      "previous_sibling": "handler_4_1749074788487"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O senhor está disponível para atender a uma ocorrência?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1748911688923",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1748911688937",
+      "previous_sibling": "handler_1_1748911688937"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_1_1749074210047",
+      "event_name": "input",
+      "dialog_node": "handler_6_1749074210048"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em uma escala de 0 a 10, o quanto você nos indicaria para um amigo ou familiar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1749072835607",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1749072835608",
+      "previous_sibling": "handler_10_1749072835607"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_1_1749072620094",
+      "event_name": "input",
+      "dialog_node": "handler_8_1749072620108"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pode me informar em qual região/bairro de São Paulo você se encontra?\nIrei encontrar a Subprefeitura mais próxima a você."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "slot_5_1748970080283",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1748970080289",
+      "previous_sibling": "handler_4_1748970080289"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obrigado pelo reporte, isso nos ajuda a manter a cidade mais segura."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1748970080283",
+      "conditions": "@subprefeitura",
+      "event_name": "filled",
+      "dialog_node": "handler_9_1748989396519",
+      "previous_sibling": "handler_9_1748970080289"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Me explique em poucas palavras o que está acontecendo?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1748991769387",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1748991769387",
+      "previous_sibling": "handler_3_1748991769387"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1749074370332",
+      "context": {
+        "subprefeitura_policia": "@subprefeitura"
+      },
+      "conditions": "@subprefeitura",
+      "event_name": "input",
+      "dialog_node": "handler_9_1749074370344"
+    },
+    {
+      "type": "frame",
+      "title": "Pesquisa de Satisfação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "RESUMO DA AVALIAÇÃO\nQualidade do atendimento: $qualidade/10\nVocê indicaria o L.U.C.A.S. com nota: $indicacao/10\nObrigado pelo feedback!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1749072373385",
+      "conditions": "",
+      "dialog_node": "node_10_1749072666515"
+    },
+    {
+      "type": "standard",
+      "title": "Emergência",
+      "output": {
+        "generic": [
+          {
+            "title": "Pode me confirmar se é uma emergência?",
+            "options": [
+              {
+                "label": "SIM, é uma emergência",
+                "value": {
+                  "input": {
+                    "text": "Sim"
+                  }
+                }
+              },
+              {
+                "label": "NÃO, foi um engano",
+                "value": {
+                  "input": {
+                    "text": "Não"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1748911075345",
+      "conditions": "#emergencia",
+      "dialog_node": "node_1_1748917209781",
+      "previous_sibling": "node_5_1748913076150"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "time": 5000,
+            "typing": true,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "Obrigado por nos ajudar a construir uma cidade cada vez mais segura."
+              },
+              {
+                "text": "Espero ter te ajudado, até logo!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "time": 10000,
+            "typing": false,
+            "response_type": "pause"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1749072666515"
+      },
+      "conditions": "#encerramento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1749072373385",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "frame",
+      "title": "Relatar Incidente",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "RESUMO DO REPORTE\nIncidente: $incidente \nRegião da Subprefeitura $regiao\nEstou notificando as autoridades mais próximas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1748911075345",
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1749072373385"
+      },
+      "conditions": "#reportar_ocorrencia",
+      "dialog_node": "node_4_1748913039565"
+    },
+    {
+      "type": "standard",
+      "title": "Sim para Localização Exata ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, clique no Link a seguir para encontrar o Orgão Público mais próximo:\nhttps://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1748913076150",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1749072373385"
+      },
+      "conditions": "@sim-nao:Sim",
+      "dialog_node": "node_4_1748992895294"
+    },
+    {
+      "type": "standard",
+      "title": "Policial",
+      "output": {
+        "generic": [
+          {
+            "title": "O senhor está disponível para atender a uma ocorrência?",
+            "options": [
+              {
+                "label": "SIM",
+                "value": {
+                  "input": {
+                    "text": "Sim"
+                  }
+                }
+              },
+              {
+                "label": "NÃO",
+                "value": {
+                  "input": {
+                    "text": "Não"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@usuario:Policial",
+      "dialog_node": "node_5_1748911531149",
+      "previous_sibling": "node_8_1748911075345"
+    },
+    {
+      "type": "frame",
+      "title": "Bombeiro",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, temos 1 chamado de emergência na Subprefeitura $subprefeitura_bombeiro, próximo ao seu local. Aguarde um instante."
+              },
+              {
+                "text": "Ok, temos 3 chamados emergenciais na Subprefeitura $subprefeitura_bombeiro, iremos verificar o mais próximo a sua localização. Aguarde um instante."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@usuario:Bombeiro",
+      "dialog_node": "node_5_1748911595387",
+      "previous_sibling": "node_5_1748911531149"
+    },
+    {
+      "type": "standard",
+      "title": "Abrigo Próximo",
+      "output": {
+        "generic": [
+          {
+            "title": "Autoriza que o sistema use sua localização exata neste momento?",
+            "options": [
+              {
+                "label": "SIM",
+                "value": {
+                  "input": {
+                    "text": "Sim"
+                  }
+                }
+              },
+              {
+                "label": "NÃO",
+                "value": {
+                  "input": {
+                    "text": "Não"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1748911075345",
+      "conditions": "#abrigo_proximo",
+      "dialog_node": "node_5_1748913076150",
+      "previous_sibling": "node_4_1748913039565"
+    },
+    {
+      "type": "standard",
+      "title": "Não para Localização Exata",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, mas precisamos da localização exata para indicar locais próximos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1748913076150",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1748911075345"
+      },
+      "conditions": "@sim-nao:Não",
+      "dialog_node": "node_5_1748993711242",
+      "previous_sibling": "node_4_1748992895294"
+    },
+    {
+      "type": "standard",
+      "title": "Sim para Emergência",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As autoridades já foram acionadas e devem devem chegar a qualquer momento.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "time": 2000,
+            "typing": true,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "Se for seguro, continue prestando socorro à pessoa em perigo.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1748917209781",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1749072373385"
+      },
+      "conditions": "@sim-nao:Sim",
+      "dialog_node": "node_5_1749058120043"
+    },
+    {
+      "type": "frame",
+      "title": "Disponível para Ocorrência",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. Uma ocorrência foi detectada na região da Subprefeitura $subprefeitura_policia.\nEntre em contato com seu batalhão para mais detalhes."
+              },
+              {
+                "text": "Encontrei 3 ocorrências próximas a região da Subprefeitura $subprefeitura_policia.\nEntre em contato com seu batalhão para mais detalhes."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_5_1748911531149",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1749072373385"
+      },
+      "conditions": "@sim-nao:Sim",
+      "dialog_node": "node_5_1749074329152"
+    },
+    {
+      "type": "standard",
+      "title": "Indisponível",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entre em contato conosco quando terminar sua ocorrência."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1748911531149",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1749072373385"
+      },
+      "conditions": "@sim-nao:Não",
+      "dialog_node": "node_5_1749074629505",
+      "previous_sibling": "node_5_1749074329152"
+    },
+    {
+      "type": "standard",
+      "title": "Cidadão",
+      "output": {
+        "generic": [
+          {
+            "title": "Olá! Bem-vindo a nossa central de reportes, em que posso ajudar?",
+            "options": [
+              {
+                "label": "Relatar incidente",
+                "value": {
+                  "input": {
+                    "text": "Reportar ocorrência"
+                  }
+                }
+              },
+              {
+                "label": "Abrigo mais próximo",
+                "value": {
+                  "input": {
+                    "text": "Local seguro"
+                  }
+                }
+              },
+              {
+                "label": "Pessoas em perigo ",
+                "value": {
+                  "input": {
+                    "text": "Emergência, Pessoas em perigo "
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "@usuario:Cidadão",
+      "dialog_node": "node_8_1748911075345"
+    },
+    {
+      "type": "standard",
+      "title": "Não para Emergência",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Parece que houve um engano."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1748917209781",
+      "dialog_node": "node_8_1749072088907",
+      "previous_sibling": "node_5_1749058120043"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1748911531149",
+      "variable": "$sim_ocorrecia",
+      "dialog_node": "slot_10_1748911688923",
+      "previous_sibling": "node_5_1749074629505"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1749072373385",
+      "dialog_node": "slot_1_1749072620094",
+      "previous_sibling": "node_10_1749072666515"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1748911531149",
+      "dialog_node": "slot_1_1749074210047",
+      "previous_sibling": "slot_10_1748911688923"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1749072666515",
+      "variable": "$qualidade",
+      "dialog_node": "slot_2_1749072689495"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1749072666515",
+      "variable": "$indicacao",
+      "dialog_node": "slot_2_1749072835607",
+      "previous_sibling": "slot_2_1749072689495"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1749074329152",
+      "variable": "$subprefeitura_policia",
+      "dialog_node": "slot_2_1749074370332"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1748913039565",
+      "variable": "$incidente",
+      "dialog_node": "slot_4_1748991769387"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1748913039565",
+      "variable": "$regiao",
+      "dialog_node": "slot_5_1748970080283",
+      "previous_sibling": "slot_4_1748991769387"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1748911595387",
+      "variable": "$subprefeitura_bombeiro",
+      "dialog_node": "slot_5_1749074788469"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1748917209781",
+      "dialog_node": "slot_9_1749057861201",
+      "previous_sibling": "node_8_1749072088907"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "LUCAS-dialog"
+}

@@ -20,11 +20,11 @@ def data_init_manager() -> dict:
     data = csv_loader(SP_NEIGHBORHOODS)
     if not data:
         print(f"Error: No data found in the CSV file.")
-        exit(0)
+        exit(1)
     parsed_data = csv_parser(data)
     if not parsed_data:
         print(f"Error: Failed to parse the CSV data.")
-        exit(0)
+        exit(1)
     return parsed_data
 
 def citizen_submenu_manager(data_with_rainfall: dict, neighborhood_list: dict) -> None:

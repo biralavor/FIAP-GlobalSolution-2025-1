@@ -22,7 +22,6 @@ async def incident_simulator(neighborhood_list: dict, data_with_rainfall: dict) 
     while True:
         for location in neighborhood_list:
             rainfall_risk = rainfall_risk_getter(location, data_with_rainfall)
-            print(f"rainfall risk for {location}: {rainfall_risk}")
             incident = random.randint(0, pow(3, rainfall_risk))
             confidence_level = ""
             if incident >= 15:

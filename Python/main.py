@@ -34,7 +34,8 @@ async def main():
                 if neighborhood_list:
                     neighborhood_list = citizen_manager(data_with_rainfall, neighborhood_list)
             case 2:
-                agent_manager(data_with_rainfall, neighborhood_list)
+                if neighborhood_list:
+                    agent_manager(data_with_rainfall, neighborhood_list)
             case 3:
                 exiting_printer()
             case _:

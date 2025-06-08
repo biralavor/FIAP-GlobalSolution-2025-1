@@ -51,7 +51,16 @@ def neighbor_risk_finder(user_location: str, data_with_rainfall: dict) -> int:
         if user_location in neighbors:
             neighbor_idx = neighbors.index(user_location)
             risk_value = neighbors[neighbor_idx + 1]
-            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Rainfall risk for {user_location}: {risk_value}{RESET}")
+            risk_kind = "No Risk"
+            if risk_value == 1:
+                risk_kind = "Low"
+            elif risk_value == 2:
+                risk_kind = "Medium"
+            elif risk_value == 3:
+                risk_kind = "High"
+            elif risk_value == 4:
+                risk_kind = "Extreme"
+            print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Rainfall risk for {user_location}: {risk_kind}{RESET}")
             return risk_value
     return -1
 

@@ -41,15 +41,17 @@ public class Bombeiro extends Autoridade {
     }
     @Override
     public void autoridadePrinter() {
+        System.out.println("*********** AUTORIDADE BOMBEIRO ***********");
         System.out.println("Bombeiro{" +
-                "nome='" + getNome() + '\'' +
-                ", cpf='" + getCpf() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", contato='" + getContato() + '\'' +
-                ", endereco='" + getEndereco() + '\'' +
-                ", especialidade='" + especialidade + '\'' +
-                ", unidade='" + unidade + '\'' +
-                ", credencialBombeiro='" + credencialBombeiro + '\'' +
-                '}');
+        "nome='" + getNome() + '\'' +
+        ", cpf='" + getCpf() + '\'' +
+        ", email='" + getEmail() + '\'' +
+        ", contato='" + getContato() + '\'' +
+        ", endereco='" + getEndereco() + '\'' +
+        ", especialidade='" + especialidade + '\'' +
+        ", unidade='" + unidade + '\'' +
+        ", credencialBombeiro='" + credencialBombeiro + '\'' +
+        '}');
+        System.out.println("*******************************************\n");
     }
 }

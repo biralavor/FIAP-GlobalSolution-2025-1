@@ -41,16 +41,18 @@ public class Policial extends Autoridade{
     }
     @Override
     public void autoridadePrinter() {
+        System.out.println("*********** AUTORIDADE POLICIAL ***********");
         System.out.println("Policial{" +
-                "nome='" + getNome() + '\'' +
-                ", cpf='" + getCpf() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", contato='" + getContato() + '\'' +
-                ", endereco='" + getEndereco() + '\'' +
-                ", patente='" + patente + '\'' +
-                ", unidade='" + unidade + '\'' +
-                ", credencialPolicial='" + credencialPolicial + '\'' +
-                '}');
+        "nome='" + getNome() + '\'' +
+        ", cpf='" + getCpf() + '\'' +
+        ", email='" + getEmail() + '\'' +
+        ", contato='" + getContato() + '\'' +
+        ", endereco='" + getEndereco() + '\'' +
+        ", patente='" + patente + '\'' +
+        ", unidade='" + unidade + '\'' +
+        ", credencialPolicial='" + credencialPolicial + '\'' +
+        '}');
+        System.out.println("*******************************************\n");
     }
     
 }

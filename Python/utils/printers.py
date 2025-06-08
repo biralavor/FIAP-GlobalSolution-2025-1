@@ -65,6 +65,15 @@ def neighborhood_printer(neighborhoods: dict):
         print(f"{RED}No neighborhoods found.{RESET}")
 
 def incidents_table_printer(incident_dict: dict) -> None:
+    """
+    Brief:
+        Prints a table of incidents with their confidence levels and locations.
+    Args:
+        `incident_dict` (dict): A dictionary where keys are locations and values are lists containing
+                              the number of incidents and confidence level.
+    Returns:
+        None
+    """
     print(f"{YELLOW}-{RESET}" * 55)
     print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}INCIDENTS{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
     print(f"{YELLOW}-{RESET}" * 55)
@@ -81,6 +90,19 @@ def incidents_table_printer(incident_dict: dict) -> None:
         print(f"{B_GRAY}-{RESET}" * 50)
 
 def high_risk_district_printer(agent_location: str, data_with_rainfall: dict, neighborhood_list: dict) -> None:
+    """
+    Brief:
+        Prints a table of high-risk districts based on rainfall data (from `data_with_rainfall`)
+        and incidents (from `neighborhood_list`).
+    Args:
+        `agent_location` (str): The location of the agent.
+        `data_with_rainfall` (dict): A dictionary where keys are districts and values are lists of neighbors
+                                     with their rainfall risk.
+        `neighborhood_list` (dict): A dictionary where keys are neighborhoods and values are lists containing
+                                    the number of incidents and confidence level.
+    Returns:
+        None
+    """
     print(f"{YELLOW}-{RESET}" * 55)
     print(f"| {MAGENTA}CONFIDENCE{RESET}    |   {MAGENTA}INCIDENTS{RESET}\t| {MAGENTA}  LOCATION{RESET}\t|")
     print(f"{YELLOW}-{RESET}" * 55)

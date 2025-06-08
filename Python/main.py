@@ -1,7 +1,7 @@
 import asyncio
 
-from managers.main_menu_manager import citizen_manager
-from managers.main_menu_manager import agent_manager
+from managers.main_menu_manager import citizen_submenu_manager
+from managers.main_menu_manager import agent_submenu_manager
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
 from utils.printers import invalid_choice
@@ -18,28 +18,33 @@ from generators.simulators import incident_simulator
 SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
 
 async def main():
+    clear_screen()
     data = csv_loader(SP_NEIGHBORHOODS)
+    if not data:
+        print(f"Error: No data found in the CSV file.")
+        exit(0)
     parsed_data = csv_parser(data)
+    if not parsed_data:
+        print(f"Error: Failed to parse the CSV data.")
+        exit(0)
     neighborhood_list = neighborhood_list_loader(parsed_data)
     data_with_rainfall = rainfall_init(parsed_data)
-    data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
-    neighborhood_list = await incident_simulator(neighborhood_list, data_with_rainfall)
-    clear_screen()
     sirena_title_printer()
-    while True:
-        main_menu_printer()
-        choice = ask_valid_nbr()
-        match choice:
-            case 1:
-                if neighborhood_list:
-                    neighborhood_list = citizen_manager(data_with_rainfall, neighborhood_list)
-            case 2:
-                if neighborhood_list:
-                    agent_manager(data_with_rainfall, neighborhood_list)
-            case 3:
-                exiting_printer()
-            case _:
-                invalid_choice()
+    data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
+    if neighborhood_list and data_with_rainfall:
+        while True:
+            data_with_incidents = incident_simulator(neighborhood_list, data_with_rainfall)
+            main_menu_printer()
+            choice = ask_valid_nbr()
+            match choice:
+                case 1:
+                    data_with_incidents = citizen_submenu_manager(data_with_rainfall, data_with_incidents)
+                case 2:
+                    agent_submenu_manager(data_with_rainfall, data_with_incidents)
+                case 3:
+                    exiting_printer()
+                case _:
+                    invalid_choice()
 
 if __name__ == '__main__':
     asyncio.run(main())

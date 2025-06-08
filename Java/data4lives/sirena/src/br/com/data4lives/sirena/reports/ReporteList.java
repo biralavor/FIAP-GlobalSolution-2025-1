@@ -1,3 +1,5 @@
+package br.com.data4lives.sirena.reports;
+
 public class ReporteList {
 
     private Reporte[] listaReportes;

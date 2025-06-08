@@ -1,3 +1,9 @@
+package br.com.data4lives.sirena.reports;
+
+import br.com.data4lives.sirena.Confiabilidade;
+import br.com.data4lives.sirena.Localizacao;
+import br.com.data4lives.sirena.Prioridade;
+
 public class Reporte {
 
     private int idReporte;

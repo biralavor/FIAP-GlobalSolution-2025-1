@@ -1,3 +1,8 @@
+package br.com.data4lives.sirena;
+
+import br.com.data4lives.sirena.reports.Reporte;
+import br.com.data4lives.sirena.reports.ReporteList;
+
 public class Confiabilidade {
 
     private int idConfiabilidade;

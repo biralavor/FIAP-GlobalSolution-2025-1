@@ -1,3 +1,7 @@
+package br.com.data4lives.sirena.autoridades;
+
+import br.com.data4lives.sirena.Localizacao;
+
 public class Bombeiro extends Autoridade {
 
     private String especialidade;

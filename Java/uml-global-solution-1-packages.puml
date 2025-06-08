@@ -1,0 +1,180 @@
+@startuml
+class br.com.data4lives.sirena.reports.ReporteList {
+- Reporte[] listaReportes
+- int quantidadeReportes
++ <<Create>> ReporteList(int)
++ Reporte[] getReportes()
++ void setReportes(Reporte[])
++ int getQuantidadeReportes()
++ void addToReporteList(Reporte)
++ void reporteListPrinter()
+}
+
+
+class br.com.data4lives.sirena.autoridades.Bombeiro {
+- String especialidade
+- String unidade
+- String credencialBombeiro
++ <<Create>> Bombeiro(String,String,String,String,Localizacao,String,String,String)
++ String getEspecialidade()
++ void setEspecialidade(String)
++ String getUnidade()
++ void setUnidade(String)
++ String getCredencialBombeiro()
++ void setCredencialBombeiro(String)
++ String getTipoAutoridade()
++ void autoridadePrinter()
+}
+
+
+class br.com.data4lives.sirena.autoridades.Policial {
+- String patente
+- String unidade
+- String credencialPolicial
++ <<Create>> Policial(String,String,String,String,Localizacao,String,String,String)
++ String getPatente()
++ void setPatente(String)
++ String getUnidade()
++ void setUnidade(String)
++ String getCredencialPolicial()
++ void setCredencialPolicial(String)
++ String getTipoAutoridade()
++ void autoridadePrinter()
+}
+
+
+class br.com.data4lives.sirena.Ocorrencia {
+- Localizacao localOcorrencia
+- String horaInicioOcorrencia
+- String horaFimOcorrencia
+- Confiabilidade confiabilidade
+- Prioridade prioridade
+- Autoridade[] autoridade
+- boolean flagAtendida
+- String status
++ <<Create>> Ocorrencia(Localizacao,String,Confiabilidade,Prioridade,Autoridade[])
++ Localizacao getLocalOcorrencia()
++ void setLocalOcorrencia(Localizacao)
++ String getHoraInicioOcorrencia()
++ void setHoraInicioOcorrencia(String)
++ String getHoraFimOcorrencia()
++ void setHoraFimOcorrencia(String)
++ Confiabilidade getConfiabilidade()
++ void setConfiabilidade(Confiabilidade)
++ Prioridade getPrioridade()
++ void setPrioridade(Prioridade)
++ Autoridade[] getAutoridade()
++ void setAutoridade(Autoridade[])
++ String getStatus()
++ void setStatus(String)
++ void atenderOcorrencia(Reporte,String,Autoridade[])
++ void finalizarOcorrencia(String,boolean)
++ void ocorrenciaPrinter()
+}
+
+
+class br.com.data4lives.sirena.Confiabilidade {
+- int idConfiabilidade
+- String grauConfiabilidade
++ <<Create>> Confiabilidade()
++ int getIdConfiabilidade()
++ void setIdConfiabilidade(int)
++ String getGrauConfiabilidade()
++ void setGrauConfiabilidade(String)
++ void calculoConfiabilidade(ReporteList)
+}
+
+
+class br.com.data4lives.sirena.autoridades.Autoridade {
+- String nome
+- String cpf
+- String email
+- String contato
+- Localizacao endereco
+- String tipoAutoridade
++ <<Create>> Autoridade(String,String,String,String,Localizacao)
++ String getNome()
++ void setNome(String)
++ String getCpf()
++ void setCpf(String)
++ String getEmail()
++ void setEmail(String)
++ String getContato()
++ void setContato(String)
++ Localizacao getEndereco()
++ void setEndereco(Localizacao)
++ String getTipoAutoridade()
++ void setTipoAutoridade(String)
++ void autoridadePrinter()
+}
+
+
+class br.com.data4lives.sirena.Localizacao {
+- int idLocalizacao
+- String nomeRua
+- String coordenadas
++ int getIdLocalizacao()
++ void setIdLocalizacao(int)
++ String getNomeRua()
++ void setNomeRua(String)
++ String getCoordenadas()
++ void setCoordenadas(String)
+}
+
+
+class br.com.data4lives.sirena.reports.Reporte {
+- int idReporte
+- String descricao
+- String data
+- String hora
+- Localizacao localizacao
+- String tipoReporte
+- Confiabilidade confiabilidade
+- boolean pessoaEmPerigo
+- boolean viaIntransitavel
+- Prioridade prioridade
++ <<Create>> Reporte(int,String,String,String,Localizacao,String,boolean,boolean)
++ int getIdReporte()
++ String getDescricao()
++ void setDescricao(String)
++ String getData()
++ void setData(String)
++ String getHora()
++ void setHora(String)
++ Localizacao getLocalizacao()
++ void setLocalizacao(Localizacao)
++ String getTipoReporte()
++ void setTipoReporte(String)
++ Confiabilidade getConfiabilidade()
++ void setConfiabilidade(Confiabilidade)
++ boolean isPessoaEmPerigo()
++ void setPessoaEmPerigo(boolean)
++ boolean isViaIntransitavel()
++ void setViaIntransitavel(boolean)
++ Prioridade getPrioridade()
++ void setPrioridade(Prioridade)
++ void reportePrinter()
+}
+
+
+class Main {
++ {static} void main(String[])
+}
+
+class br.com.data4lives.sirena.Prioridade {
+~ int idPrioridade
+~ String grauPrioridade
++ <<Create>> Prioridade()
++ int getIdPrioridade()
++ void setIdPrioridade(int)
++ String getGrauPrioridade()
++ void setGrauPrioridade(String)
++ void defineGrauPrioridade(boolean,boolean)
+}
+
+
+
+
+br.com.data4lives.sirena.autoridades.Autoridade <|-- br.com.data4lives.sirena.autoridades.Bombeiro
+br.com.data4lives.sirena.autoridades.Autoridade <|-- br.com.data4lives.sirena.autoridades.Policial
+@enduml

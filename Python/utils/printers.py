@@ -104,7 +104,7 @@ def citizen_danger_printer(user_location: str, neighborhood_list: dict):
             reported_incidents = values[0]
             confidence = values[1]
             print(f"You're in a high-risk area: {neighborhood}")
-            print(f"Number of incidents there is: {reported_incidents}")
+            print(f"Number of incidents: {reported_incidents}")
             print(f"Confidence index: {confidence}")
 
 def leave_now_printer():

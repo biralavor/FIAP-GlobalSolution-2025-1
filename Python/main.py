@@ -31,7 +31,8 @@ async def main():
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                citizen_manager(data_with_rainfall, neighborhood_list)
+                if neighborhood_list:
+                    neighborhood_list = citizen_manager(data_with_rainfall, neighborhood_list)
             case 2:
                 agent_manager(data_with_rainfall, neighborhood_list)
             case 3:

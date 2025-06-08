@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"br.com.data4lives.sirena"},{"l":"br.com.data4lives.sirena.autoridades"},{"l":"br.com.data4lives.sirena.reports"}];updateSearchResults();

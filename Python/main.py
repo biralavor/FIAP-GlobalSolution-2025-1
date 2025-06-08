@@ -23,7 +23,7 @@ async def main():
     neighborhood_list = neighborhood_list_loader(parsed_data)
     data_with_rainfall = rainfall_init(parsed_data)
     data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
-    neighborhood_list = await incident_simulator(neighborhood_list)
+    neighborhood_list = await incident_simulator(neighborhood_list, data_with_rainfall)
     clear_screen()
     sirena_title_printer()
     while True:
@@ -31,7 +31,7 @@ async def main():
         choice = ask_valid_nbr()
         match choice:
             case 1:
-                citizen_manager(data_with_rainfall)
+                citizen_manager(data_with_rainfall, neighborhood_list)
             case 2:
                 agent_manager(data_with_rainfall, neighborhood_list)
             case 3:

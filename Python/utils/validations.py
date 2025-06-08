@@ -36,3 +36,19 @@ def does_str_has_special_char(user_input: str) -> bool:
         return True
     else:
         return False
+
+def is_agent_in_high_risk_district(agent_location: str, data_with_rainfall: dict, neighborhood_list: dict) -> bool:
+    its_a_match = False
+    for district, neighborhood in data_with_rainfall.items():
+        if agent_location in neighborhood:
+            for neighborhood, values_list in neighborhood_list.items():
+                if values_list[1] == "High":
+                    its_a_match = True
+                    actual_district = district
+                    break
+    if its_a_match:
+        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Agent is in a high-risk district: {actual_district}{RESET}")
+        return True
+    else:
+        print(f"{B_GRAY}S.I.R.E.N.A. is thinking ::: Agent is NOT in a high-risk district.{RESET}")
+        return False

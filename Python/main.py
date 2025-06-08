@@ -1,36 +1,22 @@
 import asyncio
 
+from managers.main_menu_manager import data_init_manager
 from managers.main_menu_manager import citizen_submenu_manager
 from managers.main_menu_manager import agent_submenu_manager
 from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
 from utils.printers import invalid_choice
 from utils.printers import exiting_printer
-from utils.printers import clear_screen
-from utils.loaders import csv_loader
-from utils.loaders import csv_parser
 from utils.loaders import neighborhood_list_loader
 from utils.validations import ask_valid_nbr
-from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
 from generators.simulators import incident_simulator
 
-SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
-
 async def main():
-    clear_screen()
-    data = csv_loader(SP_NEIGHBORHOODS)
-    if not data:
-        print(f"Error: No data found in the CSV file.")
-        exit(0)
-    parsed_data = csv_parser(data)
-    if not parsed_data:
-        print(f"Error: Failed to parse the CSV data.")
-        exit(0)
+    parsed_data = data_init_manager()
     neighborhood_list = neighborhood_list_loader(parsed_data)
-    data_with_rainfall = rainfall_init(parsed_data)
     sirena_title_printer()
-    data_with_rainfall = await extreme_rainfall_risk_simulator(data_with_rainfall)
+    data_with_rainfall = await extreme_rainfall_risk_simulator(parsed_data)
     if neighborhood_list and data_with_rainfall:
         while True:
             data_with_incidents = incident_simulator(neighborhood_list, data_with_rainfall)

@@ -1,3 +1,6 @@
+from utils.printers import clear_screen
+from utils.loaders import csv_loader
+from utils.loaders import csv_parser
 from managers.incident_manager import incident_manager
 from managers.neighbor_manager import neighborhood_manager
 from utils.printers import citizen_menu_printer
@@ -9,6 +12,20 @@ from utils.finders import ask_users_location
 from utils.validations import is_agent_in_high_risk_district
 from utils.validations import ask_valid_nbr
 from utils.colors import YELLOW, GREEN, RED, MAGENTA, CYAN, B_GRAY, RESET
+
+SP_NEIGHBORHOODS = "database-files/distritos-sp.csv"
+
+def data_init_manager() -> dict:
+    clear_screen()
+    data = csv_loader(SP_NEIGHBORHOODS)
+    if not data:
+        print(f"Error: No data found in the CSV file.")
+        exit(1)
+    parsed_data = csv_parser(data)
+    if not parsed_data:
+        print(f"Error: Failed to parse the CSV data.")
+        exit(1)
+    return parsed_data
 
 def citizen_submenu_manager(data_with_rainfall: dict, neighborhood_list: dict) -> None:
     """

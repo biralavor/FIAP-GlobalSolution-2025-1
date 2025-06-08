@@ -7,20 +7,15 @@ from utils.printers import sirena_title_printer
 from utils.printers import main_menu_printer
 from utils.printers import invalid_choice
 from utils.printers import exiting_printer
-
 from utils.loaders import neighborhood_list_loader
 from utils.validations import ask_valid_nbr
-from generators.simulators import rainfall_init
 from generators.simulators import extreme_rainfall_risk_simulator
 from generators.simulators import incident_simulator
 
 async def main():
-    parsed_data = {}
     parsed_data = data_init_manager()
-    neighborhood_list = {}
     neighborhood_list = neighborhood_list_loader(parsed_data)
     sirena_title_printer()
-    data_with_rainfall = {}
     data_with_rainfall = await extreme_rainfall_risk_simulator(parsed_data)
     if neighborhood_list and data_with_rainfall:
         while True:

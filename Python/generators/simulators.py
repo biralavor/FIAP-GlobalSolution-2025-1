@@ -32,7 +32,7 @@ def incident_simulator(neighborhood_list: dict, data_with_rainfall: dict) -> dic
         elif incident >= 5:
             confidence_level = "Low"
         else:
-            confidence_level = "-"
+            confidence_level = "Zero"
         neighborhood_list[location] = [incident, confidence_level]
     return neighborhood_list
 

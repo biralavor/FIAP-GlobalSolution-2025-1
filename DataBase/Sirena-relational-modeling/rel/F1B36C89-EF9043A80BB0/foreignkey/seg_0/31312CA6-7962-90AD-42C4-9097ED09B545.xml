@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="31312CA6-7962-90AD-42C4-9097ED09B545" containerWithKeyObject="734B5407-7EC9-92F6-0F6E-FEFD1CA0C7B0" localFKIndex="179F6757-F82C-FFE0-369F-B69F9B310D77" name="TB_SUBPREFEITURA_TB_ENDERECO_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:06:00 UTC</createdTime>
+<generatorID>758EDA7E-807D-06CF-F58C-A1C408AD7F81</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<referredTableLongName>TB_ENDERECO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0DCA372-CFB3-982D-A9D7-FB7B55198534</referredTableID>
+<keyObject>59CECCA2-799B-6901-E3ED-110816F1B397</keyObject>
+<referredKeyID>59CECCA2-799B-6901-E3ED-110816F1B397</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_endereco</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

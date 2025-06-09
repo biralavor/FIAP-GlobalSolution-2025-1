@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2BBD04B3-7417-F105-5C4F-2C59949F8AF1" containerWithKeyObject="BF34F1FB-612B-E75C-69C9-E2368632743E" localFKIndex="894BEF7C-6C1F-B3DD-99D3-7DE3EE8EADE5" name="TB_STATUS_REPORTE_TB_STATUS_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>AA0B52FE-C02A-628F-BA2F-B077B09BD65D</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<referredTableLongName>TB_STATUS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2B0D87B5-F020-67C5-33D5-0396C399D2E5</referredTableID>
+<keyObject>2F9AF1DB-E528-6526-6856-A0D332294B65</keyObject>
+<referredKeyID>2F9AF1DB-E528-6526-6856-A0D332294B65</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_status</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

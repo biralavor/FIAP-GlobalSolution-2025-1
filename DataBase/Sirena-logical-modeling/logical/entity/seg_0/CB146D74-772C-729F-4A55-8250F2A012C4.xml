@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CB146D74-772C-729F-4A55-8250F2A012C4" name="TB_SUBPREFEITURA">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:10:07 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_subprefeitura" id="A43DA1FE-2200-7D1E-20EE-536B6ABF9A69">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:10:18 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_prefeitura" id="7E6F3622-EF5D-2928-C749-2B8B4D54DFAA">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:10:43 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="703F55A5-306D-8D01-A64B-9D4526FC638F" name="TB_SUBPREFEITURA PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:10:32 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A43DA1FE-2200-7D1E-20EE-536B6ABF9A69</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

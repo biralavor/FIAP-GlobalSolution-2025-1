@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="AAE14396-3636-F50D-ACDD-46A3D2850272">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:00:26 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

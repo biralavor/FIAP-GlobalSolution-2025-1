@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CA65C2A4-FD38-33A2-AD50-26751DC54CE0" containerWithKeyObject="27E1EE31-E50F-08E6-1520-488E060EB1C7" localFKIndex="D6B27D8D-B8CC-A378-3901-76D2CA450D14" name="TB_REGIAO_ATUACAO_TB_AUTORIDADE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>E3F32F60-E7D9-C0BA-C528-675F7B1C1CA6</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<referredTableLongName>TB_AUTORIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1482759F-CE1E-5498-B570-C3DDF62619C9</referredTableID>
+<keyObject>E30565FC-A5A4-B82C-B2C0-FB6B99EC1035</keyObject>
+<referredKeyID>E30565FC-A5A4-B82C-B2C0-FB6B99EC1035</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_autoridade</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

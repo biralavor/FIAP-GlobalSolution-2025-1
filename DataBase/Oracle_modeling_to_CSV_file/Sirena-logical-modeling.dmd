@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Sirena-logical-modeling" id="EDB1C141-7C33-3455-EFEB-94A0DE1EEB42" version="3.5">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:00:26 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>EDB1C141-7C33-3455-EFEB-94A0DE1EEB42</designId>
+</OSDM_Design>

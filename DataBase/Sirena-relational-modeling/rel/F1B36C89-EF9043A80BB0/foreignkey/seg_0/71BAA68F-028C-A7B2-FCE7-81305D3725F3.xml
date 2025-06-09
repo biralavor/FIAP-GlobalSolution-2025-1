@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="71BAA68F-028C-A7B2-FCE7-81305D3725F3" containerWithKeyObject="9B786F98-8A13-725C-01EA-774F48CB32B4" localFKIndex="B88752CA-C793-853A-5B40-2773FF0E2AC7" name="TB_MEDICOES_METEOROLOGICAS_TB_ESTACOES_METEOROLOGICAS_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:25:21 UTC</createdTime>
+<generatorID>CDFAE145-B949-6421-B58D-CB80EE600622</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<referredTableLongName>TB_ESTACOES_METEOROLOGICAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4093F3A3-25B5-9F08-38CC-C4E44E1D4650</referredTableID>
+<keyObject>8AC0C9E8-9726-3C8C-9D4E-C08E4C2DFA8B</keyObject>
+<referredKeyID>8AC0C9E8-9726-3C8C-9D4E-C08E4C2DFA8B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_estacao_meteo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94BE37A9-2BB8-3685-8B38-40F3E36358E7" name="TB_REGIAO_ATUACAO">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:39:03 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_autoridade" id="74D37331-B0FB-F746-85C5-F6B7AF424488">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:39:08 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F571DB06-F9C2-CC14-DABC-21C6BE89552D" referredColumn="CBDA48B5-FB60-9B26-437F-052003624FB6"/>
+</associations>
+</Column>
+<Column name="id_subprefeitura" id="12A210FC-19B6-D5B3-FD40-880ACE6EE8C8">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:39:14 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DC33010-2C73-8198-41CE-23E92DCA73DD" referredColumn="743F3230-8C2B-5C7F-8704-90FED7D00F1D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8C60BE9F-8956-897F-0909-13C96DF31646" name="TB_REGIAO_ATUACAO_TB_AUTORIDADE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:39:08 UTC</createdTime>
+<generatorID>61274658-750C-279B-D0A7-5228FB17A1B1</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74D37331-B0FB-F746-85C5-F6B7AF424488"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5BD560F-F18E-275A-2811-23829CC20AA7" name="TB_REGIAO_ATUACAO_TB_SUBPREFEITURA_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:39:14 UTC</createdTime>
+<generatorID>703F55A5-306D-8D01-A64B-9D4526FC638F</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12A210FC-19B6-D5B3-FD40-880ACE6EE8C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

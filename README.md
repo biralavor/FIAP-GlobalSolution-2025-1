@@ -20,27 +20,46 @@
 </ol>
 
 ## 2. Cliente
-(client_logo)
-
-Mussum Ipsum, cacilds vidis litro abertis. 
-
-(client_site)
+- Governo Estadual
+- Governmo Municipal
 
 ## 3. Metas
 > [!IMPORTANT]
-> - Mussum Ipsum, cacilds vidis litro abertis. 
+> - **Técnico:**
+> - Redução de 70% dos falsos positivos em alertas de enxurradas e alagamentos
+> - Acurácia mínima de 95% na previsão do volume de chuva
+> - **Operacional:**
+> - Redução de 40% no tempo de elaboração do plano de ação
+> - Execução da ação em até 15 min
+> - **Social:**
+> - Redução de 60% em vítimas fatais nas áreas mapeadas
+> - Aumento em 3x na adesão das evacuações
+
 
 ## 4. Hipóteses
-Mussum Ipsum, cacilds vidis litro abertis. 
+**Aumento da eficácia operacional:**
+
+Agentes públicos reduzirão o tempo de resposta em 40% usando o dashboard do S.I.R.E.N.A., que integra dados meteorológicos, recursos humanos e planos de ação pré-aprovados;
+
+**Adoção de agentes públicos:**
+
+Times priorizarão alertas da S.I.R.E.N.A. com score de confiabilidade acima de 90%, reduzindo trotes;
+
+**Engajamento da população:**
+
+Cidadãos de áreas de risco seguirão alertas da S.I.R.E.N.A. 3x mais rápido, quando receberem instruções específicas e geolocalizadas;
 
 
 ## 5. Segmento de Cliente
-Mussum Ipsum, cacilds vidis litro abertis. 
-
+- Agentes Públicos: Defesa Civil, Corpor de Bombeiros, C.E.T.
+- Cidadãos
 
 ## 6. Solução
 ### Plataforma S.I.R.E.N.A
-Mussum Ipsum, cacilds vidis litro abertis. 
+
+Sistema Integrado de Resposta às Emergências e Notificações Ambientais, que gera alertas antecipados e coordenação integrada de recursos públicos.
+
+Nosso objetivo é prever chuvas extremas e fazer a ponte entre agentes públicos e cidadãos, reduzindo mortes e danos econômicos em eventos climáticos.
 
 
 ## 7. Milestones
@@ -52,16 +71,26 @@ Mussum Ipsum, cacilds vidis litro abertis.
 </ol>
 
 ### Milestones1
-Mussum Ipsum, cacilds vidis litro abertis. 
+Chatbot já será apresentado à população e aos agentes públicos.
+
+Modo Cidadão: O Cidadão poderá indicar ocorrências climáticas e receber alertas, baseadas em sua geolocalização. 
+
+Modo Agente: Agentes deverão confirmar ocorrências in loco, daquelas já filtradas por alta confiabilidade.
+
 
 ### Milestones2
-Mussum Ipsum, cacilds vidis litro abertis. 
+Desenvolvimento de cada modelo de Machine Learning: topografia, histórico de alagamento, estações meteorológicas antigas, estações meteorológicas novas e trânsito em tempo real
+
 
 ### Milestones3
-Mussum Ipsum, cacilds vidis litro abertis.  
+Combinação dos múltiplos modelos de Machine Learning para o desenvolvimento de um plano de ação geolocalizado
+
 
 ### Milestones4
-Mussum Ipsum, cacilds vidis litro abertis. 
+Modo Cidadão vai indicar locais mais seguros, durante eventos climáticos, baseados em sua localização, topografia, risco e dados climáticos.
+
+Modo Agente vai receber o plano de ação elaborado pelo S.I.R.E.N.A., indicando melhor rota de como chegar ao local
+
 
 ## 8. Tecnologias Utilizadas
 <ol>

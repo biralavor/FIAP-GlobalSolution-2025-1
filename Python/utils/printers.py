@@ -125,16 +125,16 @@ def citizen_danger_printer(user_location: str, neighborhood_list: dict):
         if user_location == neighborhood:
             reported_incidents = values[0]
             confidence = values[1]
-            if confidence == "-":
-                confidence = f"{B_GRAY}No risk{MAGENTA}"
+            if confidence == "Zero":
+                confidence = f"{B_GRAY}No{MAGENTA}"
             elif confidence == "Low":
-                confidence = f"{GREEN}{confidence}{RESET}"
+                confidence = f"{GREEN}{confidence}{MAGENTA}"
             elif confidence == "Medium":
-                confidence = f"{YELLOW}{confidence}{RESET}"
+                confidence = f"{YELLOW}{confidence}{MAGENTA}"
             elif confidence == "High":
-                confidence = f"{RED}{confidence}{RESET}"
-            print(f"{MAGENTA}You're in a {confidence} area: {neighborhood}{RESET}")
-            print(f"{MAGENTA}Number of incidents: {reported_incidents}{RESET}\n")
+                confidence = f"{RED}{confidence}{MAGENTA}"
+            print(f"{MAGENTA}You're in a area with {confidence} risk:: {neighborhood}{RESET}")
+            print(f"{MAGENTA}Number of reported incidents: {reported_incidents}{RESET}\n")
 
 def leave_now_printer():
     print(f"{RED}")

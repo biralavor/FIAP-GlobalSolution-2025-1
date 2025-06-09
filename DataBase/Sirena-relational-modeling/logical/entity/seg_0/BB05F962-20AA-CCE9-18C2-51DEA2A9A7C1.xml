@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB05F962-20AA-CCE9-18C2-51DEA2A9A7C1" name="TB_REGIAO_ATUACAO">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:29:37 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_subprefeitura" id="495B566E-B6B9-C361-79DA-8D7C903F741E">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:29:51 UTC</createdTime>
+<generatorID>CEDAF9BE-A649-6D3B-B05B-DF4683D66EE5</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>A43DA1FE-2200-7D1E-20EE-536B6ABF9A69</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_autoridade" id="7C8065A4-6891-E7F4-1305-50D89A711A7B">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:29:59 UTC</createdTime>
+<generatorID>E3F32F60-E7D9-C0BA-C528-675F7B1C1CA6</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>CADC720A-A7E7-9615-D95A-8162CB71AAB0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="0A470F67-400D-9ED5-5CE7-AD6CE80A7F78">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:46:22 UTC</createdTime>
+<generatorID>CEDAF9BE-A649-6D3B-B05B-DF4683D66EE5</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>9DF54335-3165-DB15-8E81-5DDF6C23AAAC</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B195420F-6CB5-6CF6-C500-B14006A56D94" name="TB_REGIAO_ATUACAO PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:29:51 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>495B566E-B6B9-C361-79DA-8D7C903F741E</attributeRef>
+<attributeRef>0A470F67-400D-9ED5-5CE7-AD6CE80A7F78</attributeRef>
+<attributeRef>7C8065A4-6891-E7F4-1305-50D89A711A7B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

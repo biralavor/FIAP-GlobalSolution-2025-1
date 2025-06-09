@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D86CFD22-F867-2CF7-8C56-58ED42BD2BE6" name="TB_CHATBOT_LOG">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>3B2701B3-D435-AEEA-AA32-F9606A6899F0</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_log" id="C219A6F5-34F2-CE7A-4020-4FEC13D77531">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>96222DA8-8134-B70A-ADCA-8AD7708B4582</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_mensagem" id="3D90340A-A60C-D4EE-88E2-5F4ED98DE77E">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>1940B408-312F-B898-07F3-C1E4FA684E16</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero_tel_usuario" id="86BCA748-EB6C-C6CB-F97D-13E782364B99">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>2EE63F7C-4D88-93D6-B1C0-3B5760BBC3CB</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mensagem_usuario" id="8983B698-6847-E9DC-4039-7AFB3617EE4A">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>986E012B-DA42-BD4B-29A3-7BD663C40799</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="chatbot_response" id="A5B8661F-6EFB-F1B3-868D-DBA4D672E392">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>85CF2EF3-01E7-5D70-1B7E-B9E068F78349</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TB_REPORTE_id_reporte" id="8FFEFD38-6F5B-0E9D-885D-58F761AA94E6">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>40592F7F-6F35-0902-301E-725FE9B5BD9B</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65E75B27-46EE-80F8-B0CF-F6C036B6A2C9" referredColumn="7354B9B0-C87F-58FB-7CA4-F2429CFA8C26"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB391496-405F-6B16-7C51-74CA713EDE54" name="TB_CHATBOT_LOG_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>57C285FA-3A69-B90D-F43F-D5DE8E553A65</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C219A6F5-34F2-CE7A-4020-4FEC13D77531"/>
+<colUsage columnID="8FFEFD38-6F5B-0E9D-885D-58F761AA94E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4CF2D8A-26C0-56FF-386C-565D3970A8F6" name="TB_CHATBOT_LOG_TB_REPORTE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>5B53DAD7-F702-7072-32BA-CC45E40C9FDB</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8FFEFD38-6F5B-0E9D-885D-58F761AA94E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8B214458-437C-B973-2435-9939DAD1B937" containerWithKeyObject="4093F3A3-25B5-9F08-38CC-C4E44E1D4650" localFKIndex="9AE8A347-AE7F-8377-6CCF-72B895F9BA6D" name="TB_ESTACOES_METEOROLOGICAS_TB_ENDERECO_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>B86EE175-8873-5532-A66F-62423481D928</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<referredTableLongName>TB_ENDERECO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0DCA372-CFB3-982D-A9D7-FB7B55198534</referredTableID>
+<keyObject>59CECCA2-799B-6901-E3ED-110816F1B397</keyObject>
+<referredKeyID>59CECCA2-799B-6901-E3ED-110816F1B397</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4B2C6FA5-2735-942E-DFDD-CCB508C96738" containerWithKeyObject="27E1EE31-E50F-08E6-1520-488E060EB1C7" localFKIndex="16594D41-027C-CCAE-1E7E-C6C723FA2F39" name="TB_REGIAO_ATUACAO_TB_SUBPREFEITURA_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CEDAF9BE-A649-6D3B-B05B-DF4683D66EE5</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<referredTableLongName>TB_SUBPREFEITURA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>734B5407-7EC9-92F6-0F6E-FEFD1CA0C7B0</referredTableID>
+<keyObject>8B8FF8F3-5FF4-E0AA-D074-60CBC7FACCD3</keyObject>
+<referredKeyID>8B8FF8F3-5FF4-E0AA-D074-60CBC7FACCD3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_subprefeitura</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79B6A2F5-EF0D-B830-8177-5E8D3B932C57" name="TB_STATUS_REPORTE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:42:53 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="data_hora" id="007D5F5F-D4FA-4611-228B-67D309D27BB1">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:43:03 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_status" id="F7DB3A79-8843-C753-4A7B-EE2114DEAE50">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:49:20 UTC</createdTime>
+<generatorID>AA0B52FE-C02A-628F-BA2F-B077B09BD65D</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>A20A5E0E-77ED-1324-4321-7A1FE0E5839D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_reporte" id="B08E8214-54EA-7062-8795-E0269FC5700F">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:49:35 UTC</createdTime>
+<generatorID>D6D212F8-CF51-54FB-FF31-45F3489C333A</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>01390A58-1589-C0EA-E9E7-A4FB0B72202A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D079EDC7-D9F7-40C5-013A-8ABA1D037530" name="TB_STATUS_REPORTE PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:49:20 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F7DB3A79-8843-C753-4A7B-EE2114DEAE50</attributeRef>
+<attributeRef>B08E8214-54EA-7062-8795-E0269FC5700F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

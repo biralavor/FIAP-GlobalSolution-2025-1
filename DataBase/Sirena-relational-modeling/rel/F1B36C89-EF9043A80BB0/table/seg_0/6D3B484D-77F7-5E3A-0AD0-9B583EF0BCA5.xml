@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6D3B484D-77F7-5E3A-0AD0-9B583EF0BCA5" name="TB_REPORTE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>393993FF-19F1-E342-3FD5-AA99371CB3DF</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_reporte" id="7354B9B0-C87F-58FB-7CA4-F2429CFA8C26">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>01390A58-1589-C0EA-E9E7-A4FB0B72202A</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_endereco" id="D7307A1F-0415-0907-38A0-C67032121529">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:40:08 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FD9F9A5-8814-34EE-2C64-E71EFE76AA72" referredColumn="A57BA99D-26D9-9CF3-B087-C4874A5A4C0E"/>
+</associations>
+</Column>
+<Column name="data_hora" id="95779497-437B-1207-CB0C-B865EC390631">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>71E1AC87-439E-924C-66DF-4F8D41040ED7</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="latitude" id="70C84499-C08F-12CB-E52A-66B59B51C692">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>A226D99C-EEBC-C599-71C7-E9E0A8F197B1</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="longitude" id="70FE9AD0-BB03-6DDD-CA90-361A4C1C1C45">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CFA3C99B-D5F5-9022-7BA4-5AE37DBBB034</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B518D263-00FF-DADA-6BFC-94D37985E784" name="TB_REPORTE_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>58373454-0DC8-204C-80D6-6F38BF549E72</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7354B9B0-C87F-58FB-7CA4-F2429CFA8C26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FD54408-E67B-8959-EACB-725C421BA2CD" name="TB_REPORTE_TB_ENDERECO_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:40:08 UTC</createdTime>
+<generatorID>758EDA7E-807D-06CF-F58C-A1C408AD7F81</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7307A1F-0415-0907-38A0-C67032121529"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

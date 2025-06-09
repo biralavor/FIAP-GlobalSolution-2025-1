@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="396BA01D-AF73-4A6C-4589-80126BF986BA" name="TB_ESTACOES_METEOROLOGICAS">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:21:09 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_estacao_meteo" id="87F47E49-AC9F-B45B-F7D9-FFA407C827A5">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:21:24 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="20944EB6-C2D1-BECF-E706-566EFCBCE838">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:46:22 UTC</createdTime>
+<generatorID>B86EE175-8873-5532-A66F-62423481D928</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>A09C299F-E065-7997-ACAD-A6841A11A82B</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CDFAE145-B949-6421-B58D-CB80EE600622" name="TB_ESTACOES_METEOROLOGICAS PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:21:37 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87F47E49-AC9F-B45B-F7D9-FFA407C827A5</attributeRef>
+<attributeRef>20944EB6-C2D1-BECF-E706-566EFCBCE838</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

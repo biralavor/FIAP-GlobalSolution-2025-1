@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="E7C66BF6-575D-22D2-245E-43E200C4DFED">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:00:26 UTC</createdTime>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

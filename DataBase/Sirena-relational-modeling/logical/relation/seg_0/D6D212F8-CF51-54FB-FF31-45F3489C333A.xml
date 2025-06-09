@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_6" directorySegmentName="seg_0" id="D6D212F8-CF51-54FB-FF31-45F3489C333A">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:49:35 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<sourcePk>58373454-0DC8-204C-80D6-6F38BF549E72</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>393993FF-19F1-E342-3FD5-AA99371CB3DF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>79B6A2F5-EF0D-B830-8177-5E8D3B932C57</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

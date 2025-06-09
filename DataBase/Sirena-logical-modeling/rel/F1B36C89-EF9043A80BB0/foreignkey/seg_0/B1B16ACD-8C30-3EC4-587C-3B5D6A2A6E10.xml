@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1B16ACD-8C30-3EC4-587C-3B5D6A2A6E10" containerWithKeyObject="788ED255-5CD3-AD7A-9E9D-374F298015C5" localFKIndex="6E515B86-689F-7142-0A6C-3FD6F8A75BCD" name="TB_REPORTE_OCORRENCIA_TB_OCORRENCIA_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>3ADBD062-4DC9-31EA-2F7F-8B2D479F65A0</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<referredTableLongName>TB_OCORRENCIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>181CDE6C-9580-D608-098D-13672312B8E0</referredTableID>
+<keyObject>EF83EBC9-048E-7A4B-EED0-A4D7C3A8E6EB</keyObject>
+<referredKeyID>EF83EBC9-048E-7A4B-EED0-A4D7C3A8E6EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_ocorrencia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

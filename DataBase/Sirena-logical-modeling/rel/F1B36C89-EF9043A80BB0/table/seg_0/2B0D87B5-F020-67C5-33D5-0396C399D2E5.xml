@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B0D87B5-F020-67C5-33D5-0396C399D2E5" name="TB_STATUS">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>36BC0656-D8B2-44DA-7C3C-D4B113B12ED2</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_status" id="7EA35636-8CBB-96AF-D0A9-4955148E3185">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>A20A5E0E-77ED-1324-4321-7A1FE0E5839D</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao_status" id="8B96B73E-9C39-C880-8C47-34A23BB2EC05">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>038633BC-BD23-4DFC-2F53-3BCEBD47C35B</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F9AF1DB-E528-6526-6856-A0D332294B65" name="TB_STATUS_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>5667F480-8AED-602B-0881-F7EC689B78E4</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EA35636-8CBB-96AF-D0A9-4955148E3185"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

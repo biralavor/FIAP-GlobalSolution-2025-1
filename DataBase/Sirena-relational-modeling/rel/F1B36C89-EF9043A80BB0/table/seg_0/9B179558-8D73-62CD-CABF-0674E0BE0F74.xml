@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B179558-8D73-62CD-CABF-0674E0BE0F74" name="TB_LOGIN">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>83105768-F5C2-D4D4-FBA4-9EDE9A66E2D8</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_autoridade" id="22A3266B-7BC1-F00E-9B51-20B398910D51">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>32996C6F-4CBE-D54E-1C92-332F03C66905</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85418A6A-9684-16F0-EF3E-FB6FF1D7A959" referredColumn="CBDA48B5-FB60-9B26-437F-052003624FB6"/>
+</associations>
+</Column>
+<Column name="email_autoridade" id="2B3C1166-A27E-B71E-641A-9FDB9E81F375">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>877A9C19-338A-BD4A-6C05-0BDF317EDCB7</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="A3BBF023-564D-EB4B-0286-EC4271D82FB6">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>B1E3CEF5-B303-C17C-C0C3-FBB5686255B7</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8823052D-335A-2F0C-5816-AA847D5E394A" name="TB_LOGIN__IDX">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>453D5595-AA8A-4583-F8B4-E720910F7344</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="22A3266B-7BC1-F00E-9B51-20B398910D51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05538D9F-CC9C-2D95-C6CB-FEE9691EE016" name="TB_LOGIN_TB_AUTORIDADE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>453D5595-AA8A-4583-F8B4-E720910F7344</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22A3266B-7BC1-F00E-9B51-20B398910D51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="71ED427E-3C76-14BB-18D2-6AE4331707F9" name="TB_MEDICOES_METEOROLOGICAS">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:21:45 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="data_hora_medicao" id="62E6647A-8D37-A476-4597-8418E617F964">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:21:58 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="temperatura" id="F86D295A-2543-FCDC-188B-1A75F6DE509D">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:22:11 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pressao_atmosferica" id="14562EB1-9E9D-AF7C-5EC8-F04B437C75C5">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:22:34 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="umidade" id="C322AB50-D83C-4630-C44D-AFC520CBDD19">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:23:20 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="velocidade_vento" id="461BF002-9838-9A40-F053-B9E4BB08C9F9">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:24:22 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direcao_vento" id="B17FE1CF-9123-D072-6F71-CE2559107ED9">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:24:45 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precipitacao" id="8FF47946-2455-9AE4-7927-E00876431AB3">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:25:09 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="radiacao_solar" id="0ECD460B-50FF-C7F3-8D85-D0387AEDF3EE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:25:41 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estacao_meteo" id="51AAEBBB-B89A-0BD8-8940-ED5C1AB49F71">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:30:44 UTC</createdTime>
+<generatorID>F25AB7C5-463F-EBEA-6E5D-EE4C45B1C3C9</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>87F47E49-AC9F-B45B-F7D9-FFA407C827A5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="24743B30-61ED-0BB7-F596-B709DC28339C">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:46:22 UTC</createdTime>
+<generatorID>F25AB7C5-463F-EBEA-6E5D-EE4C45B1C3C9</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>20944EB6-C2D1-BECF-E706-566EFCBCE838</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C3BCF046-16D4-A731-66AB-1501147C556A" name="TB_MEDICOES_METEOROLOGICAS PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:30:44 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>51AAEBBB-B89A-0BD8-8940-ED5C1AB49F71</attributeRef>
+<attributeRef>24743B30-61ED-0BB7-F596-B709DC28339C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

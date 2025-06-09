@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A2139AB0-FFB7-5648-F68F-005F7BD5A4DE" containerWithKeyObject="E800FEE1-A976-F625-ECD8-A6E7FF637DC6" localFKIndex="17C62B8D-EC44-48B1-FD90-1E6D1B670D2D" name="TB_REPORTE_AUTORIDADE_TB_REPORTE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>EDC61571-7329-4059-5ED4-1C321543B8A3</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<referredTableLongName>TB_REPORTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D3B484D-77F7-5E3A-0AD0-9B583EF0BCA5</referredTableID>
+<keyObject>B518D263-00FF-DADA-6BFC-94D37985E784</keyObject>
+<referredKeyID>B518D263-00FF-DADA-6BFC-94D37985E784</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_reporte</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

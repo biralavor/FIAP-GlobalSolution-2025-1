@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="788ED255-5CD3-AD7A-9E9D-374F298015C5" name="TB_REPORTE_OCORRENCIA">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>549097C1-DAAD-397D-EACF-63D80E9B075B</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_reporte_ocorrencia" id="DE65D09F-3ED2-441E-CF04-2E0243D6B06D">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>9A45BBC4-E20F-5C26-E00E-3213260ECF98</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_ocorrencia" id="33D577AA-BB18-230B-371C-241A65A804EE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>5E4B0686-5E96-17CB-7E52-617EA2F97D91</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1B16ACD-8C30-3EC4-587C-3B5D6A2A6E10" referredColumn="7F9BD705-CBDC-3F6A-0D54-CEDE34899556"/>
+</associations>
+</Column>
+<Column name="id_reporte" id="36D1F490-45A4-B1E4-689C-3237E6C20178">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>1A5B27E1-86D8-3EE7-1419-56ECB17AB78D</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D9A982D-D130-46D5-C35E-81AB5F0EDD71" referredColumn="7354B9B0-C87F-58FB-7CA4-F2429CFA8C26"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C30E730-5912-EA91-7F87-88E6324246F6" name="TB_REPORTE_OCORRENCIA_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>A8F11672-98A3-39D1-B498-5A21CF8951E9</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE65D09F-3ED2-441E-CF04-2E0243D6B06D"/>
+<colUsage columnID="33D577AA-BB18-230B-371C-241A65A804EE"/>
+<colUsage columnID="36D1F490-45A4-B1E4-689C-3237E6C20178"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E515B86-689F-7142-0A6C-3FD6F8A75BCD" name="TB_REPORTE_OCORRENCIA_TB_OCORRENCIA_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>3ADBD062-4DC9-31EA-2F7F-8B2D479F65A0</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33D577AA-BB18-230B-371C-241A65A804EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1ADE1F34-4A71-FF24-04E7-BB9ED9EDA643" name="TB_REPORTE_OCORRENCIA_TB_REPORTE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>6B6571B5-B66D-BF7F-C991-551EB31916E6</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36D1F490-45A4-B1E4-689C-3237E6C20178"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

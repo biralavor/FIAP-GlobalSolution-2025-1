@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B2701B3-D435-AEEA-AA32-F9606A6899F0" name="TB_CHATBOT_LOG">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:46:21 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_log" id="96222DA8-8134-B70A-ADCA-8AD7708B4582">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:46:39 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_mensagem" id="1940B408-312F-B898-07F3-C1E4FA684E16">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:46:50 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero_tel_usuario" id="2EE63F7C-4D88-93D6-B1C0-3B5760BBC3CB">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:47:10 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mensagem_usuario" id="986E012B-DA42-BD4B-29A3-7BD663C40799">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:47:54 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="chatbot_response" id="85CF2EF3-01E7-5D70-1B7E-B9E068F78349">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:48:13 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_reporte" id="40592F7F-6F35-0902-301E-725FE9B5BD9B">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:09:05 UTC</createdTime>
+<generatorID>5B53DAD7-F702-7072-32BA-CC45E40C9FDB</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>01390A58-1589-C0EA-E9E7-A4FB0B72202A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="915D4F8E-306F-346B-DAE7-C6E0802A9E17">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 15:43:21 UTC</createdTime>
+<generatorID>5B53DAD7-F702-7072-32BA-CC45E40C9FDB</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<referedAttribute>9916EA62-17AE-7ADC-596F-9AE19EA74CB2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="57C285FA-3A69-B90D-F43F-D5DE8E553A65" name="TB_CHATBOT_LOG PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:46:44 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>96222DA8-8134-B70A-ADCA-8AD7708B4582</attributeRef>
+<attributeRef>40592F7F-6F35-0902-301E-725FE9B5BD9B</attributeRef>
+<attributeRef>915D4F8E-306F-346B-DAE7-C6E0802A9E17</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="27E1EE31-E50F-08E6-1520-488E060EB1C7" name="TB_REGIAO_ATUACAO">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>BB05F962-20AA-CCE9-18C2-51DEA2A9A7C1</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TB_SUBPREFEITURA_id_subprefeitura" id="6B3A5968-6348-AC3A-3841-48FF1F1AF5F0">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>495B566E-B6B9-C361-79DA-8D7C903F741E</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B2C6FA5-2735-942E-DFDD-CCB508C96738" referredColumn="743F3230-8C2B-5C7F-8704-90FED7D00F1D"/>
+</associations>
+</Column>
+<Column name="TB_AUTORIDADE_id_autoridade" id="7991C94B-21AF-A46F-A3B0-D8B506B4ABBF">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>7C8065A4-6891-E7F4-1305-50D89A711A7B</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA65C2A4-FD38-33A2-AD50-26751DC54CE0" referredColumn="CBDA48B5-FB60-9B26-437F-052003624FB6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D012FCED-DFCC-7C9E-631A-75954952CCDF" name="TB_REGIAO_ATUACAO_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>B195420F-6CB5-6CF6-C500-B14006A56D94</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B3A5968-6348-AC3A-3841-48FF1F1AF5F0"/>
+<colUsage columnID="7991C94B-21AF-A46F-A3B0-D8B506B4ABBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6B27D8D-B8CC-A378-3901-76D2CA450D14" name="TB_REGIAO_ATUACAO_TB_AUTORIDADE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>E3F32F60-E7D9-C0BA-C528-675F7B1C1CA6</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7991C94B-21AF-A46F-A3B0-D8B506B4ABBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16594D41-027C-CCAE-1E7E-C6C723FA2F39" name="TB_REGIAO_ATUACAO_TB_SUBPREFEITURA_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CEDAF9BE-A649-6D3B-B05B-DF4683D66EE5</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B3A5968-6348-AC3A-3841-48FF1F1AF5F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

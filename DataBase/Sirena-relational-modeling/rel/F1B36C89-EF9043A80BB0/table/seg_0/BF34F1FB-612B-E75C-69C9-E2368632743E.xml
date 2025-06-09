@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF34F1FB-612B-E75C-69C9-E2368632743E" name="TB_STATUS_REPORTE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>79B6A2F5-EF0D-B830-8177-5E8D3B932C57</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_status" id="EA635323-63D1-D56C-B480-AC99EE94859C">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>F7DB3A79-8843-C753-4A7B-EE2114DEAE50</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2BBD04B3-7417-F105-5C4F-2C59949F8AF1" referredColumn="7EA35636-8CBB-96AF-D0A9-4955148E3185"/>
+</associations>
+</Column>
+<Column name="id_reporte" id="65219EDA-96ED-1AAB-02E2-4E01FFD36DBC">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>B08E8214-54EA-7062-8795-E0269FC5700F</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E51DAF9-F56D-3181-71E5-BC0D351CC2DE" referredColumn="7354B9B0-C87F-58FB-7CA4-F2429CFA8C26"/>
+</associations>
+</Column>
+<Column name="data_hora" id="9201202F-408C-CF7B-A6AC-F630317E710E">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>007D5F5F-D4FA-4611-228B-67D309D27BB1</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C415E6A1-1851-E4C2-EE8F-33BF37AC1F84" name="TB_STATUS_REPORTE_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>D079EDC7-D9F7-40C5-013A-8ABA1D037530</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA635323-63D1-D56C-B480-AC99EE94859C"/>
+<colUsage columnID="65219EDA-96ED-1AAB-02E2-4E01FFD36DBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="894BEF7C-6C1F-B3DD-99D3-7DE3EE8EADE5" name="TB_STATUS_REPORTE_TB_STATUS_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>AA0B52FE-C02A-628F-BA2F-B077B09BD65D</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA635323-63D1-D56C-B480-AC99EE94859C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEE43B19-3855-D4D7-8DD2-D667DDC9FE30" name="TB_STATUS_REPORTE_TB_REPORTE_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>D6D212F8-CF51-54FB-FF31-45F3489C333A</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65219EDA-96ED-1AAB-02E2-4E01FFD36DBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

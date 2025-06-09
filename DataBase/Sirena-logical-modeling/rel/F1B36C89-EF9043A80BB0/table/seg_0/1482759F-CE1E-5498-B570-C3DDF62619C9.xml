@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1482759F-CE1E-5498-B570-C3DDF62619C9" name="TB_AUTORIDADE">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>1B2BB4B2-3E50-3B16-7C04-A91BEFD97CD8</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_autoridade" id="CBDA48B5-FB60-9B26-437F-052003624FB6">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CADC720A-A7E7-9615-D95A-8162CB71AAB0</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome_autoridade" id="5BECCF25-005D-2C1E-89C8-E6E5FE147A6F">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>9C440BDC-06DD-B6EC-6115-CDEC7A31D847</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_autoridade" id="E6E5B266-6AF7-4B5C-73A3-EB5A6F873571">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>3020B76F-2C1D-57F7-0681-FF0107D65E3A</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_identificacao" id="FC6EF093-040B-9E0F-A789-7AF0657BD4A5">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>EDF3A49E-64EA-9B69-0D51-F62F14D40B20</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contato_autoridade" id="80A5F49A-55D9-E079-24FE-132528625378">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>065C3560-5817-0693-EC25-10745CC30046</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E30565FC-A5A4-B82C-B2C0-FB6B99EC1035" name="TB_AUTORIDADE_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>61274658-750C-279B-D0A7-5228FB17A1B1</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBDA48B5-FB60-9B26-437F-052003624FB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C86B9342-CFEE-7EA6-4086-17C033CDC8D5" name="TB_AUTORIDADE_TB_ENDERECO_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>61E76B38-1A7F-A927-CFF4-99767E7DF7F4</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

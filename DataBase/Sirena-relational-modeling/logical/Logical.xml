@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="E808F4D4-C17F-6542-7ABC-3835D9BF854F" mainViewID="27E4A283-E5C3-F042-DB27-9F3CB5D352D3">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 13:00:26 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

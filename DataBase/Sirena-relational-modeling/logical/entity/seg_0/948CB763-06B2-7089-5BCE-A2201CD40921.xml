@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="948CB763-06B2-7089-5BCE-A2201CD40921" name="TB_ENDERECO">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:11:07 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_endereco" id="A09C299F-E065-7997-ACAD-A6841A11A82B">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:11:14 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_rua" id="C555FB49-9FFA-F374-3E63-6D71CD4A9940">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:11:39 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="6EE202E2-997B-D038-E9D4-7037C31D91CD">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:11:52 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bairro" id="214B2D0E-3A9A-5688-4560-22581D0B6A52">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:12:05 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cidade" id="2D8AD5ED-F732-E45D-BBA7-B53EF63E5273">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:13:42 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="5D0D3533-EEE8-7A15-76D0-01714C48F449">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:18:32 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pais" id="742F30EE-A47F-9A1D-CDA7-CB22FFF9EDEA">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:18:44 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="758EDA7E-807D-06CF-F58C-A1C408AD7F81" name="TB_ENDERECO PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:30:14 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<engineerTo>
+<item key="F1B36C89-626C-788D-8D81-EF9043A80BB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A09C299F-E065-7997-ACAD-A6841A11A82B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

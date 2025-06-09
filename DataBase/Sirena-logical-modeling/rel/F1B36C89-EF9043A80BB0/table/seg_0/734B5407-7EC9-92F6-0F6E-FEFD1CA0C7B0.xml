@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="734B5407-7EC9-92F6-0F6E-FEFD1CA0C7B0" name="TB_SUBPREFEITURA">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CB146D74-772C-729F-4A55-8250F2A012C4</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_subprefeitura" id="743F3230-8C2B-5C7F-8704-90FED7D00F1D">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>A43DA1FE-2200-7D1E-20EE-536B6ABF9A69</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome_prefeitura" id="7224374E-94F4-8833-8531-1C236A34E31F">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>7E6F3622-EF5D-2928-C749-2B8B4D54DFAA</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8B8FF8F3-5FF4-E0AA-D074-60CBC7FACCD3" name="TB_SUBPREFEITURA_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>703F55A5-306D-8D01-A64B-9D4526FC638F</generatorID>
+<ownerDesignName>Sirena-logical-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="743F3230-8C2B-5C7F-8704-90FED7D00F1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

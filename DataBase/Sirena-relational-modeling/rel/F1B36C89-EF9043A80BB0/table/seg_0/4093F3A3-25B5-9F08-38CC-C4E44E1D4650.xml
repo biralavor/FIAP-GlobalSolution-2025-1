@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4093F3A3-25B5-9F08-38CC-C4E44E1D4650" name="TB_ESTACOES_METEOROLOGICAS">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>396BA01D-AF73-4A6C-4589-80126BF986BA</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_estacao_meteo" id="A85843B4-59D3-1C54-8856-54487B68F42B">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>87F47E49-AC9F-B45B-F7D9-FFA407C827A5</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_endereco" id="7928EE9E-263F-121A-7215-8EAC1FD34E58">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:46:11 UTC</createdTime>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B214458-437C-B973-2435-9939DAD1B937" referredColumn="A57BA99D-26D9-9CF3-B087-C4874A5A4C0E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AC0C9E8-9726-3C8C-9D4E-C08E4C2DFA8B" name="TB_ESTACOES_METEOROLOGICAS_PK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>CDFAE145-B949-6421-B58D-CB80EE600622</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A85843B4-59D3-1C54-8856-54487B68F42B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AE8A347-AE7F-8377-6CCF-72B895F9BA6D" name="TB_ESTACOES_METEOROLOGICAS_TB_ENDERECO_FK">
+<createdBy>biralavor</createdBy>
+<createdTime>2025-06-09 14:32:11 UTC</createdTime>
+<generatorID>B86EE175-8873-5532-A66F-62423481D928</generatorID>
+<ownerDesignName>Sirena-relational-modeling</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7928EE9E-263F-121A-7215-8EAC1FD34E58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

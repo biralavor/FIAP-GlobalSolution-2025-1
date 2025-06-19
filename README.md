@@ -18,14 +18,18 @@ Nota máxima: 100 pontos
 
 > [!TIP]
 > ## SUMÁRIO
-> 1. [Integrantes](https://github.com/biralavor/FIAP-Challenge-2025#1-integrantes)
-> 2. [Cliente](https://github.com/biralavor/FIAP-Challenge-2025#2-cliente)
-> 3. [Metas](https://github.com/biralavor/FIAP-Challenge-2025#3-metas)
-> 4. [Hipóteses](https://github.com/biralavor/FIAP-Challenge-2025#4-hipoteses)
-> 5. [Segmentos de Cliente](https://github.com/biralavor/FIAP-Challenge-2025#5-segmentos-de-cliente)
-> 6. [Solução](https://github.com/biralavor/FIAP-Challenge-2025#6-solucao)
-> 7. [Milestones](https://github.com/biralavor/FIAP-Challenge-2025#7-milestones)
-> 8. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025#8-tecnologias-utilizadas)
+> 1. [Integrantes](https://github.com/biralavor/FIAP-Challenge-2025-1#1-integrantes)
+> 2. [Cliente](https://github.com/biralavor/FIAP-Challenge-2025-1#2-cliente)
+> 3. [Metas](https://github.com/biralavor/FIAP-Challenge-2025-1#3-metas)
+> 4. [Hipóteses](https://github.com/biralavor/FIAP-Challenge-2025-1#4-hipoteses)
+> 5. [Segmentos de Cliente](https://github.com/biralavor/FIAP-Challenge-2025-1#5-segmentos-de-cliente)
+> 6. [Solução](https://github.com/biralavor/FIAP-Challenge-2025-1#6-solucao)
+>    
+> - 6.1 [Fase 1 - Treinamento da Operação - curto prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#61-fase-1---treinamento-da-opera%C3%A7%C3%A3o---curto-prazo)
+> - 6.2 [Fase 2 - Aprimoramento da Predição - médio prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#62-fase-2---aprimoramento-da-predi%C3%A7%C3%A3o---m%C3%A9dio-prazo)
+> - 6.3 [Fase 3 - Coleta Refinada do Microclima - longo prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#63-fase-3---coleta-refinada-do-microclima---longo-prazo)
+> 7. [Milestones](https://github.com/biralavor/FIAP-Challenge-2025-1#7-milestones)
+> 8. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025-1#8-tecnologias-utilizadas)
 
 ## 1. Integrantes
 [RM 565463 - Bira Lavor](https://github.com/biralavor)
@@ -68,6 +72,32 @@ Sistema Integrado de Resposta às Emergências e Notificações Ambientais, que 
 
 Nosso objetivo é prever chuvas extremas e fazer a ponte entre agentes públicos e cidadãos, reduzindo mortes e danos econômicos em eventos climáticos.
 ![Sirena-white-horizontal](https://github.com/user-attachments/assets/acd3c561-ceab-40e4-be35-680c61a0c251)
+
+### 6.1 Fase 1 - Treinamento da Operação - curto prazo
+Chatbot L.U.C.A.S. - Localizador Urbano de Chamados e Alertas de Segurança para WhatsApp
+
+O Chatbot L.U.C.A.S. atua como canal de comunicação direta entre a população e o sistema de monitoramento urbano. Sem exigir login, ele permite que qualquer cidadão envie relatos sobre ocorrências como alagamentos, quedas de árvores ou falta de energia. Além disso, orienta o usuário com informações de segurança em situações de risco e encaminha automaticamente os dados para análise pelo sistema.
+
+Aqui, o Cidadão poderá reportar um incidente e conferir se está ou não em local de perigo.
+
+Já o Agente poderá acessar um relatório das ocorrências dos bairros e verificar qual bairro com maior ocorrência é o mais perto de sua localização atual.
+
+### 6.2 Fase 2 - Aprimoramento da Predição - médio prazo
+Combinação de múltiplos modelos de Machine Learning tendo como variável resposta: dados topográficos; dados das estações meteorológicas atuais; histórico de alagamentos; dados de trânsito em tempo real e dados das novas estações meteorológicas.
+
+A partir daí, os Agentes Públicos vão acelerar o processo de tomada de decisão e execução com SIRENA;
+Os Cidadãos poderão encontrar uma rota de fuga mais rápida para locais protegidos, já que ambos terão acesso a um plano de ação integrado, geolocalizado e distribuído pelo chatbot L.U.C.A.S.
+
+![image](https://github.com/user-attachments/assets/4a3943ee-c825-4c6f-9862-8a146b2cef50)
+
+### 6.3 Fase 3 - Coleta Refinada do Microclima - longo prazo
+Queremos engajar a população ao transformá-los em mini estações meteorológicas portáteis com o aplicativo SIRENA.
+
+Atualmente os dispositivos móveis premium têm sensores climáticos de alta precisão embarcados.
+
+O compartilhamento desses dados aumentará e muito a acurácia das predições do microclima e o tempo de resposta dos modelos, beneficiando a todos que estiverem conectados ao LUCAS.
+
+![image](https://github.com/user-attachments/assets/e15fdf7e-4fc6-4770-a877-89e986887269)
 
 
 ## 7. Milestones

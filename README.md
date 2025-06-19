@@ -82,6 +82,9 @@ Aqui, o Cidadão poderá reportar um incidente e conferir se está ou não em lo
 
 Já o Agente poderá acessar um relatório das ocorrências dos bairros e verificar qual bairro com maior ocorrência é o mais perto de sua localização atual.
 
+[Chatbot_LUCAS.webm](https://github.com/user-attachments/assets/c541b471-22ed-4776-af0e-7f2282b0ece1)
+
+
 ### 6.2 Fase 2 - Aprimoramento da Predição - médio prazo
 Combinação de múltiplos modelos de Machine Learning tendo como variável resposta: dados topográficos; dados das estações meteorológicas atuais; histórico de alagamentos; dados de trânsito em tempo real e dados das novas estações meteorológicas.
 

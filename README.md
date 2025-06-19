@@ -128,6 +128,6 @@ O compartilhamento desses dados aumentará e muito a acurácia das predições d
 </ol>
 
 ## Watch the promo video of S.I.R.E.N.A:
-Mussum Ipsum, cacilds vidis litro abertis. 
+https://drive.google.com/file/d/1m-cq_E9Wer_toWYWFegcOpLMdtnWKO1K/view
 
 [Acesso ao repositório SIRENA GlobalSolution no Github](https://github.com/biralavor/FIAP-GlobalSolution-2025-1)

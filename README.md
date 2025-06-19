@@ -22,7 +22,7 @@ Nota máxima: 100 pontos
 > 2. [Cliente](https://github.com/biralavor/FIAP-Challenge-2025#2-cliente)
 > 3. [Metas](https://github.com/biralavor/FIAP-Challenge-2025#3-metas)
 > 4. [Hipóteses](https://github.com/biralavor/FIAP-Challenge-2025#4-hipoteses)
-> 5. [Segmento de Cliente](https://github.com/biralavor/FIAP-Challenge-2025#5-segmento-de-cliente)
+> 5. [Segmentos de Cliente](https://github.com/biralavor/FIAP-Challenge-2025#5-segmentos-de-cliente)
 > 6. [Solução](https://github.com/biralavor/FIAP-Challenge-2025#6-solucao)
 > 7. [Milestones](https://github.com/biralavor/FIAP-Challenge-2025#7-milestones)
 > 8. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025#8-tecnologias-utilizadas)
@@ -50,20 +50,15 @@ Nota máxima: 100 pontos
 
 
 ## 4. Hipóteses
-**Aumento da eficácia operacional:**
-
-Agentes públicos reduzirão o tempo de resposta em 40% usando o dashboard do S.I.R.E.N.A., que integra dados meteorológicos, recursos humanos e planos de ação pré-aprovados;
-
-**Adoção de agentes públicos:**
-
-Times priorizarão alertas da S.I.R.E.N.A. com score de confiabilidade acima de 90%, reduzindo trotes;
-
-**Engajamento da população:**
-
-Cidadãos de áreas de risco seguirão alertas da S.I.R.E.N.A. 3x mais rápido, quando receberem instruções específicas e geolocalizadas;
+| Descrição |   |
+|-----------|---|
+| **Aumento da eficácia operacional** <br><br>Agentes públicos reduzirão o tempo de resposta em 40% usando o dashboard do S.I.R.E.N.A., que integra dados meteorológicos, recursos humanos e planos de ação pré-aprovados; | ![image](https://github.com/user-attachments/assets/17db8a8d-21f8-415e-bace-749ff6aed03d) |
+| **Adoção de agentes públicos** <br><br>Times priorizarão alertas da S.I.R.E.N.A. com score de confiabilidade acima de 90%, reduzindo trotes; | ![image](https://github.com/user-attachments/assets/d23a9922-9c78-43f0-a682-7a0808a6e58d) |
+| **Engajamento da população** <br><br>Cidadãos de áreas de risco seguirão alertas da S.I.R.E.N.A. 3x mais rápido, quando receberem instruções específicas e geolocalizadas; | ![image](https://github.com/user-attachments/assets/536d965e-bead-4e3f-b965-1b25bae993f0) |
 
 
-## 5. Segmento de Cliente
+
+## 5. Segmentos de Cliente
 - Agentes Públicos: Defesa Civil, Corpor de Bombeiros, C.E.T.
 - Cidadãos
 

@@ -64,40 +64,19 @@ Nota máxima: 100 pontos
 
 ## 6. Solução
 ### Plataforma S.I.R.E.N.A
-
 Sistema Integrado de Resposta às Emergências e Notificações Ambientais, que gera alertas antecipados e coordenação integrada de recursos públicos.
 
 Nosso objetivo é prever chuvas extremas e fazer a ponte entre agentes públicos e cidadãos, reduzindo mortes e danos econômicos em eventos climáticos.
+![Sirena-white-horizontal](https://github.com/user-attachments/assets/acd3c561-ceab-40e4-be35-680c61a0c251)
 
 
 ## 7. Milestones
-<ol>
-  <li>Milestones1</li>
-  <li>Milestones2</li>
-  <li>Milestones3</li>
-  <li>Milestones4</li>
-</ol>
-
-### Milestones1
-Chatbot já será apresentado à população e aos agentes públicos.
-
-Modo Cidadão: O Cidadão poderá indicar ocorrências climáticas e receber alertas, baseadas em sua geolocalização. 
-
-Modo Agente: Agentes deverão confirmar ocorrências in loco, daquelas já filtradas por alta confiabilidade.
-
-
-### Milestones2
-Desenvolvimento de cada modelo de Machine Learning: topografia, histórico de alagamento, estações meteorológicas antigas, estações meteorológicas novas e trânsito em tempo real
-
-
-### Milestones3
-Combinação dos múltiplos modelos de Machine Learning para o desenvolvimento de um plano de ação geolocalizado
-
-
-### Milestones4
-Modo Cidadão vai indicar locais mais seguros, durante eventos climáticos, baseados em sua localização, topografia, risco e dados climáticos.
-
-Modo Agente vai receber o plano de ação elaborado pelo S.I.R.E.N.A., indicando melhor rota de como chegar ao local
+| Milestone | Descrição |
+|-----------|-----------|
+| **#1** | Chatbot já será apresentado à população e aos agentes públicos.<br>Modo Cidadão: O Cidadão poderá indicar ocorrências climáticas e receber alertas, baseadas em sua geolocalização.<br>Modo Agente: Agentes deverão confirmar ocorrências in loco, daquelas já filtradas por alta confiabilidade. |
+| **#2** | Desenvolvimento de cada modelo de Machine Learning: topografia, histórico de alagamento, estações meteorológicas antigas, estações meteorológicas novas e trânsito em tempo real |
+| **#3** | Combinação dos múltiplos modelos de Machine Learning para o desenvolvimento de um plano de ação geolocalizado |
+| **#4** | Modo Cidadão vai indicar locais mais seguros, durante eventos climáticos, baseados em sua localização, topografia, risco e dados climáticos.<br>Modo Agente vai receber o plano de ação elaborado pelo S.I.R.E.N.A., indicando melhor rota de como chegar ao local |
 
 
 ## 8. Tecnologias Utilizadas

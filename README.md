@@ -28,26 +28,25 @@ Nota máxima: 100 pontos
 > 8. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025#8-tecnologias-utilizadas)
 
 ## 1. Integrantes
-<ol>
-  <li>RM 565463: Bira Lavor - https://github.com/biralavor</li>
-  <li>RM 565355: Lucas Hideki - https://github.com/HidekiLucas0701</li>
-</ol>
+[RM 565463 - Bira Lavor](https://github.com/biralavor)
+
+[RM 565355 - Lucas Hideki](https://github.com/HidekiLucas0701)
 
 ## 2. Cliente
-- Governo Estadual
-- Governmo Municipal
+- Governos Estaduais
+- Governos Municipais
 
 ## 3. Metas
 > [!IMPORTANT]
-> - **Técnico:**
-> - Redução de 70% dos falsos positivos em alertas de enxurradas e alagamentos
-> - Acurácia mínima de 95% na previsão do volume de chuva
+> - **Técnica:**
+>     - Redução de 70% dos falsos positivos em alertas de enxurradas e alagamentos
+>     - Acurácia mínima de 95% na previsão do volume de chuva
 > - **Operacional:**
-> - Redução de 40% no tempo de elaboração do plano de ação
-> - Execução da ação em até 15 min
+>     - Redução de 40% no tempo de elaboração do plano de ação
+>     - Execução da ação em até 15 min
 > - **Social:**
-> - Redução de 60% em vítimas fatais nas áreas mapeadas
-> - Aumento em 3x na adesão das evacuações
+>     - Redução de 60% em vítimas fatais nas áreas mapeadas
+>     - Aumento em 3x na adesão das evacuações
 
 
 ## 4. Hipóteses

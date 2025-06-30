@@ -1,5 +1,18 @@
 # FIAP GlobalSolution 2025-1 Plataforma S.I.R.E.N.A.
 
+# Global Solutions - the 2025 FIAP's Hackathon about Climate Crisis.
+This year, The [Global Solution](https://www.fiap.com.br/graduacao/global-solution/) was about Climate Crisis - How could we prevent extreme events from nature using technology?
+
+![image](https://github.com/user-attachments/assets/d88a42e3-c84a-4cbc-8209-fce84933511e)
+
+> [!Note]
+> Ventos que desenham novos caminhos. Chuvas que carregam histórias de resiliência. Calor que forja ideias revolucionárias. Os eventos extremos não são apenas provas da força da natureza – são convites para reescrevermos o futuro.
+> 
+## Our focus -> Using Preditive AI for extreme rainfall
+![image](https://github.com/user-attachments/assets/4c0bfc28-08f8-4f51-9252-519cc154e998)
+
+
+# Our Solution: S.I.R.E.N.A.
 [Check S.I.R.E.N.A.'s website](https://biralavor.github.io/FIAP-GlobalSolution-2025-1/Front-end/)
 
 ![GlobalSolution 2025 01 - Computacional Thinking using Python(1)](https://github.com/user-attachments/assets/d09e2c97-870c-4650-913c-89b7a65fcb65)

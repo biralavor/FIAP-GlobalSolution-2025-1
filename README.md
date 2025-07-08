@@ -1,4 +1,5 @@
 # FIAP GlobalSolution 2025-1 Plataforma S.I.R.E.N.A.
+[Get access to the S.I.R.E.N.A's full presentation here](https://docs.google.com/presentation/d/1SL9jN6vpV7UoOQ1bYs-Z6pw9-tkXIMrM90vCuHdnmBg/edit?usp=sharing)
 
 # Global Solutions - the 2025 FIAP's Hackathon about Climate Crisis.
 This year, The [Global Solution](https://www.fiap.com.br/graduacao/global-solution/) was about Climate Crisis - How could we prevent extreme events from nature using technology?

@@ -33,19 +33,19 @@ Nota máxima: 100 pontos
 
 > [!TIP]
 > ## SUMÁRIO
-> 1. [Integrantes](https://github.com/biralavor/FIAP-Challenge-2025-1#1-integrantes)
-> 2. [Cliente](https://github.com/biralavor/FIAP-Challenge-2025-1#2-cliente)
-> 3. [Oportunidades](https://github.com/biralavor/FIAP-Challenge-2025-1#3-oportunidades)
-> 4. [Metas](https://github.com/biralavor/FIAP-Challenge-2025-1#4-metas)
-> 5. [Hipóteses](https://github.com/biralavor/FIAP-Challenge-2025-1#5-hipoteses)
-> 6. [Segmentos de Cliente](https://github.com/biralavor/FIAP-Challenge-2025-1#6-segmentos-de-cliente)
-> 7. [Solução](https://github.com/biralavor/FIAP-Challenge-2025-1#7-solucao)
+> 1. [Integrantes](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#1-integrantes)
+> 2. [Cliente](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#2-cliente)
+> 3. [Oportunidades](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#3-oportunidades)
+> 4. [Metas](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#4-metas)
+> 5. [Hipóteses](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#5-hipoteses)
+> 6. [Segmentos de Cliente](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#6-segmentos-de-cliente)
+> 7. [Solução](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#7-solucao)
 >    
 > - 7.1 [Fase 1 - Treinamento da Operação - curto prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#71-fase-1---treinamento-da-opera%C3%A7%C3%A3o---curto-prazo)
 > - 7.2 [Fase 2 - Aprimoramento da Predição - médio prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#72-fase-2---aprimoramento-da-predi%C3%A7%C3%A3o---m%C3%A9dio-prazo)
 > - 7.3 [Fase 3 - Coleta Refinada do Microclima - longo prazo](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#73-fase-3---coleta-refinada-do-microclima---longo-prazo)
-> 8. [Milestones](https://github.com/biralavor/FIAP-Challenge-2025-1#8-milestones)
-> 9. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-Challenge-2025-1#9-tecnologias-utilizadas)
+> 8. [Milestones](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#8-milestones)
+> 9. [Tecnologias Utilizadas](https://github.com/biralavor/FIAP-GlobalSolution-2025-1#9-tecnologias-utilizadas)
 
 ## 1. Integrantes
 [RM 565463 - Bira Lavor](https://github.com/biralavor)

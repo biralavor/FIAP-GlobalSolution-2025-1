@@ -56,7 +56,7 @@ Nota máxima: 100 pontos
 - Governos Estaduais
 - Governos Municipais
 
-## Oportunidades
+## 3. Oportunidades
 - Governos Municipais, Estaduais e Federais têm aumentado o investimento em tecnologia e monitoramento em tempo real. Porém, os sistemas não são integrados entre si;
 - A coordenação conjunta é custosa, imprecisa e de baixa confiabilidade pela população;
 - Existe uma agenda global focada em compartilhar conhecimento sobre monitoramento climático e ações integradas: [WMO - World Meteorological Organization](https://wmo.int/);
